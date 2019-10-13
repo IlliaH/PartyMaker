@@ -34,11 +34,16 @@ class AuthService : AuthServiceProtocol {
                             completion(accessToken, nil)
                         }
                         else {
-                            completion(nil, AppError.TokenNotFound)
+                            if let message = dictionary["message"] as? String {
+                                completion(nil, ServiceError.ServerMessage(message))
+                            }
+                            else {
+                                completion(nil, ServiceError.TokenNotFound)
+                            }
                         }
                     }
                     else {
-                        completion(nil, AppError.TokenNotFound)
+                        completion(nil, ServiceError.TokenNotFound)
                     }
                 } catch {
                     print(error)

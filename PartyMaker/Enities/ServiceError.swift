@@ -8,6 +8,7 @@
 
 import Foundation
 
-enum AppError : Error {
+enum ServiceError : Error {
     case TokenNotFound
+    case ServerMessage(String)
 }
