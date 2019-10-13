@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class LoginController: UIViewController, LoginViewProtocol {
 
@@ -22,6 +23,13 @@ class LoginController: UIViewController, LoginViewProtocol {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         configurator.configure(with: self)
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        
+        AppDelegate.visibleViewController = self
+        
+        // Autimatically sign in the user
+        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+        
     }
 
     

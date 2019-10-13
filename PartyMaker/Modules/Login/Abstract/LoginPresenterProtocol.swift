@@ -13,4 +13,5 @@ protocol LoginPresenterProtocol : class {
     func loginButtonClicked()
     func emailValueChanged(to newEmailValue: String?)
     func passwordValueChanged(to newPasswordValue: String?)
+    func googleLoginButtonClicked(tokenID : String)
 }

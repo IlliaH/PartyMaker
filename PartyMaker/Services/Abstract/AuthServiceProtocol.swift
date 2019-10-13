@@ -11,4 +11,5 @@ import Foundation
 protocol AuthServiceProtocol {
     func Login(email : String, password : String, remember_me : Bool, completion: @escaping(String?, Error?)->Void)
     
+    func GoogleLogin(token : String, completion: @escaping(String?, Error?)->Void)
 }

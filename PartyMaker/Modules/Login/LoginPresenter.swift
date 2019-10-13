@@ -9,6 +9,7 @@
 import Foundation
 
 class LoginPresenter : LoginPresenterProtocol {
+    
     weak var view: LoginViewProtocol!
     var interactor: LoginInteractorProtocol!
     var router: LoginRouterProtocol!
@@ -54,6 +55,17 @@ class LoginPresenter : LoginPresenterProtocol {
                 print(message as Any)
             }
         }
+    }
+    
+    func googleLoginButtonClicked(tokenID : String) {
+        interactor.googleLogin(token: tokenID, completion: { (status, message) in
+            if (status == .Sucess) {
+                self.router.showMainView()
+            }
+            else if (status == .LoginError) {
+                print(message as Any)
+            }
+        })
     }
     
     

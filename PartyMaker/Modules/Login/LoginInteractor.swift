@@ -37,5 +37,22 @@ class LoginInteractor: LoginInteractorProtocol {
         }
     }
     
+    func googleLogin(token : String, completion: @escaping (PresenterStatus, String?) -> Void){
+        authService.GoogleLogin(token: token, completion: {
+            (accessToken, error) in
+            if let error = error {
+                completion(.LoginError, error.localizedDescription)
+            }
+            else if accessToken == nil || accessToken == "" {
+                 completion(.LoginError, "Token is invalid")
+            }
+            else {
+                // Save access token
+                print(accessToken)
+                completion(.Sucess, "Token received successfully")
+            }
+        })
+    }
+    
     
 }
