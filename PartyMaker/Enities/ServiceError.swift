@@ -8,7 +8,16 @@
 
 import Foundation
 
-enum ServiceError : Error {
+enum ServiceError : LocalizedError {
     case TokenNotFound
     case ServerMessage(String)
+    
+    var errorDescription: String? {
+        switch self {
+        case let .ServerMessage(message):
+            return message
+        case .TokenNotFound:
+            return "Token was not found in response"
+        }
+    }
 }
