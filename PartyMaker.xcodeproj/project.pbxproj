@@ -17,6 +17,7 @@
 		2310B4092352AB7100CAFB75 /* LoginConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310B4082352AB7100CAFB75 /* LoginConfiguratorProtocol.swift */; };
 		2310B40B2352ABC800CAFB75 /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310B40A2352ABC800CAFB75 /* LoginConfigurator.swift */; };
 		2310B40D2352AC2E00CAFB75 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310B40C2352AC2E00CAFB75 /* LoginRouter.swift */; };
+		41F52227B9935A02E8BD682E /* Pods_PartyMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3E9D4293DF28EE5972EF22 /* Pods_PartyMaker.framework */; };
 		FE7BB060234BFF53004CF70F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7BB05F234BFF53004CF70F /* AppDelegate.swift */; };
 		FE7BB062234BFF53004CF70F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7BB061234BFF53004CF70F /* SceneDelegate.swift */; };
 		FE7BB064234BFF53004CF70F /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7BB063234BFF53004CF70F /* LoginController.swift */; };
@@ -40,6 +41,9 @@
 		2310B4082352AB7100CAFB75 /* LoginConfiguratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConfiguratorProtocol.swift; sourceTree = "<group>"; };
 		2310B40A2352ABC800CAFB75 /* LoginConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConfigurator.swift; sourceTree = "<group>"; };
 		2310B40C2352AC2E00CAFB75 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		2DFFCBD30AA1B0CD95CED7AE /* Pods-PartyMaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyMaker.debug.xcconfig"; path = "Target Support Files/Pods-PartyMaker/Pods-PartyMaker.debug.xcconfig"; sourceTree = "<group>"; };
+		DB0B27CA6C904C4129E8A6F2 /* Pods-PartyMaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyMaker.release.xcconfig"; path = "Target Support Files/Pods-PartyMaker/Pods-PartyMaker.release.xcconfig"; sourceTree = "<group>"; };
+		EC3E9D4293DF28EE5972EF22 /* Pods_PartyMaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PartyMaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7BB05C234BFF53004CF70F /* PartyMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7BB05F234BFF53004CF70F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE7BB061234BFF53004CF70F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41F52227B9935A02E8BD682E /* Pods_PartyMaker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,11 +82,30 @@
 			path = Abstract;
 			sourceTree = "<group>";
 		};
+		38BEB3DEEDD3925E50DFA184 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2DFFCBD30AA1B0CD95CED7AE /* Pods-PartyMaker.debug.xcconfig */,
+				DB0B27CA6C904C4129E8A6F2 /* Pods-PartyMaker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		56B3AA81D3FAE4E1D807166C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC3E9D4293DF28EE5972EF22 /* Pods_PartyMaker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FE7BB053234BFF53004CF70F = {
 			isa = PBXGroup;
 			children = (
 				FE7BB05E234BFF53004CF70F /* PartyMaker */,
 				FE7BB05D234BFF53004CF70F /* Products */,
+				38BEB3DEEDD3925E50DFA184 /* Pods */,
+				56B3AA81D3FAE4E1D807166C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,9 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE7BB070234BFF55004CF70F /* Build configuration list for PBXNativeTarget "PartyMaker" */;
 			buildPhases = (
+				030A4A32A669FF308A7D8189 /* [CP] Check Pods Manifest.lock */,
 				FE7BB058234BFF53004CF70F /* Sources */,
 				FE7BB059234BFF53004CF70F /* Frameworks */,
 				FE7BB05A234BFF53004CF70F /* Resources */,
+				33EEE1531C0F6677CB44E870 /* [CP] Embed Pods Frameworks */,
+				DC2F475F5A27023BA5121495 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,6 +257,79 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		030A4A32A669FF308A7D8189 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PartyMaker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		33EEE1531C0F6677CB44E870 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PartyMaker/Pods-PartyMaker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMAppAuth/GTMAppAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMAppAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PartyMaker/Pods-PartyMaker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC2F475F5A27023BA5121495 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PartyMaker/Pods-PartyMaker-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PartyMaker/Pods-PartyMaker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FE7BB058234BFF53004CF70F /* Sources */ = {
@@ -394,6 +494,7 @@
 		};
 		FE7BB071234BFF55004CF70F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DFFCBD30AA1B0CD95CED7AE /* Pods-PartyMaker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -413,6 +514,7 @@
 		};
 		FE7BB072234BFF55004CF70F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB0B27CA6C904C4129E8A6F2 /* Pods-PartyMaker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
