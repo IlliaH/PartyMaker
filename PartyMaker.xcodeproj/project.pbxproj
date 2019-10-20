@@ -18,6 +18,8 @@
 		2310B40B2352ABC800CAFB75 /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310B40A2352ABC800CAFB75 /* LoginConfigurator.swift */; };
 		2310B40D2352AC2E00CAFB75 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310B40C2352AC2E00CAFB75 /* LoginRouter.swift */; };
 		41F52227B9935A02E8BD682E /* Pods_PartyMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3E9D4293DF28EE5972EF22 /* Pods_PartyMaker.framework */; };
+		FE13576B235BCF26008597E4 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE13576A235BCF26008597E4 /* GradientView.swift */; };
+		FE5F2869235BECF100F2FD1C /* CustomHoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5F2868235BECF100F2FD1C /* CustomHoshiTextField.swift */; };
 		FE7BB060234BFF53004CF70F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7BB05F234BFF53004CF70F /* AppDelegate.swift */; };
 		FE7BB062234BFF53004CF70F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7BB061234BFF53004CF70F /* SceneDelegate.swift */; };
 		FE7BB064234BFF53004CF70F /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7BB063234BFF53004CF70F /* LoginController.swift */; };
@@ -44,6 +46,8 @@
 		2DFFCBD30AA1B0CD95CED7AE /* Pods-PartyMaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyMaker.debug.xcconfig"; path = "Target Support Files/Pods-PartyMaker/Pods-PartyMaker.debug.xcconfig"; sourceTree = "<group>"; };
 		DB0B27CA6C904C4129E8A6F2 /* Pods-PartyMaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyMaker.release.xcconfig"; path = "Target Support Files/Pods-PartyMaker/Pods-PartyMaker.release.xcconfig"; sourceTree = "<group>"; };
 		EC3E9D4293DF28EE5972EF22 /* Pods_PartyMaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PartyMaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE13576A235BCF26008597E4 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		FE5F2868235BECF100F2FD1C /* CustomHoshiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHoshiTextField.swift; sourceTree = "<group>"; };
 		FE7BB05C234BFF53004CF70F /* PartyMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7BB05F234BFF53004CF70F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE7BB061234BFF53004CF70F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FE13576C235BCF54008597E4 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				FE5F2868235BECF100F2FD1C /* CustomHoshiTextField.swift */,
+				FE13576A235BCF26008597E4 /* GradientView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		FE7BB053234BFF53004CF70F = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +133,7 @@
 		FE7BB05E234BFF53004CF70F /* PartyMaker */ = {
 			isa = PBXGroup;
 			children = (
+				FE13576C235BCF54008597E4 /* CustomViews */,
 				FEBCC54D235292500034D1E2 /* Enities */,
 				FEBCC54623528F620034D1E2 /* Services */,
 				FEBCC54423526F650034D1E2 /* Modules */,
@@ -293,6 +307,7 @@
 				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMAppAuth/GTMAppAuth.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -301,6 +316,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMAppAuth.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -336,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE5F2869235BECF100F2FD1C /* CustomHoshiTextField.swift in Sources */,
 				2310B3FD23529A2700CAFB75 /* LoginPresenterProtocol.swift in Sources */,
 				2310B3FB235299EA00CAFB75 /* LoginViewProtocol.swift in Sources */,
 				2310B4072352A81C00CAFB75 /* LoginInteractor.swift in Sources */,
@@ -344,6 +361,7 @@
 				FE7BB064234BFF53004CF70F /* LoginController.swift in Sources */,
 				2310B40D2352AC2E00CAFB75 /* LoginRouter.swift in Sources */,
 				2310B4092352AB7100CAFB75 /* LoginConfiguratorProtocol.swift in Sources */,
+				FE13576B235BCF26008597E4 /* GradientView.swift in Sources */,
 				2310B4052352A5E400CAFB75 /* PresenterStatus.swift in Sources */,
 				2310B40123529E4100CAFB75 /* LoginPresenter.swift in Sources */,
 				FE7BB060234BFF53004CF70F /* AppDelegate.swift in Sources */,
