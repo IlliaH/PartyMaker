@@ -86,6 +86,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sc4-NP-VSm">
                                 <rect key="frame" x="339" y="407" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="onTintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </switch>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xzo-Wp-3CX" customClass="CustomHoshiTextField" customModule="PartyMaker">
                                 <rect key="frame" x="20" y="280" width="366" height="34"/>
@@ -120,6 +121,8 @@
                     </view>
                     <connections>
                         <outlet property="LoginTextField" destination="xzo-Wp-3CX" id="u7U-cb-RaZ"/>
+                        <outlet property="PasswordTextField" destination="sh4-l9-UlZ" id="VJr-S8-EoN"/>
+                        <outlet property="RememberMeSwitch" destination="sc4-NP-VSm" id="fu6-Nx-9Gd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

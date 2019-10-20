@@ -16,6 +16,8 @@ class LoginController: UIViewController, LoginViewProtocol {
     
     @IBOutlet weak var PasswordTextField: UITextField!
     
+    @IBOutlet weak var RememberMeSwitch: UISwitch!
+    
     var presenter: LoginPresenterProtocol!
     var configurator: LoginConfiguratorProtocol = LoginConfigurator()
     
