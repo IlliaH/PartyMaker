@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2304C444235E20C8006E5C33 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2304C443235E20C8006E5C33 /* RoundImageView.swift */; };
 		2310B3FB235299EA00CAFB75 /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310B3FA235299EA00CAFB75 /* LoginViewProtocol.swift */; };
 		2310B3FD23529A2700CAFB75 /* LoginPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310B3FC23529A2700CAFB75 /* LoginPresenterProtocol.swift */; };
 		2310B3FF23529A5A00CAFB75 /* LoginRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310B3FE23529A5A00CAFB75 /* LoginRouterProtocol.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2304C443235E20C8006E5C33 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		2310B3FA235299EA00CAFB75 /* LoginViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
 		2310B3FC23529A2700CAFB75 /* LoginPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterProtocol.swift; sourceTree = "<group>"; };
 		2310B3FE23529A5A00CAFB75 /* LoginRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouterProtocol.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			children = (
 				FE5F2868235BECF100F2FD1C /* CustomHoshiTextField.swift */,
 				FE13576A235BCF26008597E4 /* GradientView.swift */,
+				2304C443235E20C8006E5C33 /* RoundImageView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				2310B3FB235299EA00CAFB75 /* LoginViewProtocol.swift in Sources */,
 				2310B4072352A81C00CAFB75 /* LoginInteractor.swift in Sources */,
 				2310B4032352A0CF00CAFB75 /* LoginInteractorProtocol.swift in Sources */,
+				2304C444235E20C8006E5C33 /* RoundImageView.swift in Sources */,
 				2310B3FF23529A5A00CAFB75 /* LoginRouterProtocol.swift in Sources */,
 				FE7BB064234BFF53004CF70F /* LoginController.swift in Sources */,
 				2310B40D2352AC2E00CAFB75 /* LoginRouter.swift in Sources */,

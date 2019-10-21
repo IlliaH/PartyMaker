@@ -49,6 +49,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // Initialize sign-in
         GIDSignIn.sharedInstance()?.clientID = "765272374924-aeh4csiofl5u932kb9vlc0rc6i0l81d1.apps.googleusercontent.com"
         GIDSignIn.sharedInstance()?.delegate = self
+        
+        // Customize tab bar button color
+        // Override point for customization after application launch.
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         return true
     }
 
