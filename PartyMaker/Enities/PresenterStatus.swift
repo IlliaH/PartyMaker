@@ -11,4 +11,6 @@ import Foundation
 enum PresenterStatus {
     case Sucess
     case LoginError
+    case RegisterError
+    case RegisterPictureUploadError
 }

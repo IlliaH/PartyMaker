@@ -11,6 +11,7 @@ import Foundation
 enum ServiceError : LocalizedError {
     case TokenNotFound
     case ServerMessage(String)
+    case NoResponseFromServer
     
     var errorDescription: String? {
         switch self {
@@ -18,6 +19,8 @@ enum ServiceError : LocalizedError {
             return message
         case .TokenNotFound:
             return "Token was not found in response"
+        case .NoResponseFromServer:
+            return "Server is not available"
         }
     }
 }

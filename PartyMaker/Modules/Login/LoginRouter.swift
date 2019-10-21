@@ -18,4 +18,8 @@ class LoginRouter : LoginRouterProtocol {
     func showMainView() {
         print("Navigated to main VC")
     }
+    
+    func showRegisterView() {
+        viewController.performSegue(withIdentifier: "LoginToRegisterSegue", sender: nil)
+    }
 }

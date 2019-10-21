@@ -107,7 +107,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="O7A-ob-oqS" kind="show" id="axV-Bb-Ldc"/>
+                                    <action selector="registerButtonOnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3o7-3U-7gS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -128,6 +128,7 @@
                         <outlet property="LoginTextField" destination="xzo-Wp-3CX" id="u7U-cb-RaZ"/>
                         <outlet property="PasswordTextField" destination="sh4-l9-UlZ" id="VJr-S8-EoN"/>
                         <outlet property="RememberMeSwitch" destination="sc4-NP-VSm" id="fu6-Nx-9Gd"/>
+                        <segue destination="O7A-ob-oqS" kind="show" identifier="LoginToRegisterSegue" id="s4R-0F-V9e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -137,7 +138,7 @@
         <!--Register Controller-->
         <scene sceneID="iXz-zv-rYE">
             <objects>
-                <viewController id="O7A-ob-oqS" userLabel="Register Controller" sceneMemberID="viewController">
+                <viewController id="O7A-ob-oqS" userLabel="Register Controller" customClass="RegisterController" customModule="PartyMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V9S-mV-hPz" customClass="GradientView" customModule="PartyMaker" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -257,6 +258,9 @@
                                 <state key="normal" title="REGISTER">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerButtonOnTouch:" destination="O7A-ob-oqS" eventType="touchUpInside" id="aoz-TZ-7Tl"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PartyMaker" translatesAutoresizingMaskIntoConstraints="NO" id="xr7-JV-vL3" customClass="RoundImageView" customModule="PartyMaker" customModuleProvider="target">
                                 <rect key="frame" x="157" y="25" width="100" height="100"/>
@@ -276,6 +280,15 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="aRV-aD-WZB"/>
+                    <connections>
+                        <outlet property="ConfirmPasswordTextField" destination="aK1-2u-ULy" id="7Jc-Pi-MxY"/>
+                        <outlet property="EmailTextField" destination="zhA-Ns-DA3" id="uA4-yA-5Kd"/>
+                        <outlet property="FirstNameTextField" destination="8lF-0H-0Ac" id="VT9-IX-KNA"/>
+                        <outlet property="LastNameTextField" destination="eZl-tm-LHe" id="w1D-so-G0I"/>
+                        <outlet property="NicknameTextField" destination="cul-F9-eRx" id="hp0-sS-Dji"/>
+                        <outlet property="PasswordTextField" destination="sGM-Ju-l9P" id="kkr-5M-uWJ"/>
+                        <outlet property="ProfileImageView" destination="xr7-JV-vL3" id="4Gw-zH-6CS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lTx-yz-6Ge" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

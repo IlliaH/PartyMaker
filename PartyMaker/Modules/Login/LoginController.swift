@@ -12,9 +12,9 @@ import GoogleSignIn
 class LoginController: UIViewController, LoginViewProtocol {
 
     
-    @IBOutlet weak var LoginTextField: UITextField!
+    @IBOutlet weak var LoginTextField: CustomHoshiTextField!
     
-    @IBOutlet weak var PasswordTextField: UITextField!
+    @IBOutlet weak var PasswordTextField: CustomHoshiTextField!
     
     @IBOutlet weak var RememberMeSwitch: UISwitch!
     
@@ -52,6 +52,9 @@ class LoginController: UIViewController, LoginViewProtocol {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
-
+    @IBAction func registerButtonOnTapped(_ sender: UIButton) {
+        presenter.router.showRegisterView()
+    }
+    
 }
 

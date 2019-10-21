@@ -10,4 +10,5 @@ import Foundation
 
 protocol LoginRouterProtocol : class {
     func showMainView()
+    func showRegisterView()
 }
