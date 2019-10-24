@@ -49,7 +49,6 @@ class RegisterController : UIViewController, RegisterViewProtocol {
         
         storageService.uploadFile(picture: ProfileImageView.image!.pngData()!) { (url, error) in
             print(url as Any)
-            print(error as Any)
         }
     }
 }

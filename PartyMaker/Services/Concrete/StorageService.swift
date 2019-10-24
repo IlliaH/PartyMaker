@@ -14,24 +14,30 @@ class StorageService : StorageServiceProtocol {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         
-        let filename = "user-profile.jpg"
+        // TO DO: read token from user defaults
+        let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJuYmYiOjE1NzE4ODg2MDgsImV4cCI6MTU3MTg5MjIwOCwiaWF0IjoxNTcxODg4NjA4fQ.uMfGW-THRRAkUoy97BOlNVaxWMHYUkbnRbx6Zf5fYZk"
 
-        let mimetype = "image/jpg"
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         
-        let boundary = "Boundary-\(NSUUID().uuidString)"
+        // generate boundary string using a unique per-app string
+        let boundary = UUID().uuidString
         
-        let body = NSMutableData();
-
-        body.appendString("--\(boundary)\r\n")
-        body.appendString("Content-Disposition: form-data; name=\"file\"; filename=\"\(filename)\"\r\n")
-        body.appendString("Content-Type: \(mimetype)\r\n\r\n")
-        body.appendString(picture.base64EncodedString())
-        body.appendString("\r\n")
-
-        body.appendString("--\(boundary)--\r\n")
-
-        request.httpBody = body as Data
+        // Set Content-Type Header to multipart/form-data, this is equivalent to submitting form data with file upload in a web browser
+        // And the boundary is also set here
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        
+        var data = Data()
+        
+        // Add the image data to the raw http request data
+        data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+        data.append("Content-Disposition: form-data; name=\"file\"; filename=\"profilePicture.png\"\r\n".data(using: .utf8)!)
+        data.append("Content-Type: image/png\r\n\r\n".data(using: .utf8)!)
+        data.append(picture)
+        
+        // End the raw http request data, note that there is 2 extra dash ("-") at the end, this is to indicate the end of the data
+        data.append("\r\n--\(boundary)--\r\n".data(using: .utf8)!)
+        
+        request.httpBody = data
         
         let session = URLSession.shared
         session.dataTask(with: request, completionHandler: {(data, response, error) in
@@ -44,8 +50,11 @@ class StorageService : StorageServiceProtocol {
                 do {
                     let json = try JSONSerialization.jsonObject(with: data, options: [])
                     print(json)
-                    
+                        
                     if let dictionary = json as? [String: Any] {
+                        if let url = dictionary["url"] as? String, !url.isEmpty {
+                            completion(url, nil)
+                        }
                         if let message = dictionary["message"] as? String {
                             completion(nil, ServiceError.ServerMessage(message))
                         }
@@ -54,9 +63,7 @@ class StorageService : StorageServiceProtocol {
                         }
                     }
                     else {
-                        if let pictureUrl = json as? String {
-                            completion(pictureUrl, nil)
-                        }
+                        completion(nil, ServiceError.NoResponseFromServer)
                     }
                 } catch {
                     print(error)
@@ -67,10 +74,17 @@ class StorageService : StorageServiceProtocol {
     }
 }
 
-extension NSMutableData {
+extension Data {
 
-    func appendString(_ string: String) {
-        let data = string.data(using: String.Encoding.utf8, allowLossyConversion: true)
-        append(data!)
+    /// Append string to Data
+    ///
+    /// Rather than littering my code with calls to `data(using: .utf8)` to convert `String` values to `Data`, this wraps it in a nice convenient little extension to Data. This defaults to converting using UTF-8.
+    ///
+    /// - parameter string:       The string to be added to the `Data`.
+
+    mutating func append(_ string: String, using encoding: String.Encoding = .utf8) {
+        if let data = string.data(using: encoding) {
+            append(data)
+        }
     }
 }
