@@ -42,7 +42,7 @@ class LoginController: UIViewController, LoginViewProtocol {
     
     @IBAction func LoginButtonOnTapped(_ sender: UIButton) {
         let loader = WavesLoader.createLoader(with: LoaderPath.glassPath(), on: self.view)
-        loader.loaderColor = UIColor.black
+        loader.loaderColor = UIColor.systemPink
         loader.showLoader()
         
 //        presenter.emailValueChanged(to: LoginTextField.text)
