@@ -32,6 +32,7 @@ class LoginInteractor: LoginInteractorProtocol {
             else {
                 // Save access token
                 print(accessToken)
+                UserDefaults.standard.set("\(accessToken)", forKey: "accessToken")
                 completion(.Sucess, "Token received successfully")
             }
         }
@@ -49,6 +50,7 @@ class LoginInteractor: LoginInteractorProtocol {
             else {
                 // Save access token
                 print(accessToken)
+                UserDefaults.standard.set("\(accessToken)", forKey: "accessToken")
                 completion(.Sucess, "Token received successfully")
             }
         })

@@ -50,6 +50,7 @@ class RegisterInteractor : RegisterInteractorProtocol {
                     else {
                         // Save access token
                         print(accessToken)
+                        UserDefaults.standard.set("\(accessToken)", forKey: "accessToken")
                         
                         if let picture = self.pictureValue {
                             self.storageService.uploadFile(picture: picture) { (pictureUrl, error) in

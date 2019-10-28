@@ -14,9 +14,8 @@ class StorageService : StorageServiceProtocol {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         
-        // TO DO: read token from user defaults
-        let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJuYmYiOjE1NzE4ODg2MDgsImV4cCI6MTU3MTg5MjIwOCwiaWF0IjoxNTcxODg4NjA4fQ.uMfGW-THRRAkUoy97BOlNVaxWMHYUkbnRbx6Zf5fYZk"
-
+        
+        let token = UserDefaults.standard.string(forKey: "accessToken") ?? ""
         request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         
         // generate boundary string using a unique per-app string
