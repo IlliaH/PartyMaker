@@ -23,7 +23,7 @@ DEPENDENCIES:
   - TextFieldEffects
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AppAuth
     - GoogleSignIn
     - GTMAppAuth
@@ -39,4 +39,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: d385d195e6a5c854823193b41ed7ad2077d650d3
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.8.4

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,9 @@
 		2304C45E235E4179006E5C33 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2304C45D235E4179006E5C33 /* RegisterInteractor.swift */; };
 		2304C460235E4BA0006E5C33 /* RegisterConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2304C45F235E4BA0006E5C33 /* RegisterConfiguratorProtocol.swift */; };
 		2304C462235E4BE3006E5C33 /* RegisterConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2304C461235E4BE3006E5C33 /* RegisterConfigurator.swift */; };
+		23059B472363BD350033FC74 /* LoaderPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23059B462363BD350033FC74 /* LoaderPath.swift */; };
+		23059B4A2363BE440033FC74 /* FillableLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23059B492363BE440033FC74 /* FillableLoader.swift */; };
+		23059B4C2363BF090033FC74 /* WavesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23059B4B2363BF090033FC74 /* WavesLoader.swift */; };
 		2310B3FB235299EA00CAFB75 /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310B3FA235299EA00CAFB75 /* LoginViewProtocol.swift */; };
 		2310B3FD23529A2700CAFB75 /* LoginPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310B3FC23529A2700CAFB75 /* LoginPresenterProtocol.swift */; };
 		2310B3FF23529A5A00CAFB75 /* LoginRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310B3FE23529A5A00CAFB75 /* LoginRouterProtocol.swift */; };
@@ -63,6 +66,9 @@
 		2304C45D235E4179006E5C33 /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
 		2304C45F235E4BA0006E5C33 /* RegisterConfiguratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterConfiguratorProtocol.swift; sourceTree = "<group>"; };
 		2304C461235E4BE3006E5C33 /* RegisterConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterConfigurator.swift; sourceTree = "<group>"; };
+		23059B462363BD350033FC74 /* LoaderPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderPath.swift; sourceTree = "<group>"; };
+		23059B492363BE440033FC74 /* FillableLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillableLoader.swift; sourceTree = "<group>"; };
+		23059B4B2363BF090033FC74 /* WavesLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavesLoader.swift; sourceTree = "<group>"; };
 		2310B3FA235299EA00CAFB75 /* LoginViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
 		2310B3FC23529A2700CAFB75 /* LoginPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterProtocol.swift; sourceTree = "<group>"; };
 		2310B3FE23529A5A00CAFB75 /* LoginRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouterProtocol.swift; sourceTree = "<group>"; };
@@ -129,6 +135,15 @@
 			path = Abstract;
 			sourceTree = "<group>";
 		};
+		23059B482363BE2C0033FC74 /* FillableLoader */ = {
+			isa = PBXGroup;
+			children = (
+				23059B492363BE440033FC74 /* FillableLoader.swift */,
+				23059B4B2363BF090033FC74 /* WavesLoader.swift */,
+			);
+			path = FillableLoader;
+			sourceTree = "<group>";
+		};
 		2310B3F9235299B100CAFB75 /* Abstract */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,9 +176,11 @@
 		FE13576C235BCF54008597E4 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				23059B482363BE2C0033FC74 /* FillableLoader */,
 				FE5F2868235BECF100F2FD1C /* CustomHoshiTextField.swift */,
 				FE13576A235BCF26008597E4 /* GradientView.swift */,
 				2304C443235E20C8006E5C33 /* RoundImageView.swift */,
+				23059B462363BD350033FC74 /* LoaderPath.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -362,22 +379,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PartyMaker/Pods-PartyMaker-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMAppAuth/GTMAppAuth.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-PartyMaker/Pods-PartyMaker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMAppAuth.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-PartyMaker/Pods-PartyMaker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -390,16 +396,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PartyMaker/Pods-PartyMaker-resources.sh",
-				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-PartyMaker/Pods-PartyMaker-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-PartyMaker/Pods-PartyMaker-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -431,11 +432,14 @@
 				2304C44C235E3592006E5C33 /* StorageService.swift in Sources */,
 				2310B4052352A5E400CAFB75 /* PresenterStatus.swift in Sources */,
 				2304C452235E3C2A006E5C33 /* RegisterViewProtocol.swift in Sources */,
+				23059B4C2363BF090033FC74 /* WavesLoader.swift in Sources */,
 				2304C45C235E4105006E5C33 /* RegisterInteractorProtocol.swift in Sources */,
 				2304C45E235E4179006E5C33 /* RegisterInteractor.swift in Sources */,
 				2304C450235E3BF2006E5C33 /* RegisterController.swift in Sources */,
+				23059B4A2363BE440033FC74 /* FillableLoader.swift in Sources */,
 				2310B40123529E4100CAFB75 /* LoginPresenter.swift in Sources */,
 				FE7BB060234BFF53004CF70F /* AppDelegate.swift in Sources */,
+				23059B472363BD350033FC74 /* LoaderPath.swift in Sources */,
 				2304C462235E4BE3006E5C33 /* RegisterConfigurator.swift in Sources */,
 				2304C460235E4BA0006E5C33 /* RegisterConfiguratorProtocol.swift in Sources */,
 				FEBCC54C2352911A0034D1E2 /* AuthService.swift in Sources */,

@@ -31,14 +31,23 @@ class LoginController: UIViewController, LoginViewProtocol {
         
         // Autimatically sign in the user
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+    
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
     }
 
     
     @IBAction func LoginButtonOnTapped(_ sender: UIButton) {
-        presenter.emailValueChanged(to: LoginTextField.text)
-        presenter.passwordValueChanged(to: PasswordTextField.text)
-        presenter.loginButtonClicked()
+        let loader = WavesLoader.createLoader(with: LoaderPath.glassPath(), on: self.view)
+        loader.loaderColor = UIColor.black
+        loader.showLoader()
+        
+//        presenter.emailValueChanged(to: LoginTextField.text)
+//        presenter.passwordValueChanged(to: PasswordTextField.text)
+//        presenter.loginButtonClicked()
        
     }
     
