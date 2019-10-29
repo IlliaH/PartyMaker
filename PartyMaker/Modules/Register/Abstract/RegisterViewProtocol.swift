@@ -9,5 +9,6 @@
 import Foundation
 
 protocol RegisterViewProtocol : class {
-    
+    func showLoader()
+    func hideLoader()
 }

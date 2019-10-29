@@ -32,7 +32,8 @@ class LoginInteractor: LoginInteractorProtocol {
             else {
                 // Save access token
                 print(accessToken)
-                UserDefaults.standard.set("\(accessToken)", forKey: "accessToken")
+                guard let token = accessToken else {return}
+                UserDefaults.standard.set("\(token)", forKey: "accessToken")
                 completion(.Sucess, "Token received successfully")
             }
         }

@@ -88,17 +88,21 @@ class RegisterPresenter : RegisterPresenterProtocol {
     }
     
     func registerButtonClicked() {
+        view.showLoader()
         interactor.register { (status, message) in
             if status == .Sucess {
                 self.router.showMainView()
+                self.view.hideLoader()
             }
             else if status == .RegisterPictureUploadError {
                 // Alert picture upload failed
                 print("Picture upload failed")
                 self.router.showMainView()
+                self.view.hideLoader()
             }
             else if status == .RegisterError {
                 print(message as Any)
+                self.view.hideLoader()
             }
         }
     }

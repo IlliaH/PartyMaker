@@ -15,7 +15,7 @@ class StorageService : StorageServiceProtocol {
         request.httpMethod = "POST"
         
         
-        let token = UserDefaults.standard.string(forKey: "accessToken") ?? ""
+        guard let token = UserDefaults.standard.string(forKey: "accessToken") else { return }
         request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         
         // generate boundary string using a unique per-app string

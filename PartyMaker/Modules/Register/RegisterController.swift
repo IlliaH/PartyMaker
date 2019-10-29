@@ -27,6 +27,7 @@ class RegisterController : UIViewController, RegisterViewProtocol {
     
     var presenter: RegisterPresenterProtocol!
     var configurator: RegisterConfiguratorProtocol = RegisterConfigurator()
+    var loader : FillableLoader?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,5 +46,24 @@ class RegisterController : UIViewController, RegisterViewProtocol {
         
         presenter.registerButtonClicked()
         
+    }
+}
+
+extension RegisterController {
+    
+    func showLoader() {
+        DispatchQueue.main.async {
+            self.loader = WavesLoader.createLoader(with: LoaderPath.glassPath(), on: self.view)
+            guard let loader = self.loader else {return}
+                   loader.loaderColor = UIColor.systemPink
+                   loader.showLoader()
+        }
+       }
+       
+       func hideLoader() {
+        DispatchQueue.main.async {
+            guard let loader = self.loader else {return}
+        loader.removeLoader()
+       }
     }
 }
