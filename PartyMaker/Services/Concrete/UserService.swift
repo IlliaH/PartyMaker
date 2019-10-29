@@ -58,10 +58,11 @@ class UserService : UserServiceProtocol {
         guard let url = URL(string: "\(AppConstant.API_URL)auth/user") else {return}
         var request = URLRequest(url: url)
         request.httpMethod = "PATCH"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         guard let token = UserDefaults.standard.string(forKey: "accessToken") else { return }
         request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         
-        let json: [String: Any] = ["email" : email, "nickname" : nickname, "pictureUrl" : pictureUrl]
+        let json: [String: Any] = ["Email" : email, "Nickname" : nickname, "PictureUrl" : pictureUrl]
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
         
         request.httpBody = jsonData
