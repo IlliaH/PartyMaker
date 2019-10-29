@@ -35,7 +35,7 @@ class RegisterController : UIViewController, RegisterViewProtocol {
     
     
     @IBAction func registerButtonOnTouch(_ sender: UIButton) {
-        /*presenter.nicknameValueChanged(to: NicknameTextField.text)
+        presenter.nicknameValueChanged(to: NicknameTextField.text)
         presenter.firstNameValueChanged(to: FirstNameTextField.text)
         presenter.lastNameValueChanged(to: LastNameTextField.text)
         presenter.emailValueChanged(to: EmailTextField.text)
@@ -43,12 +43,7 @@ class RegisterController : UIViewController, RegisterViewProtocol {
         presenter.passwordConfirmValueChanged(to: ConfirmPasswordTextField.text)
         presenter.pictureValueChanged(to: ProfileImageView.image)
         
-        presenter.registerButtonClicked()*/
+        presenter.registerButtonClicked()
         
-        let storageService: StorageServiceProtocol = StorageService()
-        
-        storageService.uploadFile(picture: ProfileImageView.image!.pngData()!) { (url, error) in
-            print(url as Any)
-        }
     }
 }

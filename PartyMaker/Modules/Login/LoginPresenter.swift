@@ -47,12 +47,15 @@ class LoginPresenter : LoginPresenterProtocol {
     }
     
     func loginButtonClicked() {
+        view.showLoader()
         interactor.login { (status, message) in
             if (status == .Sucess) {
                 self.router.showMainView()
+                self.view.hideLoader()
             }
             else if (status == .LoginError) {
                 print(message as Any)
+                self.view.hideLoader()
             }
         }
     }

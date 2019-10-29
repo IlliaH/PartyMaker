@@ -11,7 +11,6 @@ import GoogleSignIn
 
 class LoginController: UIViewController, LoginViewProtocol {
 
-    
     @IBOutlet weak var LoginTextField: CustomHoshiTextField!
     
     @IBOutlet weak var PasswordTextField: CustomHoshiTextField!
@@ -20,6 +19,7 @@ class LoginController: UIViewController, LoginViewProtocol {
     
     var presenter: LoginPresenterProtocol!
     var configurator: LoginConfiguratorProtocol = LoginConfigurator()
+    var loader : FillableLoader?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +41,10 @@ class LoginController: UIViewController, LoginViewProtocol {
 
     
     @IBAction func LoginButtonOnTapped(_ sender: UIButton) {
-        let loader = WavesLoader.createLoader(with: LoaderPath.glassPath(), on: self.view)
-        loader.loaderColor = UIColor.systemPink
-        loader.showLoader()
         
-//        presenter.emailValueChanged(to: LoginTextField.text)
-//        presenter.passwordValueChanged(to: PasswordTextField.text)
-//        presenter.loginButtonClicked()
+        presenter.emailValueChanged(to: LoginTextField.text)
+        presenter.passwordValueChanged(to: PasswordTextField.text)
+        presenter.loginButtonClicked()
        
     }
     
@@ -67,3 +64,21 @@ class LoginController: UIViewController, LoginViewProtocol {
     
 }
 
+extension LoginController {
+    
+    func showLoader() {
+        DispatchQueue.main.async {
+            self.loader = WavesLoader.createLoader(with: LoaderPath.glassPath(), on: self.view)
+            guard let loader = self.loader else {return}
+                   loader.loaderColor = UIColor.systemPink
+                   loader.showLoader()
+        }
+       }
+       
+       func hideLoader() {
+        DispatchQueue.main.async {
+            guard let loader = self.loader else {return}
+        loader.removeLoader()
+       }
+    }
+}
