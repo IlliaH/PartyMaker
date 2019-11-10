@@ -9,6 +9,8 @@
 import Foundation
 
 class AuthService : AuthServiceProtocol {
+   let userService = UserService()
+    
     func Login(email: String, password: String, remember_me: Bool, completion: @escaping (String?, Error?) -> Void) {
         guard let url = URL(string: "\(AppConstant.API_URL)auth/login") else {return}
         var request = URLRequest(url: url)

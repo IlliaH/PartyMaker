@@ -45,7 +45,8 @@ class LoginController: UIViewController, LoginViewProtocol {
         presenter.emailValueChanged(to: LoginTextField.text)
         presenter.passwordValueChanged(to: PasswordTextField.text)
         presenter.loginButtonClicked()
-       
+       //TODO: fix this
+        performSegue(withIdentifier: "goToTabBar", sender: sender)
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -51,6 +51,7 @@ class LoginPresenter : LoginPresenterProtocol {
         interactor.login { (status, message) in
             if (status == .Sucess) {
                 self.router.showMainView()
+                self.interactor.getCurrentUser()
                 self.view.hideLoader()
             }
             else if (status == .LoginError) {

@@ -13,6 +13,8 @@ import GoogleSignIn
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     // Getting current VC
     static var visibleViewController: UIViewController?
+    // Current User
+    static var currentUser : User?
 
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         
@@ -43,7 +45,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         }
         
     }
-
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        let userService : UserServiceProtocol = UserService()
+        guard let token = UserDefaults.standard.string(forKey: "accessToken") else {return}
+        userService.getCurrentUser { (user, error) in
+            if let user = user {
+                AppDelegate.currentUser = user
+            } else {
+                print(error)
+            }
+        }
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Initialize sign-in

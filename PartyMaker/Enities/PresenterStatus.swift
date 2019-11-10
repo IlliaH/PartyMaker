@@ -13,4 +13,7 @@ enum PresenterStatus {
     case LoginError
     case RegisterError
     case RegisterPictureUploadError
+    case UpdatePasswordError
+    case UploadPictureError
+    case UpdateUserError
 }

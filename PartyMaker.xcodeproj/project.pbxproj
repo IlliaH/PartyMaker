@@ -48,6 +48,16 @@
 		FEBCC54C2352911A0034D1E2 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBCC54B2352911A0034D1E2 /* AuthService.swift */; };
 		FEBCC54F235292AB0034D1E2 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBCC54E235292AB0034D1E2 /* AppConstant.swift */; };
 		FEBCC551235295F30034D1E2 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBCC550235295F30034D1E2 /* ServiceError.swift */; };
+		FEED38A7237745CD0013B21C /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED38A6237745CD0013B21C /* AccountViewController.swift */; };
+		FEED38AC237746570013B21C /* AccountPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED38AB237746560013B21C /* AccountPresenterProtocol.swift */; };
+		FEED38AE237746820013B21C /* AccountInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED38AD237746820013B21C /* AccountInteractorProtocol.swift */; };
+		FEED38B0237746A10013B21C /* AccountConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED38AF237746A10013B21C /* AccountConfiguratorProtocol.swift */; };
+		FEED38B2237746BA0013B21C /* AccountViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED38B1237746BA0013B21C /* AccountViewProtocol.swift */; };
+		FEED38B4237754DE0013B21C /* AccountConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED38B3237754DE0013B21C /* AccountConfigurator.swift */; };
+		FEED38B62377555E0013B21C /* AccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED38B52377555E0013B21C /* AccountInteractor.swift */; };
+		FEED38B8237759D30013B21C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED38B7237759D30013B21C /* User.swift */; };
+		FEED38BA23775DA00013B21C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED38B923775DA00013B21C /* Extensions.swift */; };
+		FEED38BD237768610013B21C /* AccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED38BC237768610013B21C /* AccountPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +106,16 @@
 		FEBCC54B2352911A0034D1E2 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		FEBCC54E235292AB0034D1E2 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		FEBCC550235295F30034D1E2 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		FEED38A6237745CD0013B21C /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccountViewController.swift; path = PartyMaker/AccountViewController.swift; sourceTree = SOURCE_ROOT; };
+		FEED38AB237746560013B21C /* AccountPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPresenterProtocol.swift; sourceTree = "<group>"; };
+		FEED38AD237746820013B21C /* AccountInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInteractorProtocol.swift; sourceTree = "<group>"; };
+		FEED38AF237746A10013B21C /* AccountConfiguratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountConfiguratorProtocol.swift; sourceTree = "<group>"; };
+		FEED38B1237746BA0013B21C /* AccountViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewProtocol.swift; sourceTree = "<group>"; };
+		FEED38B3237754DE0013B21C /* AccountConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountConfigurator.swift; sourceTree = "<group>"; };
+		FEED38B52377555E0013B21C /* AccountInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInteractor.swift; sourceTree = "<group>"; };
+		FEED38B7237759D30013B21C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FEED38B923775DA00013B21C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FEED38BC237768610013B21C /* AccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +226,7 @@
 		FE7BB05E234BFF53004CF70F /* PartyMaker */ = {
 			isa = PBXGroup;
 			children = (
+				FEED38BB23775DA50013B21C /* Helpers */,
 				FE13576C235BCF54008597E4 /* CustomViews */,
 				FEBCC54D235292500034D1E2 /* Enities */,
 				FEBCC54623528F620034D1E2 /* Services */,
@@ -223,6 +244,7 @@
 		FEBCC54423526F650034D1E2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FEED38A5237745B40013B21C /* Account */,
 				2304C44D235E3BCA006E5C33 /* Register */,
 				FEBCC54523528F3B0034D1E2 /* Login */,
 			);
@@ -277,8 +299,40 @@
 				FEBCC54E235292AB0034D1E2 /* AppConstant.swift */,
 				FEBCC550235295F30034D1E2 /* ServiceError.swift */,
 				2310B4042352A5E400CAFB75 /* PresenterStatus.swift */,
+				FEED38B7237759D30013B21C /* User.swift */,
 			);
 			path = Enities;
+			sourceTree = "<group>";
+		};
+		FEED38A5237745B40013B21C /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				FEED38A8237745F90013B21C /* Abstract */,
+				FEED38A6237745CD0013B21C /* AccountViewController.swift */,
+				FEED38BC237768610013B21C /* AccountPresenter.swift */,
+				FEED38B3237754DE0013B21C /* AccountConfigurator.swift */,
+				FEED38B52377555E0013B21C /* AccountInteractor.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		FEED38A8237745F90013B21C /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				FEED38AB237746560013B21C /* AccountPresenterProtocol.swift */,
+				FEED38AD237746820013B21C /* AccountInteractorProtocol.swift */,
+				FEED38AF237746A10013B21C /* AccountConfiguratorProtocol.swift */,
+				FEED38B1237746BA0013B21C /* AccountViewProtocol.swift */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
+		FEED38BB23775DA50013B21C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FEED38B923775DA00013B21C /* Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,10 +470,13 @@
 			files = (
 				FE5F2869235BECF100F2FD1C /* CustomHoshiTextField.swift in Sources */,
 				2304C44A235E3542006E5C33 /* StorageServiceProtocol.swift in Sources */,
+				FEED38A7237745CD0013B21C /* AccountViewController.swift in Sources */,
 				2310B3FD23529A2700CAFB75 /* LoginPresenterProtocol.swift in Sources */,
 				2310B3FB235299EA00CAFB75 /* LoginViewProtocol.swift in Sources */,
 				2310B4072352A81C00CAFB75 /* LoginInteractor.swift in Sources */,
+				FEED38B2237746BA0013B21C /* AccountViewProtocol.swift in Sources */,
 				2304C456235E3F74006E5C33 /* RegisterRouter.swift in Sources */,
+				FEED38B62377555E0013B21C /* AccountInteractor.swift in Sources */,
 				2304C454235E3F27006E5C33 /* RegisterRouterProtocol.swift in Sources */,
 				2310B4032352A0CF00CAFB75 /* LoginInteractorProtocol.swift in Sources */,
 				2304C444235E20C8006E5C33 /* RoundImageView.swift in Sources */,
@@ -430,13 +487,18 @@
 				2310B4092352AB7100CAFB75 /* LoginConfiguratorProtocol.swift in Sources */,
 				FE13576B235BCF26008597E4 /* GradientView.swift in Sources */,
 				2304C44C235E3592006E5C33 /* StorageService.swift in Sources */,
+				FEED38AE237746820013B21C /* AccountInteractorProtocol.swift in Sources */,
 				2310B4052352A5E400CAFB75 /* PresenterStatus.swift in Sources */,
 				2304C452235E3C2A006E5C33 /* RegisterViewProtocol.swift in Sources */,
+				FEED38BD237768610013B21C /* AccountPresenter.swift in Sources */,
+				FEED38B8237759D30013B21C /* User.swift in Sources */,
 				23059B4C2363BF090033FC74 /* WavesLoader.swift in Sources */,
+				FEED38AC237746570013B21C /* AccountPresenterProtocol.swift in Sources */,
 				2304C45C235E4105006E5C33 /* RegisterInteractorProtocol.swift in Sources */,
 				2304C45E235E4179006E5C33 /* RegisterInteractor.swift in Sources */,
 				2304C450235E3BF2006E5C33 /* RegisterController.swift in Sources */,
 				23059B4A2363BE440033FC74 /* FillableLoader.swift in Sources */,
+				FEED38B4237754DE0013B21C /* AccountConfigurator.swift in Sources */,
 				2310B40123529E4100CAFB75 /* LoginPresenter.swift in Sources */,
 				FE7BB060234BFF53004CF70F /* AppDelegate.swift in Sources */,
 				23059B472363BD350033FC74 /* LoaderPath.swift in Sources */,
@@ -445,9 +507,11 @@
 				FEBCC54C2352911A0034D1E2 /* AuthService.swift in Sources */,
 				FEBCC54F235292AB0034D1E2 /* AppConstant.swift in Sources */,
 				2304C458235E3FAB006E5C33 /* RegisterPresenterProtocol.swift in Sources */,
+				FEED38B0237746A10013B21C /* AccountConfiguratorProtocol.swift in Sources */,
 				FE7BB062234BFF53004CF70F /* SceneDelegate.swift in Sources */,
 				2304C45A235E40BE006E5C33 /* RegisterPresenter.swift in Sources */,
 				2304C448235E29BA006E5C33 /* UserService.swift in Sources */,
+				FEED38BA23775DA00013B21C /* Extensions.swift in Sources */,
 				FEBCC54823528F970034D1E2 /* AuthServiceProtocol.swift in Sources */,
 				2310B40B2352ABC800CAFB75 /* LoginConfigurator.swift in Sources */,
 				FEBCC551235295F30034D1E2 /* ServiceError.swift in Sources */,

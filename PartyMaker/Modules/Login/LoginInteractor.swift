@@ -9,6 +9,18 @@
 import Foundation
 
 class LoginInteractor: LoginInteractorProtocol {
+    
+    func getCurrentUser() {
+        let userService : UserServiceProtocol = UserService()
+        userService.getCurrentUser { (user, error) in
+            if let user = user {
+                AppDelegate.currentUser = user
+            } else {
+                print(error)
+            }
+        }
+    }
+    
     weak var presenter: LoginPresenterProtocol!
     
     var emailValue: String = ""

@@ -13,4 +13,5 @@ protocol LoginInteractorProtocol : class {
     var passwordValue: String { set get }
     func login(completion: @escaping(PresenterStatus, String?)->Void)
     func googleLogin(token : String, completion: @escaping (PresenterStatus, String?) -> Void)
+    func getCurrentUser()
 }
