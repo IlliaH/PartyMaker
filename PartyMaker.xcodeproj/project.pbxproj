@@ -25,6 +25,7 @@
 		23059B472363BD350033FC74 /* LoaderPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23059B462363BD350033FC74 /* LoaderPath.swift */; };
 		23059B4A2363BE440033FC74 /* FillableLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23059B492363BE440033FC74 /* FillableLoader.swift */; };
 		23059B4C2363BF090033FC74 /* WavesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23059B4B2363BF090033FC74 /* WavesLoader.swift */; };
+		23080A7623809C31008E3654 /* CreatePartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23080A7523809C31008E3654 /* CreatePartyViewController.swift */; };
 		2310B3FB235299EA00CAFB75 /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310B3FA235299EA00CAFB75 /* LoginViewProtocol.swift */; };
 		2310B3FD23529A2700CAFB75 /* LoginPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310B3FC23529A2700CAFB75 /* LoginPresenterProtocol.swift */; };
 		2310B3FF23529A5A00CAFB75 /* LoginRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310B3FE23529A5A00CAFB75 /* LoginRouterProtocol.swift */; };
@@ -79,6 +80,7 @@
 		23059B462363BD350033FC74 /* LoaderPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderPath.swift; sourceTree = "<group>"; };
 		23059B492363BE440033FC74 /* FillableLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillableLoader.swift; sourceTree = "<group>"; };
 		23059B4B2363BF090033FC74 /* WavesLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavesLoader.swift; sourceTree = "<group>"; };
+		23080A7523809C31008E3654 /* CreatePartyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePartyViewController.swift; sourceTree = "<group>"; };
 		2310B3FA235299EA00CAFB75 /* LoginViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
 		2310B3FC23529A2700CAFB75 /* LoginPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterProtocol.swift; sourceTree = "<group>"; };
 		2310B3FE23529A5A00CAFB75 /* LoginRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouterProtocol.swift; sourceTree = "<group>"; };
@@ -164,6 +166,14 @@
 			path = FillableLoader;
 			sourceTree = "<group>";
 		};
+		23080A7423809C06008E3654 /* CreateParty */ = {
+			isa = PBXGroup;
+			children = (
+				23080A7523809C31008E3654 /* CreatePartyViewController.swift */,
+			);
+			path = CreateParty;
+			sourceTree = "<group>";
+		};
 		2310B3F9235299B100CAFB75 /* Abstract */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +254,7 @@
 		FEBCC54423526F650034D1E2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				23080A7423809C06008E3654 /* CreateParty */,
 				FEED38A5237745B40013B21C /* Account */,
 				2304C44D235E3BCA006E5C33 /* Register */,
 				FEBCC54523528F3B0034D1E2 /* Login */,
@@ -497,6 +508,7 @@
 				2304C45C235E4105006E5C33 /* RegisterInteractorProtocol.swift in Sources */,
 				2304C45E235E4179006E5C33 /* RegisterInteractor.swift in Sources */,
 				2304C450235E3BF2006E5C33 /* RegisterController.swift in Sources */,
+				23080A7623809C31008E3654 /* CreatePartyViewController.swift in Sources */,
 				23059B4A2363BE440033FC74 /* FillableLoader.swift in Sources */,
 				FEED38B4237754DE0013B21C /* AccountConfigurator.swift in Sources */,
 				2310B40123529E4100CAFB75 /* LoginPresenter.swift in Sources */,

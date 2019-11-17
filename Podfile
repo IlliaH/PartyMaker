@@ -6,6 +6,7 @@ target 'PartyMaker' do
   use_frameworks!
   pod 'GoogleSignIn', '~> 5.0'
   pod 'TextFieldEffects' 
+  pod 'DateTimePicker'
 
   # Pods for PartyMaker
 
