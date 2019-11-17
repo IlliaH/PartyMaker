@@ -8,6 +8,7 @@
 
 import UIKit
 import DateTimePicker
+import McPicker
 
 class CreatePartyViewController: UIViewController {
     
@@ -15,8 +16,17 @@ class CreatePartyViewController: UIViewController {
     
     @IBOutlet weak var endDateTextField: CustomHoshiTextField!
     
+    @IBOutlet weak var ageCategoryTextField: CustomHoshiTextField!
+    
+    @IBOutlet weak var eventTypeTextField: CustomHoshiTextField!
+    
+    @IBOutlet weak var logoImageView: RoundImageView!
+    
     var startdateTimePicker: DateTimePicker?
     var enddateTimePicker: DateTimePicker?
+    
+    var ageCategoryPicker: McPicker?
+    var eventTypePicker: McPicker?
     
 
     override func viewDidLoad() {
@@ -88,5 +98,94 @@ class CreatePartyViewController: UIViewController {
         picker.selectedDate = selectedDate
         
         return picker
+    }
+    
+    func createAndReturnPickerView(data: [[String]]) -> McPicker{
+        let mcPicker = McPicker(data: data)
+
+        let customLabel = UILabel()
+        customLabel.textAlignment = .center
+        customLabel.textColor = .red
+        customLabel.font = UIFont(name:"American Typewriter", size: 30)!
+        mcPicker.label = customLabel // Set your custom label
+        let fixedSpace = McPickerBarButtonItem.fixedSpace(width: 20.0)
+        let flexibleSpace = McPickerBarButtonItem.flexibleSpace()
+        let fireButton = McPickerBarButtonItem.done(mcPicker: mcPicker, title: "Select") // Set custom Text
+        let cancelButton = McPickerBarButtonItem.cancel(mcPicker: mcPicker, barButtonSystemItem: .cancel) // or system items
+        mcPicker.setToolbarItems(items: [fixedSpace, cancelButton, flexibleSpace, fireButton, fixedSpace])
+
+        mcPicker.toolbarItemsFont = UIFont(name:"American Typewriter", size: 17)!
+
+        mcPicker.toolbarButtonsColor = .red
+        mcPicker.toolbarBarTintColor = .lightGray
+        mcPicker.pickerBackgroundColor = .lightText
+        mcPicker.backgroundColor = .black
+        mcPicker.backgroundColorAlpha = 0.15
+        
+        return mcPicker
+    }
+    
+    func setValuesForPickerAndTextField( picker: inout McPicker?, data: [[String]], textField: UITextField) {
+        guard let pickerValue = picker, let textFieldText = textField.text else {
+            picker = createAndReturnPickerView(data: data)
+            
+            picker?.pickerSelectRowsForComponents = [
+                0: [0: true]
+            ]
+            
+            picker?.show { (selections: [Int : String]) in
+                if let category = selections[0] {
+                    textField.text = category
+                }
+            }
+            
+            return
+        }
+        
+        let index = data[0].lastIndex(of: textFieldText) ?? 0
+        
+        pickerValue.pickerSelectRowsForComponents = [
+            0: [index: true]
+        ]
+        
+        pickerValue.show { (selections: [Int : String]) in
+            if let category = selections[0] {
+                textField.text = category
+            }
+        }
+    }
+    
+    @IBAction func pickerOnTouch(_ sender: UIButton) {
+        let ageCategoriesData: [[String]] = [["Teenagers", "Students", "Adults", "Seniors"]]
+        let eventTypeData: [[String]] = [["Birthday", "Cocktail", "Dances and balls", "Block", "Showers"]]
+        
+        if sender.tag == 0 {
+            setValuesForPickerAndTextField(picker: &ageCategoryPicker, data: ageCategoriesData, textField: ageCategoryTextField)
+        }
+        else if sender.tag == 1 {
+            setValuesForPickerAndTextField(picker: &eventTypePicker, data: eventTypeData, textField: eventTypeTextField)
+        }
+        
+    }
+    
+    @IBAction func pictureOnTouch(_ sender: UITapGestureRecognizer) {
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = .photoLibrary
+        image.allowsEditing = false
+        self.present(image, animated: true) { }
+    }
+    
+}
+
+extension CreatePartyViewController : UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    // Implementation of UIImagePickerDelegate. This function triggers when user has selected an image
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        // Use guard let to get a reference to selected image
+        guard let photo = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {return}
+        // Save a reference to that image
+        logoImageView.image = photo
+        // Dismiss UIImagePickerController
+        self.dismiss(animated: true)
     }
 }

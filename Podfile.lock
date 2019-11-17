@@ -17,11 +17,13 @@ PODS:
   - GTMSessionFetcher/Core (1.2.2)
   - GTMSessionFetcher/Full (1.2.2):
     - GTMSessionFetcher/Core (= 1.2.2)
+  - McPicker (2.0.1)
   - TextFieldEffects (1.6.0)
 
 DEPENDENCIES:
   - DateTimePicker
   - GoogleSignIn (~> 5.0)
+  - McPicker (~> 2.0.0)
   - TextFieldEffects
 
 SPEC REPOS:
@@ -33,6 +35,7 @@ SPEC REPOS:
     - TextFieldEffects
   trunk:
     - DateTimePicker
+    - McPicker
 
 SPEC CHECKSUMS:
   AppAuth: bce82c76043657c99d91e7882e8a9e1a93650cd4
@@ -40,8 +43,9 @@ SPEC CHECKSUMS:
   GoogleSignIn: 3a51b9bb8e48b635fd7f4272cee06ca260345b86
   GTMAppAuth: 4deac854479704f348309e7b66189e604cf5e01e
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
+  McPicker: a0a6b8ece8f1642e05401a29867463aba501188b
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: 0655a9ae0bb2cded90079bb63cfb48de1436a819
+PODFILE CHECKSUM: 39416bff0abdb0b61f3710e987282ac7b76bbcf4
 
 COCOAPODS: 1.8.4

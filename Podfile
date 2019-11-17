@@ -7,6 +7,7 @@ target 'PartyMaker' do
   pod 'GoogleSignIn', '~> 5.0'
   pod 'TextFieldEffects' 
   pod 'DateTimePicker'
+  pod 'McPicker', '~> 2.0.0'
 
   # Pods for PartyMaker
 

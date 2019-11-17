@@ -3,4 +3,5 @@ ${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework
 ${BUILT_PRODUCTS_DIR}/DateTimePicker/DateTimePicker.framework
 ${BUILT_PRODUCTS_DIR}/GTMAppAuth/GTMAppAuth.framework
 ${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework
+${BUILT_PRODUCTS_DIR}/McPicker/McPicker.framework
 ${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework
