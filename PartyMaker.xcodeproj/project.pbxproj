@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		230383662382FD7E00A7F800 /* CreatePartyViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230383652382FD7E00A7F800 /* CreatePartyViewProtocol.swift */; };
+		230383682382FDD600A7F800 /* CreatePartyPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230383672382FDD600A7F800 /* CreatePartyPresenterProtocol.swift */; };
+		2303836A2382FE0F00A7F800 /* CreatePartyInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230383692382FE0F00A7F800 /* CreatePartyInteractorProtocol.swift */; };
+		2303836C2382FE8300A7F800 /* CreatePartyRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2303836B2382FE8300A7F800 /* CreatePartyRouterProtocol.swift */; };
+		2303836E2382FEAD00A7F800 /* CreatePartyConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2303836D2382FEAD00A7F800 /* CreatePartyConfiguratorProtocol.swift */; };
+		2303837023830BB400A7F800 /* EventServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2303836F23830BB400A7F800 /* EventServiceProtocol.swift */; };
+		2303837223830C0700A7F800 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2303837123830C0700A7F800 /* Event.swift */; };
+		2303837423830EBE00A7F800 /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2303837323830EBE00A7F800 /* EventService.swift */; };
 		2304C444235E20C8006E5C33 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2304C443235E20C8006E5C33 /* RoundImageView.swift */; };
 		2304C446235E276B006E5C33 /* UserServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2304C445235E276B006E5C33 /* UserServiceProtocol.swift */; };
 		2304C448235E29BA006E5C33 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2304C447235E29BA006E5C33 /* UserService.swift */; };
@@ -62,6 +70,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		230383652382FD7E00A7F800 /* CreatePartyViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePartyViewProtocol.swift; sourceTree = "<group>"; };
+		230383672382FDD600A7F800 /* CreatePartyPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePartyPresenterProtocol.swift; sourceTree = "<group>"; };
+		230383692382FE0F00A7F800 /* CreatePartyInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePartyInteractorProtocol.swift; sourceTree = "<group>"; };
+		2303836B2382FE8300A7F800 /* CreatePartyRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePartyRouterProtocol.swift; sourceTree = "<group>"; };
+		2303836D2382FEAD00A7F800 /* CreatePartyConfiguratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePartyConfiguratorProtocol.swift; sourceTree = "<group>"; };
+		2303836F23830BB400A7F800 /* EventServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventServiceProtocol.swift; sourceTree = "<group>"; };
+		2303837123830C0700A7F800 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		2303837323830EBE00A7F800 /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
 		2304C443235E20C8006E5C33 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		2304C445235E276B006E5C33 /* UserServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceProtocol.swift; sourceTree = "<group>"; };
 		2304C447235E29BA006E5C33 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -132,6 +148,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		230383642382FD5300A7F800 /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				230383652382FD7E00A7F800 /* CreatePartyViewProtocol.swift */,
+				230383672382FDD600A7F800 /* CreatePartyPresenterProtocol.swift */,
+				230383692382FE0F00A7F800 /* CreatePartyInteractorProtocol.swift */,
+				2303836B2382FE8300A7F800 /* CreatePartyRouterProtocol.swift */,
+				2303836D2382FEAD00A7F800 /* CreatePartyConfiguratorProtocol.swift */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
 		2304C44D235E3BCA006E5C33 /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +197,7 @@
 		23080A7423809C06008E3654 /* CreateParty */ = {
 			isa = PBXGroup;
 			children = (
+				230383642382FD5300A7F800 /* Abstract */,
 				23080A7523809C31008E3654 /* CreatePartyViewController.swift */,
 			);
 			path = CreateParty;
@@ -290,6 +319,7 @@
 				FEBCC54723528F970034D1E2 /* AuthServiceProtocol.swift */,
 				2304C445235E276B006E5C33 /* UserServiceProtocol.swift */,
 				2304C449235E3542006E5C33 /* StorageServiceProtocol.swift */,
+				2303836F23830BB400A7F800 /* EventServiceProtocol.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -300,6 +330,7 @@
 				FEBCC54B2352911A0034D1E2 /* AuthService.swift */,
 				2304C447235E29BA006E5C33 /* UserService.swift */,
 				2304C44B235E3592006E5C33 /* StorageService.swift */,
+				2303837323830EBE00A7F800 /* EventService.swift */,
 			);
 			path = Concrete;
 			sourceTree = "<group>";
@@ -311,6 +342,7 @@
 				FEBCC550235295F30034D1E2 /* ServiceError.swift */,
 				2310B4042352A5E400CAFB75 /* PresenterStatus.swift */,
 				FEED38B7237759D30013B21C /* User.swift */,
+				2303837123830C0700A7F800 /* Event.swift */,
 			);
 			path = Enities;
 			sourceTree = "<group>";
@@ -484,10 +516,14 @@
 				FEED38A7237745CD0013B21C /* AccountViewController.swift in Sources */,
 				2310B3FD23529A2700CAFB75 /* LoginPresenterProtocol.swift in Sources */,
 				2310B3FB235299EA00CAFB75 /* LoginViewProtocol.swift in Sources */,
+				2303836C2382FE8300A7F800 /* CreatePartyRouterProtocol.swift in Sources */,
 				2310B4072352A81C00CAFB75 /* LoginInteractor.swift in Sources */,
+				230383662382FD7E00A7F800 /* CreatePartyViewProtocol.swift in Sources */,
 				FEED38B2237746BA0013B21C /* AccountViewProtocol.swift in Sources */,
 				2304C456235E3F74006E5C33 /* RegisterRouter.swift in Sources */,
+				230383682382FDD600A7F800 /* CreatePartyPresenterProtocol.swift in Sources */,
 				FEED38B62377555E0013B21C /* AccountInteractor.swift in Sources */,
+				2303836E2382FEAD00A7F800 /* CreatePartyConfiguratorProtocol.swift in Sources */,
 				2304C454235E3F27006E5C33 /* RegisterRouterProtocol.swift in Sources */,
 				2310B4032352A0CF00CAFB75 /* LoginInteractorProtocol.swift in Sources */,
 				2304C444235E20C8006E5C33 /* RoundImageView.swift in Sources */,
@@ -501,6 +537,7 @@
 				FEED38AE237746820013B21C /* AccountInteractorProtocol.swift in Sources */,
 				2310B4052352A5E400CAFB75 /* PresenterStatus.swift in Sources */,
 				2304C452235E3C2A006E5C33 /* RegisterViewProtocol.swift in Sources */,
+				2303837023830BB400A7F800 /* EventServiceProtocol.swift in Sources */,
 				FEED38BD237768610013B21C /* AccountPresenter.swift in Sources */,
 				FEED38B8237759D30013B21C /* User.swift in Sources */,
 				23059B4C2363BF090033FC74 /* WavesLoader.swift in Sources */,
@@ -508,6 +545,7 @@
 				2304C45C235E4105006E5C33 /* RegisterInteractorProtocol.swift in Sources */,
 				2304C45E235E4179006E5C33 /* RegisterInteractor.swift in Sources */,
 				2304C450235E3BF2006E5C33 /* RegisterController.swift in Sources */,
+				2303837223830C0700A7F800 /* Event.swift in Sources */,
 				23080A7623809C31008E3654 /* CreatePartyViewController.swift in Sources */,
 				23059B4A2363BE440033FC74 /* FillableLoader.swift in Sources */,
 				FEED38B4237754DE0013B21C /* AccountConfigurator.swift in Sources */,
@@ -521,11 +559,13 @@
 				2304C458235E3FAB006E5C33 /* RegisterPresenterProtocol.swift in Sources */,
 				FEED38B0237746A10013B21C /* AccountConfiguratorProtocol.swift in Sources */,
 				FE7BB062234BFF53004CF70F /* SceneDelegate.swift in Sources */,
+				2303837423830EBE00A7F800 /* EventService.swift in Sources */,
 				2304C45A235E40BE006E5C33 /* RegisterPresenter.swift in Sources */,
 				2304C448235E29BA006E5C33 /* UserService.swift in Sources */,
 				FEED38BA23775DA00013B21C /* Extensions.swift in Sources */,
 				FEBCC54823528F970034D1E2 /* AuthServiceProtocol.swift in Sources */,
 				2310B40B2352ABC800CAFB75 /* LoginConfigurator.swift in Sources */,
+				2303836A2382FE0F00A7F800 /* CreatePartyInteractorProtocol.swift in Sources */,
 				FEBCC551235295F30034D1E2 /* ServiceError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

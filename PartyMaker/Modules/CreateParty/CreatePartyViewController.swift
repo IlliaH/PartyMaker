@@ -11,7 +11,6 @@ import DateTimePicker
 import McPicker
 
 class CreatePartyViewController: UIViewController {
-    
     @IBOutlet weak var startDateTextField: CustomHoshiTextField!
     
     @IBOutlet weak var endDateTextField: CustomHoshiTextField!
@@ -28,6 +27,7 @@ class CreatePartyViewController: UIViewController {
     var ageCategoryPicker: McPicker?
     var eventTypePicker: McPicker?
     
+    var loader : FillableLoader?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,31 +40,34 @@ class CreatePartyViewController: UIViewController {
     @IBAction func selectStartDateOnTouch(_ sender: UIButton) {
         // Tag 0 = start date
         if sender.tag == 0 {
-            guard let startdateTimePicker = startdateTimePicker else {
-                self.startdateTimePicker = createAndReturnDate(min: Date(), max: Date().addingTimeInterval(60 * 60 * 24 * 4 * 12 * 6), textField: startDateTextField)
-                return
-            }
-            
-            self.view.addSubview(startdateTimePicker)
-            
+            showStartCalendar()
         }
         // Tag 1 = end date
         else if sender.tag == 1 {
-            if startdateTimePicker?.selectedDate == nil {
-                // Alert
-                print("select start date")
-            }
-            else {
-                guard let enddateTimePicker = enddateTimePicker else {
-                    let minDate = startdateTimePicker?.selectedDate.addingTimeInterval(60 * 60 * 2) ?? Date()
-                    self.enddateTimePicker = createAndReturnDate(min: minDate, max: Date().addingTimeInterval(60 * 60 * 24 * 4 * 12 * 6), selectedDate: minDate, textField: endDateTextField)
-                    return
-                }
-                
-                self.view.addSubview(enddateTimePicker)
-            }
+            showEndCalendar()
         }
         
+    }
+    
+    @IBAction func pickerOnTouch(_ sender: UIButton) {
+        let ageCategoriesData: [[String]] = [["Teenagers", "Students", "Adults", "Seniors"]]
+        let eventTypeData: [[String]] = [["Birthday", "Cocktail", "Dances and balls", "Block", "Showers"]]
+        
+        if sender.tag == 0 {
+            showAgeCategoryPicker(data: ageCategoriesData)
+        }
+        else if sender.tag == 1 {
+            showEventTypePicker(data: eventTypeData)
+        }
+        
+    }
+    
+    @IBAction func pictureOnTouch(_ sender: UITapGestureRecognizer) {
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = .photoLibrary
+        image.allowsEditing = false
+        self.present(image, animated: true) { }
     }
     
     func createAndReturnDate(min: Date?, max: Date?, selectedDate: Date = Date(), textField: UITextField) -> DateTimePicker {
@@ -81,11 +84,6 @@ class CreatePartyViewController: UIViewController {
         picker.highlightColor = UIColor.init(named: "MainColor") ?? UIColor.cyan
         picker.darkColor = UIColor.black
         picker.doneBackgroundColor = UIColor.init(named: "MainColor") ?? UIColor.gray
-        
-        
-        picker.dismissHandler = {
-            picker.removeFromSuperview()
-        }
         
         picker.completionHandler = { date in
             let formatter = DateFormatter()
@@ -154,28 +152,6 @@ class CreatePartyViewController: UIViewController {
             }
         }
     }
-    
-    @IBAction func pickerOnTouch(_ sender: UIButton) {
-        let ageCategoriesData: [[String]] = [["Teenagers", "Students", "Adults", "Seniors"]]
-        let eventTypeData: [[String]] = [["Birthday", "Cocktail", "Dances and balls", "Block", "Showers"]]
-        
-        if sender.tag == 0 {
-            setValuesForPickerAndTextField(picker: &ageCategoryPicker, data: ageCategoriesData, textField: ageCategoryTextField)
-        }
-        else if sender.tag == 1 {
-            setValuesForPickerAndTextField(picker: &eventTypePicker, data: eventTypeData, textField: eventTypeTextField)
-        }
-        
-    }
-    
-    @IBAction func pictureOnTouch(_ sender: UITapGestureRecognizer) {
-        let image = UIImagePickerController()
-        image.delegate = self
-        image.sourceType = .photoLibrary
-        image.allowsEditing = false
-        self.present(image, animated: true) { }
-    }
-    
 }
 
 extension CreatePartyViewController : UINavigationControllerDelegate, UIImagePickerControllerDelegate {
@@ -187,5 +163,74 @@ extension CreatePartyViewController : UINavigationControllerDelegate, UIImagePic
         logoImageView.image = photo
         // Dismiss UIImagePickerController
         self.dismiss(animated: true)
+    }
+}
+
+extension CreatePartyViewController : CreatePartyViewProtocol {
+    func showLoader() {
+        DispatchQueue.main.async {
+            self.loader = WavesLoader.createLoader(with: LoaderPath.glassPath(), on: self.view)
+            guard let loader = self.loader else {return}
+                   loader.loaderColor = UIColor.systemPink
+                   loader.showLoader()
+        }
+       }
+       
+       func hideLoader() {
+        DispatchQueue.main.async {
+            guard let loader = self.loader else {return}
+        loader.removeLoader()
+       }
+    }
+    
+    func showStartCalendar() {
+        guard let startdateTimePicker = startdateTimePicker else {
+            self.startdateTimePicker = createAndReturnDate(min: Date(), max: Date().addingTimeInterval(60 * 60 * 24 * 4 * 12 * 6), textField: startDateTextField)
+            self.startdateTimePicker?.dismissHandler = hideStartCalendar
+            return
+        }
+        
+        self.view.addSubview(startdateTimePicker)
+    }
+    
+    func hideStartCalendar() {
+        startdateTimePicker?.removeFromSuperview()
+    }
+    
+    func showEndCalendar() {
+        if startdateTimePicker?.selectedDate == nil {
+            // Alert
+            print("select start date")
+        }
+        else {
+            guard let enddateTimePicker = enddateTimePicker else {
+                let minDate = startdateTimePicker?.selectedDate.addingTimeInterval(60 * 60 * 2) ?? Date()
+                self.enddateTimePicker = createAndReturnDate(min: minDate, max: Date().addingTimeInterval(60 * 60 * 24 * 4 * 12 * 6), selectedDate: minDate, textField: endDateTextField)
+                self.enddateTimePicker?.dismissHandler = hideEndCalendar
+                return
+            }
+            
+            self.view.addSubview(enddateTimePicker)
+        }
+    }
+    
+    func hideEndCalendar() {
+        enddateTimePicker?.removeFromSuperview()
+    }
+    
+    func showAgeCategoryPicker(data: [[String]]) {
+        setValuesForPickerAndTextField(picker: &ageCategoryPicker, data: data, textField: ageCategoryTextField)
+    }
+    
+    func hideAgeCategoryPicker() {
+        ageCategoryPicker?.removeFromSuperview()
+    }
+    
+    func showEventTypePicker(data: [[String]]) {
+        setValuesForPickerAndTextField(picker: &eventTypePicker, data: data, textField: eventTypeTextField)
+    }
+    
+    func hideEventTypePicker() {
+        eventTypePicker?.removeFromSuperview()
     }
 }
