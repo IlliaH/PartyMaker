@@ -50,6 +50,10 @@
 		236524052389FCB3006F650F /* CreatePartyConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236524042389FCB3006F650F /* CreatePartyConfigurator.swift */; };
 		41F52227B9935A02E8BD682E /* Pods_PartyMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3E9D4293DF28EE5972EF22 /* Pods_PartyMaker.framework */; };
 		FE13576B235BCF26008597E4 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE13576A235BCF26008597E4 /* GradientView.swift */; };
+		FE42B84D238A042F0019C2A2 /* CategoryServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B84C238A042F0019C2A2 /* CategoryServiceProtocol.swift */; };
+		FE42B84F238A04B10019C2A2 /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B84E238A04B10019C2A2 /* EventType.swift */; };
+		FE42B851238A04DF0019C2A2 /* AgeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B850238A04DF0019C2A2 /* AgeCategory.swift */; };
+		FE42B853238A09260019C2A2 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B852238A09260019C2A2 /* CategoryService.swift */; };
 		FE5F2869235BECF100F2FD1C /* CustomHoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5F2868235BECF100F2FD1C /* CustomHoshiTextField.swift */; };
 		FE7BB060234BFF53004CF70F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7BB05F234BFF53004CF70F /* AppDelegate.swift */; };
 		FE7BB062234BFF53004CF70F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7BB061234BFF53004CF70F /* SceneDelegate.swift */; };
@@ -119,6 +123,10 @@
 		DB0B27CA6C904C4129E8A6F2 /* Pods-PartyMaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyMaker.release.xcconfig"; path = "Target Support Files/Pods-PartyMaker/Pods-PartyMaker.release.xcconfig"; sourceTree = "<group>"; };
 		EC3E9D4293DF28EE5972EF22 /* Pods_PartyMaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PartyMaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE13576A235BCF26008597E4 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		FE42B84C238A042F0019C2A2 /* CategoryServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoryServiceProtocol.swift; path = PartyMaker/Services/Abstract/CategoryServiceProtocol.swift; sourceTree = SOURCE_ROOT; };
+		FE42B84E238A04B10019C2A2 /* EventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventType.swift; sourceTree = "<group>"; };
+		FE42B850238A04DF0019C2A2 /* AgeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeCategory.swift; sourceTree = "<group>"; };
+		FE42B852238A09260019C2A2 /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
 		FE5F2868235BECF100F2FD1C /* CustomHoshiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHoshiTextField.swift; sourceTree = "<group>"; };
 		FE7BB05C234BFF53004CF70F /* PartyMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7BB05F234BFF53004CF70F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -328,6 +336,7 @@
 		FEBCC549235290C00034D1E2 /* Abstract */ = {
 			isa = PBXGroup;
 			children = (
+				FE42B84C238A042F0019C2A2 /* CategoryServiceProtocol.swift */,
 				FEBCC54723528F970034D1E2 /* AuthServiceProtocol.swift */,
 				2304C445235E276B006E5C33 /* UserServiceProtocol.swift */,
 				2304C449235E3542006E5C33 /* StorageServiceProtocol.swift */,
@@ -343,6 +352,7 @@
 				2304C447235E29BA006E5C33 /* UserService.swift */,
 				2304C44B235E3592006E5C33 /* StorageService.swift */,
 				2303837323830EBE00A7F800 /* EventService.swift */,
+				FE42B852238A09260019C2A2 /* CategoryService.swift */,
 			);
 			path = Concrete;
 			sourceTree = "<group>";
@@ -355,6 +365,8 @@
 				2310B4042352A5E400CAFB75 /* PresenterStatus.swift */,
 				FEED38B7237759D30013B21C /* User.swift */,
 				2303837123830C0700A7F800 /* Event.swift */,
+				FE42B84E238A04B10019C2A2 /* EventType.swift */,
+				FE42B850238A04DF0019C2A2 /* AgeCategory.swift */,
 			);
 			path = Enities;
 			sourceTree = "<group>";
@@ -524,6 +536,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE5F2869235BECF100F2FD1C /* CustomHoshiTextField.swift in Sources */,
+				FE42B851238A04DF0019C2A2 /* AgeCategory.swift in Sources */,
 				2304C44A235E3542006E5C33 /* StorageServiceProtocol.swift in Sources */,
 				FEED38A7237745CD0013B21C /* AccountViewController.swift in Sources */,
 				236524012389EE16006F650F /* CreatePartyPresenter.swift in Sources */,
@@ -544,6 +557,7 @@
 				2304C446235E276B006E5C33 /* UserServiceProtocol.swift in Sources */,
 				2310B3FF23529A5A00CAFB75 /* LoginRouterProtocol.swift in Sources */,
 				FE7BB064234BFF53004CF70F /* LoginController.swift in Sources */,
+				FE42B84F238A04B10019C2A2 /* EventType.swift in Sources */,
 				2310B40D2352AC2E00CAFB75 /* LoginRouter.swift in Sources */,
 				2310B4092352AB7100CAFB75 /* LoginConfiguratorProtocol.swift in Sources */,
 				FE13576B235BCF26008597E4 /* GradientView.swift in Sources */,
@@ -564,6 +578,7 @@
 				23080A7623809C31008E3654 /* CreatePartyViewController.swift in Sources */,
 				23059B4A2363BE440033FC74 /* FillableLoader.swift in Sources */,
 				FEED38B4237754DE0013B21C /* AccountConfigurator.swift in Sources */,
+				FE42B853238A09260019C2A2 /* CategoryService.swift in Sources */,
 				2310B40123529E4100CAFB75 /* LoginPresenter.swift in Sources */,
 				FE7BB060234BFF53004CF70F /* AppDelegate.swift in Sources */,
 				23059B472363BD350033FC74 /* LoaderPath.swift in Sources */,
@@ -578,6 +593,7 @@
 				2303837423830EBE00A7F800 /* EventService.swift in Sources */,
 				2304C45A235E40BE006E5C33 /* RegisterPresenter.swift in Sources */,
 				2304C448235E29BA006E5C33 /* UserService.swift in Sources */,
+				FE42B84D238A042F0019C2A2 /* CategoryServiceProtocol.swift in Sources */,
 				FEED38BA23775DA00013B21C /* Extensions.swift in Sources */,
 				FEBCC54823528F970034D1E2 /* AuthServiceProtocol.swift in Sources */,
 				2310B40B2352ABC800CAFB75 /* LoginConfigurator.swift in Sources */,

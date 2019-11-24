@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "30DA37D45B550472BE71C33F4D18FA03"
+               BlueprintIdentifier = "08DDE89E60C77638A405820912C2EBDC"
                BuildableName = "Pods_PartyMaker.framework"
                BlueprintName = "Pods-PartyMaker"
                ReferencedContainer = "container:Pods.xcodeproj">
