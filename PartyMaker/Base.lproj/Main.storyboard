@@ -477,7 +477,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="80R-Ct-ytu">
                                                 <rect key="frame" x="352" y="638" width="49" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="onTintColor" name="MainColor"/>
+                                                <color key="onTintColor" red="1" green="0.21568627450980393" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </switch>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Age Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fvQ-2Y-TWj" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="701" width="336" height="34"/>
@@ -549,6 +549,9 @@
                                                 <state key="normal" title="CREATE">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="createButtonOnTouch:" destination="NA0-9q-kbH" eventType="touchUpInside" id="riF-CW-t5V"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYu-Sn-7Pl">
                                                 <rect key="frame" x="350" y="755" width="45" height="37"/>
@@ -596,9 +599,14 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="ageCategoryTextField" destination="fvQ-2Y-TWj" id="P5b-Uz-b7C"/>
+                        <outlet property="descriptionTextView" destination="lov-fk-JH2" id="ddn-w4-IJG"/>
                         <outlet property="endDateTextField" destination="JIS-WH-dL3" id="aTT-oq-mAe"/>
                         <outlet property="eventTypeTextField" destination="Sl3-da-qnP" id="nBM-EI-4HS"/>
+                        <outlet property="hashtagsTextField" destination="x0z-HT-Saz" id="WMB-1a-lGq"/>
+                        <outlet property="isPrivateSwitch" destination="80R-Ct-ytu" id="Ird-2b-9Fg"/>
                         <outlet property="logoImageView" destination="6Ka-2J-qNf" id="VaU-Ny-577"/>
+                        <outlet property="nameTextField" destination="qtB-W1-YOg" id="SZx-oF-Chx"/>
+                        <outlet property="numberOfPeopleTextField" destination="OJD-B5-7vW" id="GOj-ba-MNg"/>
                         <outlet property="startDateTextField" destination="g3I-2Y-YId" id="57W-eb-555"/>
                     </connections>
                 </viewController>

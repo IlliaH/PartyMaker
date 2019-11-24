@@ -11,15 +11,26 @@ import DateTimePicker
 import McPicker
 
 class CreatePartyViewController: UIViewController {
+    
+    @IBOutlet weak var logoImageView: RoundImageView!
+    
+    @IBOutlet weak var nameTextField: CustomHoshiTextField!
+    
+    @IBOutlet weak var descriptionTextView: UITextView!
+    
+    @IBOutlet weak var hashtagsTextField: CustomHoshiTextField!
+    
     @IBOutlet weak var startDateTextField: CustomHoshiTextField!
     
     @IBOutlet weak var endDateTextField: CustomHoshiTextField!
+    
+    @IBOutlet weak var isPrivateSwitch: UISwitch!
     
     @IBOutlet weak var ageCategoryTextField: CustomHoshiTextField!
     
     @IBOutlet weak var eventTypeTextField: CustomHoshiTextField!
     
-    @IBOutlet weak var logoImageView: RoundImageView!
+    @IBOutlet weak var numberOfPeopleTextField: CustomHoshiTextField!
     
     var startdateTimePicker: DateTimePicker?
     var enddateTimePicker: DateTimePicker?
@@ -27,39 +38,33 @@ class CreatePartyViewController: UIViewController {
     var ageCategoryPicker: McPicker?
     var eventTypePicker: McPicker?
     
+    var presenter: CreatePartyPresenterProtocol!
+    var configurator: CreatePartyConfiguratorProtocol = CreatePartyConfigurator()
     var loader : FillableLoader?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
-        
+        configurator.configure(with: self)
     }
     
     @IBAction func selectStartDateOnTouch(_ sender: UIButton) {
         // Tag 0 = start date
         if sender.tag == 0 {
-            showStartCalendar()
+            presenter.showStartCalendarClicked()
         }
         // Tag 1 = end date
         else if sender.tag == 1 {
-            showEndCalendar()
+            presenter.showEndCalendarClicked()
         }
-        
     }
     
     @IBAction func pickerOnTouch(_ sender: UIButton) {
-        let ageCategoriesData: [[String]] = [["Teenagers", "Students", "Adults", "Seniors"]]
-        let eventTypeData: [[String]] = [["Birthday", "Cocktail", "Dances and balls", "Block", "Showers"]]
-        
         if sender.tag == 0 {
-            showAgeCategoryPicker(data: ageCategoriesData)
+            presenter.showAgeCategoryPickerClicked()
         }
         else if sender.tag == 1 {
-            showEventTypePicker(data: eventTypeData)
+            presenter.showEventTypePickerClicked()
         }
-        
     }
     
     @IBAction func pictureOnTouch(_ sender: UITapGestureRecognizer) {
@@ -68,6 +73,19 @@ class CreatePartyViewController: UIViewController {
         image.sourceType = .photoLibrary
         image.allowsEditing = false
         self.present(image, animated: true) { }
+    }
+    
+    @IBAction func createButtonOnTouch(_ sender: UIButton) {
+        presenter.pictureValueChanged(to: logoImageView.image)
+        presenter.nameValueChanged(to: nameTextField.text)
+        presenter.descriptionValueChanged(to: descriptionTextView.text)
+        presenter.hashtagsValueChanged(to: hashtagsTextField.text)
+        presenter.startDateValueChanged(to: startdateTimePicker?.selectedDate)
+        presenter.endDateValueChanged(to: enddateTimePicker?.selectedDate)
+        presenter.isPrivateValueChanged(to: isPrivateSwitch.isOn)
+        presenter.numberOfPeopleChanged(to: numberOfPeopleTextField.text)
+        
+        presenter.createButonClicked()
     }
     
     func createAndReturnDate(min: Date?, max: Date?, selectedDate: Date = Date(), textField: UITextField) -> DateTimePicker {
@@ -219,7 +237,9 @@ extension CreatePartyViewController : CreatePartyViewProtocol {
     }
     
     func showAgeCategoryPicker(data: [[String]]) {
-        setValuesForPickerAndTextField(picker: &ageCategoryPicker, data: data, textField: ageCategoryTextField)
+        DispatchQueue.main.async {
+            self.setValuesForPickerAndTextField(picker: &self.ageCategoryPicker, data: data, textField: self.ageCategoryTextField)
+        }
     }
     
     func hideAgeCategoryPicker() {
@@ -227,7 +247,9 @@ extension CreatePartyViewController : CreatePartyViewProtocol {
     }
     
     func showEventTypePicker(data: [[String]]) {
-        setValuesForPickerAndTextField(picker: &eventTypePicker, data: data, textField: eventTypeTextField)
+        DispatchQueue.main.async {
+            self.setValuesForPickerAndTextField(picker: &self.eventTypePicker, data: data, textField: self.eventTypeTextField)
+        }
     }
     
     func hideEventTypePicker() {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol CreatePartyViewProtocol {
+protocol CreatePartyViewProtocol: class {
     func showLoader()
     func hideLoader()
     
