@@ -84,6 +84,8 @@ class CreatePartyViewController: UIViewController {
         presenter.endDateValueChanged(to: enddateTimePicker?.selectedDate)
         presenter.isPrivateValueChanged(to: isPrivateSwitch.isOn)
         presenter.numberOfPeopleChanged(to: numberOfPeopleTextField.text)
+        presenter.ageCategoryValueChanged(to: ageCategoryTextField.text)
+        presenter.eventTypeValueChanged(to: eventTypeTextField.text)
         
         presenter.createButonClicked()
     }

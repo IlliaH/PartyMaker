@@ -12,7 +12,7 @@ class CategoryService : CategoryServiceProtocol {
     
     func getAgeCategories(completion: @escaping ([AgeCategory]?, Error?) -> Void) {
         
-        guard let url = URL(string: "http://partymakerbhm.azurewebsites.net/api/Category/age") else {return}
+        guard let url = URL(string: "\(AppConstant.API_URL)Category/age") else {return}
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         guard let token = UserDefaults.standard.string(forKey: "accessToken") else {return}
@@ -40,7 +40,7 @@ class CategoryService : CategoryServiceProtocol {
     
     func getEventTypes(completion: @escaping ([EventType]?, Error?) -> Void) {
         
-        guard let url = URL(string: "http://partymakerbhm.azurewebsites.net/api/Category/eventType") else {return}
+        guard let url = URL(string: "\(AppConstant.API_URL)Category/eventType") else {return}
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         guard let token = UserDefaults.standard.string(forKey: "accessToken") else {return}

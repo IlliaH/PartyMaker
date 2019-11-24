@@ -14,4 +14,6 @@ protocol CreatePartyInteractorProtocol : class {
     var pictureValue: Data? { set get }
     
     func create(completion: @escaping(PresenterStatus, String?) ->Void)
+    func getEventTypes(completion :@escaping(PresenterStatus, [EventType]?)->Void)
+    func getAgeCategories(completion: @escaping(PresenterStatus, [AgeCategory]?)-> Void)
 }

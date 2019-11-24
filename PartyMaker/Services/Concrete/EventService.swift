@@ -12,8 +12,8 @@ class EventService: EventServiceProtocol {
     
     func createEvent(event: Event, completion: @escaping (Event?, Error?) -> Void) {
         
-        guard let url = URL(string: "https://partymakerbhm.azurewebsites.net/api/Event") else {return}
-         var request = URLRequest(url: url)
+        guard let url = URL(string: "\(AppConstant.API_URL)Event") else {return}
+        var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         guard let token = UserDefaults.standard.string(forKey: "accessToken") else {return}
@@ -37,7 +37,7 @@ class EventService: EventServiceProtocol {
                      
                      if let dictionary = json as? [String: Any] {
                         if let response = response as? HTTPURLResponse {
-                            if response.statusCode == 202 {
+                            if response.statusCode == 201 {
                                 do {
                                     let jsonDecoder = JSONDecoder()
                                     let event = try jsonDecoder.decode(Event.self, from: data)

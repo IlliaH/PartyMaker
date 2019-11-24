@@ -16,4 +16,7 @@ enum PresenterStatus {
     case UpdatePasswordError
     case UploadPictureError
     case UpdateUserError
+    case CreateEventError
+    case GetEventsError
+    case GetAgeCategoriesError
 }

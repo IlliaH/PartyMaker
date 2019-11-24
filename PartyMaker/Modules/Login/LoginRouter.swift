@@ -16,7 +16,9 @@ class LoginRouter : LoginRouterProtocol {
     }
     
     func showMainView() {
-        print("Navigated to main VC")
+        DispatchQueue.main.async {
+            self.viewController.performSegue(withIdentifier: "goToTabBar", sender: nil)
+        }
     }
     
     func showRegisterView() {

@@ -9,6 +9,7 @@
 import Foundation
 
 class CreatePartyInteractor : CreatePartyInteractorProtocol {
+
     weak var presenter: CreatePartyPresenterProtocol!
     
     var event: Event = Event()
@@ -17,11 +18,49 @@ class CreatePartyInteractor : CreatePartyInteractorProtocol {
     
     var pictureValue: Data?
     
+    let eventService : EventServiceProtocol = EventService()
+    let categoryService : CategoryServiceProtocol = CategoryService()
+    
     required init(presenter: CreatePartyPresenterProtocol) {
         self.presenter = presenter
     }
     
     func create(completion: @escaping (PresenterStatus, String?) -> Void) {
-        
+        // TODO: remove hardcoded data
+        event.Latitude = 3.21312
+        event.Longitude = 2.21333
+        eventService.createEvent(event: event) { (event, error) in
+            if let error = error {
+                completion(PresenterStatus.CreateEventError, error.localizedDescription)
+            }else if event == nil{
+                completion(PresenterStatus.CreateEventError, "Event has not been saved")
+            } else {
+                completion(PresenterStatus.Sucess, "Event created")
+            }
+        }
+    }
+    
+    func getEventTypes(completion: @escaping (PresenterStatus, [EventType]?) -> Void) {
+        categoryService.getEventTypes { (eventTypes, error) in
+            if let error = error {
+                completion(PresenterStatus.GetEventsError, nil)
+            }else if eventTypes == nil{
+                completion(PresenterStatus.GetEventsError, nil)
+            } else {
+                completion(PresenterStatus.Sucess, eventTypes)
+            }
+        }
+    }
+       
+    func getAgeCategories(completion: @escaping (PresenterStatus, [AgeCategory]?) -> Void) {
+        categoryService.getAgeCategories { (ageCategories, error) in
+            if let error = error {
+                completion(PresenterStatus.GetAgeCategoriesError, nil)
+            }else if ageCategories == nil{
+                completion(PresenterStatus.GetAgeCategoriesError, nil)
+            } else {
+                completion(PresenterStatus.Sucess, ageCategories)
+            }
+        }
     }
 }
