@@ -263,8 +263,8 @@ extension CreatePartyViewController : CreatePartyViewProtocol {
 
 extension CreatePartyViewController : PassLocationDelegate {
     func passEventLocation(latitude: Decimal, longitude: Decimal) {
-        print(latitude)
-        print(longitude)
+        presenter.latitudeValueChanged(to: latitude)
+        presenter.longitudeValueChanged(to: longitude)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
