@@ -32,6 +32,7 @@ class CreatePartyViewController: UIViewController {
     
     @IBOutlet weak var numberOfPeopleTextField: CustomHoshiTextField!
     
+    
     var startdateTimePicker: DateTimePicker?
     var enddateTimePicker: DateTimePicker?
     
@@ -256,5 +257,20 @@ extension CreatePartyViewController : CreatePartyViewProtocol {
     
     func hideEventTypePicker() {
         eventTypePicker?.removeFromSuperview()
+    }
+}
+
+
+extension CreatePartyViewController : PassLocationDelegate {
+    func passEventLocation(latitude: Decimal, longitude: Decimal) {
+        print(latitude)
+        print(longitude)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "selectAddressSegue" {
+            let selectAddressVC = segue.destination as! SelectAddressViewController
+            selectAddressVC.delegate = self
+        }
     }
 }

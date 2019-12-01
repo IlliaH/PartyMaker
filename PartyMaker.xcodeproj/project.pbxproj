@@ -54,6 +54,8 @@
 		FE42B84F238A04B10019C2A2 /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B84E238A04B10019C2A2 /* EventType.swift */; };
 		FE42B851238A04DF0019C2A2 /* AgeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B850238A04DF0019C2A2 /* AgeCategory.swift */; };
 		FE42B853238A09260019C2A2 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B852238A09260019C2A2 /* CategoryService.swift */; };
+		FE42B85523941F530019C2A2 /* SelectAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B85423941F530019C2A2 /* SelectAddressViewController.swift */; };
+		FE42B8572394305C0019C2A2 /* PassLocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B8562394305C0019C2A2 /* PassLocationDelegate.swift */; };
 		FE5F2869235BECF100F2FD1C /* CustomHoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5F2868235BECF100F2FD1C /* CustomHoshiTextField.swift */; };
 		FE7BB060234BFF53004CF70F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7BB05F234BFF53004CF70F /* AppDelegate.swift */; };
 		FE7BB062234BFF53004CF70F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7BB061234BFF53004CF70F /* SceneDelegate.swift */; };
@@ -127,6 +129,8 @@
 		FE42B84E238A04B10019C2A2 /* EventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventType.swift; sourceTree = "<group>"; };
 		FE42B850238A04DF0019C2A2 /* AgeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeCategory.swift; sourceTree = "<group>"; };
 		FE42B852238A09260019C2A2 /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
+		FE42B85423941F530019C2A2 /* SelectAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressViewController.swift; sourceTree = "<group>"; };
+		FE42B8562394305C0019C2A2 /* PassLocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassLocationDelegate.swift; sourceTree = "<group>"; };
 		FE5F2868235BECF100F2FD1C /* CustomHoshiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHoshiTextField.swift; sourceTree = "<group>"; };
 		FE7BB05C234BFF53004CF70F /* PartyMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7BB05F234BFF53004CF70F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 				2303836B2382FE8300A7F800 /* CreatePartyRouterProtocol.swift */,
 				2303836D2382FEAD00A7F800 /* CreatePartyConfiguratorProtocol.swift */,
 				236523FC2389EB3A006F650F /* CreatePartyViewProtocol.swift */,
+				FE42B8562394305C0019C2A2 /* PassLocationDelegate.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 			children = (
 				230383642382FD5300A7F800 /* Abstract */,
 				23080A7523809C31008E3654 /* CreatePartyViewController.swift */,
+				FE42B85423941F530019C2A2 /* SelectAddressViewController.swift */,
 				236523FE2389ED6F006F650F /* CreatePartyInteractor.swift */,
 				236524002389EE16006F650F /* CreatePartyPresenter.swift */,
 				236524022389FC2B006F650F /* CreatePartyRouter.swift */,
@@ -553,6 +559,7 @@
 				2303836E2382FEAD00A7F800 /* CreatePartyConfiguratorProtocol.swift in Sources */,
 				2304C454235E3F27006E5C33 /* RegisterRouterProtocol.swift in Sources */,
 				2310B4032352A0CF00CAFB75 /* LoginInteractorProtocol.swift in Sources */,
+				FE42B85523941F530019C2A2 /* SelectAddressViewController.swift in Sources */,
 				2304C444235E20C8006E5C33 /* RoundImageView.swift in Sources */,
 				2304C446235E276B006E5C33 /* UserServiceProtocol.swift in Sources */,
 				2310B3FF23529A5A00CAFB75 /* LoginRouterProtocol.swift in Sources */,
@@ -585,6 +592,7 @@
 				2304C462235E4BE3006E5C33 /* RegisterConfigurator.swift in Sources */,
 				236523FD2389EB3A006F650F /* CreatePartyViewProtocol.swift in Sources */,
 				2304C460235E4BA0006E5C33 /* RegisterConfiguratorProtocol.swift in Sources */,
+				FE42B8572394305C0019C2A2 /* PassLocationDelegate.swift in Sources */,
 				FEBCC54C2352911A0034D1E2 /* AuthService.swift in Sources */,
 				FEBCC54F235292AB0034D1E2 /* AppConstant.swift in Sources */,
 				2304C458235E3FAB006E5C33 /* RegisterPresenterProtocol.swift in Sources */,

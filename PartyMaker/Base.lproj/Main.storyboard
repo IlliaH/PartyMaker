@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vZL-If-dHX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NA0-9q-kbH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -312,6 +312,78 @@
             </objects>
             <point key="canvasLocation" x="4739" y="1114"/>
         </scene>
+        <!--Select Address View Controller-->
+        <scene sceneID="xwE-eX-sb5">
+            <objects>
+                <viewController id="tPP-Q5-cOb" customClass="SelectAddressViewController" customModule="PartyMaker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RJA-Gh-lwR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Irq-yL-zs5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="760"/>
+                                <connections>
+                                    <outlet property="delegate" destination="tPP-Q5-cOb" id="0vw-yY-aDB"/>
+                                </connections>
+                            </mapView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="7iM-Tq-lbn">
+                                <rect key="frame" x="187" y="361" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="J9H-2m-KNd"/>
+                                    <constraint firstAttribute="height" constant="40" id="X5C-xu-iyo"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l08-hx-b7U">
+                                <rect key="frame" x="20" y="38" width="374" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="zMT-WV-VG6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTI-Q3-3EM">
+                                <rect key="frame" x="20" y="768" width="374" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.48627450979999998" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LMl-eP-MHd"/>
+                                </constraints>
+                                <state key="normal" title="Select location">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectLocationButtonOnTapped:" destination="tPP-Q5-cOb" eventType="touchUpInside" id="0vn-kt-sis"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Irq-yL-zs5" firstAttribute="top" secondItem="mZB-m4-gRu" secondAttribute="top" id="2c9-Ac-Gyu"/>
+                            <constraint firstItem="YTI-Q3-3EM" firstAttribute="top" secondItem="Irq-yL-zs5" secondAttribute="bottom" constant="8" id="7N0-LF-AI5"/>
+                            <constraint firstItem="mZB-m4-gRu" firstAttribute="trailing" secondItem="l08-hx-b7U" secondAttribute="trailing" constant="20" id="BS5-br-1qk"/>
+                            <constraint firstItem="7iM-Tq-lbn" firstAttribute="centerY" secondItem="RJA-Gh-lwR" secondAttribute="centerY" constant="-40" id="HZj-N1-cIY"/>
+                            <constraint firstItem="l08-hx-b7U" firstAttribute="top" secondItem="mZB-m4-gRu" secondAttribute="top" constant="38" id="JGJ-h3-eeE"/>
+                            <constraint firstItem="Irq-yL-zs5" firstAttribute="trailing" secondItem="mZB-m4-gRu" secondAttribute="trailing" id="T7I-TT-Clj"/>
+                            <constraint firstItem="YTI-Q3-3EM" firstAttribute="bottom" secondItem="mZB-m4-gRu" secondAttribute="bottom" id="ZL4-GP-olD"/>
+                            <constraint firstItem="7iM-Tq-lbn" firstAttribute="centerX" secondItem="RJA-Gh-lwR" secondAttribute="centerX" id="bq6-7Z-wZS"/>
+                            <constraint firstItem="mZB-m4-gRu" firstAttribute="trailing" secondItem="YTI-Q3-3EM" secondAttribute="trailing" constant="20" id="cYp-jl-ObB"/>
+                            <constraint firstItem="Irq-yL-zs5" firstAttribute="leading" secondItem="mZB-m4-gRu" secondAttribute="leading" id="cxm-zt-rzy"/>
+                            <constraint firstItem="l08-hx-b7U" firstAttribute="leading" secondItem="mZB-m4-gRu" secondAttribute="leading" constant="20" id="eJe-gp-TMa"/>
+                            <constraint firstItem="YTI-Q3-3EM" firstAttribute="leading" secondItem="mZB-m4-gRu" secondAttribute="leading" constant="20" id="viv-ht-ugU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mZB-m4-gRu"/>
+                    </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="l08-hx-b7U" id="EpM-fR-9w7"/>
+                        <outlet property="mapView" destination="Irq-yL-zs5" id="6xZ-Y6-wXd"/>
+                        <outlet property="pinImageView" destination="7iM-Tq-lbn" id="LjW-VS-cxf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="imb-ch-R7O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2117.3913043478265" y="1639.9553571428571"/>
+        </scene>
         <!--Create-->
         <scene sceneID="PZz-vh-aSy">
             <objects>
@@ -455,6 +527,9 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="map" catalog="system"/>
+                                                <connections>
+                                                    <segue destination="tPP-Q5-cOb" kind="presentation" identifier="selectAddressSegue" id="Ono-Xm-ogF"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Is Event Private?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yY9-FE-7On" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="636" width="336" height="34"/>
@@ -858,6 +933,7 @@
         <image name="map" catalog="system" width="64" height="56"/>
         <image name="person.2" catalog="system" width="64" height="40"/>
         <image name="person.circle" catalog="system" width="64" height="60"/>
+        <image name="pin" width="256" height="256"/>
         <image name="plus" catalog="system" width="64" height="56"/>
         <namedColor name="MainColor">
             <color red="1" green="0.21600000560283661" blue="0.37299999594688416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
