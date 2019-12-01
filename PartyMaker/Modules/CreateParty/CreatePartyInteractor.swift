@@ -26,9 +26,6 @@ class CreatePartyInteractor : CreatePartyInteractorProtocol {
     }
     
     func create(completion: @escaping (PresenterStatus, String?) -> Void) {
-        // TODO: remove hardcoded data
-        event.Latitude = 3.21312
-        event.Longitude = 2.21333
         eventService.createEvent(event: event) { (event, error) in
             if let error = error {
                 completion(PresenterStatus.CreateEventError, error.localizedDescription)
