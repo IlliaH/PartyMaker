@@ -135,6 +135,26 @@ class CreatePartyPresenter: CreatePartyPresenterProtocol {
         }
     }
     
+    var latitudeValue: Decimal? {
+        willSet(newLatitudeValue) {
+            if let latitude = newLatitudeValue {
+                if interactor.event.Latitude != latitude {
+                    interactor.event.Latitude = latitude
+                }
+            }
+        }
+    }
+    
+    var longitudeValue: Decimal? {
+        willSet(newLongitudeValue) {
+            if let longitude = newLongitudeValue {
+                if interactor.event.Longitude != longitude {
+                    interactor.event.Longitude = longitude
+                }
+            }
+        }
+    }
+    
     func showStartCalendarClicked() {
         view.showStartCalendar()
     }
@@ -261,5 +281,13 @@ class CreatePartyPresenter: CreatePartyPresenterProtocol {
     
     func pictureValueChanged(to newPictureValue: UIImage?) {
         pictureValue = newPictureValue
+    }
+    
+    func latitudeValueChanged(to newLatitudeValue: Decimal?) {
+        latitudeValue = newLatitudeValue
+    }
+    
+    func longitudeValueChanged(to newLongitudeValue: Decimal?) {
+        longitudeValue = newLongitudeValue
     }
 }

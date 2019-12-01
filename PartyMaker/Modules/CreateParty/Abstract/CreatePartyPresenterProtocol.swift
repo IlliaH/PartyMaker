@@ -30,4 +30,6 @@ protocol CreatePartyPresenterProtocol : class {
     func eventTypeValueChanged(to newEventType: String?)
     func numberOfPeopleChanged(to newNumberOfPeople: String?)
     func pictureValueChanged(to newPictureValue: UIImage?)
+    func latitudeValueChanged(to newLatitudeValue: Decimal?)
+    func longitudeValueChanged(to newLongitudeValue: Decimal?)
 }
