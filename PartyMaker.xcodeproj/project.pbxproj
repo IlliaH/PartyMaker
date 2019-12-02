@@ -48,6 +48,8 @@
 		236524012389EE16006F650F /* CreatePartyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236524002389EE16006F650F /* CreatePartyPresenter.swift */; };
 		236524032389FC2B006F650F /* CreatePartyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236524022389FC2B006F650F /* CreatePartyRouter.swift */; };
 		236524052389FCB3006F650F /* CreatePartyConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236524042389FCB3006F650F /* CreatePartyConfigurator.swift */; };
+		23A94E9C23943D96003E5F4A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A94E9B23943D96003E5F4A /* MapViewController.swift */; };
+		23A94E9E23943F7C003E5F4A /* MapBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A94E9D23943F7C003E5F4A /* MapBaseViewController.swift */; };
 		41F52227B9935A02E8BD682E /* Pods_PartyMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3E9D4293DF28EE5972EF22 /* Pods_PartyMaker.framework */; };
 		FE13576B235BCF26008597E4 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE13576A235BCF26008597E4 /* GradientView.swift */; };
 		FE42B84D238A042F0019C2A2 /* CategoryServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B84C238A042F0019C2A2 /* CategoryServiceProtocol.swift */; };
@@ -121,6 +123,8 @@
 		236524002389EE16006F650F /* CreatePartyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePartyPresenter.swift; sourceTree = "<group>"; };
 		236524022389FC2B006F650F /* CreatePartyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePartyRouter.swift; sourceTree = "<group>"; };
 		236524042389FCB3006F650F /* CreatePartyConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePartyConfigurator.swift; sourceTree = "<group>"; };
+		23A94E9B23943D96003E5F4A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		23A94E9D23943F7C003E5F4A /* MapBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBaseViewController.swift; sourceTree = "<group>"; };
 		2DFFCBD30AA1B0CD95CED7AE /* Pods-PartyMaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyMaker.debug.xcconfig"; path = "Target Support Files/Pods-PartyMaker/Pods-PartyMaker.debug.xcconfig"; sourceTree = "<group>"; };
 		DB0B27CA6C904C4129E8A6F2 /* Pods-PartyMaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyMaker.release.xcconfig"; path = "Target Support Files/Pods-PartyMaker/Pods-PartyMaker.release.xcconfig"; sourceTree = "<group>"; };
 		EC3E9D4293DF28EE5972EF22 /* Pods_PartyMaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PartyMaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -241,6 +245,15 @@
 			path = Abstract;
 			sourceTree = "<group>";
 		};
+		23A94E9A23943D77003E5F4A /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				23A94E9B23943D96003E5F4A /* MapViewController.swift */,
+				23A94E9D23943F7C003E5F4A /* MapBaseViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		38BEB3DEEDD3925E50DFA184 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +322,7 @@
 		FEBCC54423526F650034D1E2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				23A94E9A23943D77003E5F4A /* Map */,
 				23080A7423809C06008E3654 /* CreateParty */,
 				FEED38A5237745B40013B21C /* Account */,
 				2304C44D235E3BCA006E5C33 /* Register */,
@@ -563,6 +577,7 @@
 				2304C444235E20C8006E5C33 /* RoundImageView.swift in Sources */,
 				2304C446235E276B006E5C33 /* UserServiceProtocol.swift in Sources */,
 				2310B3FF23529A5A00CAFB75 /* LoginRouterProtocol.swift in Sources */,
+				23A94E9E23943F7C003E5F4A /* MapBaseViewController.swift in Sources */,
 				FE7BB064234BFF53004CF70F /* LoginController.swift in Sources */,
 				FE42B84F238A04B10019C2A2 /* EventType.swift in Sources */,
 				2310B40D2352AC2E00CAFB75 /* LoginRouter.swift in Sources */,
@@ -592,6 +607,7 @@
 				2304C462235E4BE3006E5C33 /* RegisterConfigurator.swift in Sources */,
 				236523FD2389EB3A006F650F /* CreatePartyViewProtocol.swift in Sources */,
 				2304C460235E4BA0006E5C33 /* RegisterConfiguratorProtocol.swift in Sources */,
+				23A94E9C23943D96003E5F4A /* MapViewController.swift in Sources */,
 				FE42B8572394305C0019C2A2 /* PassLocationDelegate.swift in Sources */,
 				FEBCC54C2352911A0034D1E2 /* AuthService.swift in Sources */,
 				FEBCC54F235292AB0034D1E2 /* AppConstant.swift in Sources */,
