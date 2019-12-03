@@ -11,4 +11,5 @@ import Foundation
 protocol EventServiceProtocol {
     func createEvent(event: Event, completion: @escaping(Event?, Error?) -> Void)
     func updateEvent(event: Event, completion: @escaping(Event?, Error?) -> Void)
+    func getEvents(completion: @escaping([EventShort]?, Error?) -> Void)
 }

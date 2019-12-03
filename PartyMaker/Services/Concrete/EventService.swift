@@ -9,6 +9,7 @@
 import Foundation
 
 class EventService: EventServiceProtocol {
+    let storageService: StorageService = StorageService()
     
     func createEvent(event: Event, completion: @escaping (Event?, Error?) -> Void) {
         
@@ -75,5 +76,45 @@ class EventService: EventServiceProtocol {
     
     func updateEvent(event: Event, completion: @escaping (Event?, Error?) -> Void) {
         
+    }
+    
+    func getEvents(completion: @escaping ([EventShort]?, Error?) -> Void) {
+        guard let url = URL(string: "\(AppConstant.API_URL)Event") else {return}
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        guard let token = UserDefaults.standard.string(forKey: "accessToken") else {return}
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            if let response = response {
+                print(response)
+            }
+            if let data = data {
+                do {
+                    let jsonDecoder = JSONDecoder()
+                    let events = try jsonDecoder.decode([EventShort].self, from: data)
+                    
+                    // Download images
+                    var eventsCounter = events.count
+                    for event in events {
+                        if let pictureUrl = event.pictureUrl {
+                            self.storageService.downloadFile(url: pictureUrl) { (data, _) in
+                                event.picture = data
+                                eventsCounter -= 1
+                                
+                                if eventsCounter == 0 {
+                                    completion(events, nil)
+                                }
+                            }
+                        }
+                    }
+                } catch {
+                    print(error)
+                    completion(nil, error)
+                }
+            }else {
+                completion(nil, ServiceError.NoResponseFromServer)
+            }
+        }.resume()
     }
 }

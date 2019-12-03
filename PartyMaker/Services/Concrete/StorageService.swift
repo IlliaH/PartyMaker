@@ -71,6 +71,20 @@ class StorageService : StorageServiceProtocol {
             }
         }).resume()
     }
+    
+    func downloadFile(url: String, completion: @escaping (Data?, Error?) -> Void) {
+        URLSession.shared.dataTask( with: URL(string:url)!, completionHandler: {
+            (data, response, error) -> Void in
+            DispatchQueue.main.async {
+                if let data = data {
+                    completion(data, nil)
+                }
+                else {
+                    completion(nil, ServiceError.NoResponseFromServer)
+                }
+            }
+        }).resume()
+    }
 }
 
 extension Data {

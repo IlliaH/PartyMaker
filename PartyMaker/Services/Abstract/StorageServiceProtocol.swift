@@ -10,4 +10,5 @@ import Foundation
 
 protocol StorageServiceProtocol {
     func uploadFile(picture: Data, completion: @escaping(String?, Error?)->Void)
+    func downloadFile(url: String, completion: @escaping(Data?, Error?)->Void)
 }
