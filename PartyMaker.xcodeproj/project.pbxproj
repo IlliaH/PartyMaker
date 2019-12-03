@@ -60,7 +60,15 @@
 		FE42B85523941F530019C2A2 /* SelectAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B85423941F530019C2A2 /* SelectAddressViewController.swift */; };
 		FE42B8572394305C0019C2A2 /* PassLocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B8562394305C0019C2A2 /* PassLocationDelegate.swift */; };
 		FE42B8812395EB460019C2A2 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B8802395EB460019C2A2 /* CustomAnnotation.swift */; };
+		FE42B8C7239654630019C2A2 /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B88D23960B8E0019C2A2 /* URLSessionDataTaskMock.swift */; };
+		FE42B8C8239654630019C2A2 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B88F23960BB50019C2A2 /* URLSessionMock.swift */; };
+		FE42B8C9239654630019C2A2 /* EventServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B89123960BF50019C2A2 /* EventServiceTest.swift */; };
 		FE5F2869235BECF100F2FD1C /* CustomHoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5F2868235BECF100F2FD1C /* CustomHoshiTextField.swift */; };
+		FE76567A2396560C002D4FBF /* PartyMakerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B89B239612E00019C2A2 /* PartyMakerTest.swift */; };
+		FE76567F2396B6B3002D4FBF /* CategoryServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE76567E2396B6B3002D4FBF /* CategoryServiceTest.swift */; };
+		FE7656822396C0D9002D4FBF /* UserServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7656812396C0D9002D4FBF /* UserServiceTest.swift */; };
+		FE7656862396D3F0002D4FBF /* AuthServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7656842396D3E0002D4FBF /* AuthServiceTest.swift */; };
+		FE7656892396DD3D002D4FBF /* StorageServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7656882396DD3D002D4FBF /* StorageServiceTest.swift */; };
 		FE7BB060234BFF53004CF70F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7BB05F234BFF53004CF70F /* AppDelegate.swift */; };
 		FE7BB062234BFF53004CF70F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7BB061234BFF53004CF70F /* SceneDelegate.swift */; };
 		FE7BB064234BFF53004CF70F /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7BB063234BFF53004CF70F /* LoginController.swift */; };
@@ -82,6 +90,16 @@
 		FEED38BA23775DA00013B21C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED38B923775DA00013B21C /* Extensions.swift */; };
 		FEED38BD237768610013B21C /* AccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED38BC237768610013B21C /* AccountPresenter.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE42B89E239612E00019C2A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE7BB054234BFF53004CF70F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE7BB05B234BFF53004CF70F;
+			remoteInfo = PartyMaker;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		230383672382FDD600A7F800 /* CreatePartyPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePartyPresenterProtocol.swift; sourceTree = "<group>"; };
@@ -139,7 +157,17 @@
 		FE42B85423941F530019C2A2 /* SelectAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressViewController.swift; sourceTree = "<group>"; };
 		FE42B8562394305C0019C2A2 /* PassLocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassLocationDelegate.swift; sourceTree = "<group>"; };
 		FE42B8802395EB460019C2A2 /* CustomAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
+		FE42B88D23960B8E0019C2A2 /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
+		FE42B88F23960BB50019C2A2 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
+		FE42B89123960BF50019C2A2 /* EventServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventServiceTest.swift; sourceTree = "<group>"; };
+		FE42B899239612E00019C2A2 /* PartyMakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PartyMakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE42B89B239612E00019C2A2 /* PartyMakerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyMakerTest.swift; sourceTree = "<group>"; };
+		FE42B89D239612E00019C2A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE5F2868235BECF100F2FD1C /* CustomHoshiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHoshiTextField.swift; sourceTree = "<group>"; };
+		FE76567E2396B6B3002D4FBF /* CategoryServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServiceTest.swift; sourceTree = "<group>"; };
+		FE7656812396C0D9002D4FBF /* UserServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceTest.swift; sourceTree = "<group>"; };
+		FE7656842396D3E0002D4FBF /* AuthServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceTest.swift; sourceTree = "<group>"; };
+		FE7656882396DD3D002D4FBF /* StorageServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceTest.swift; sourceTree = "<group>"; };
 		FE7BB05C234BFF53004CF70F /* PartyMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7BB05F234BFF53004CF70F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE7BB061234BFF53004CF70F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +193,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FE42B896239612E00019C2A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FE7BB059234BFF53004CF70F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -287,10 +322,75 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		FE42B89A239612E00019C2A2 /* PartyMakerTest */ = {
+			isa = PBXGroup;
+			children = (
+				FE76568A2396DD44002D4FBF /* StorageServiceTest */,
+				FE7656872396D4E1002D4FBF /* AuthServiceTest */,
+				FE7656802396C0AC002D4FBF /* UserServiceTest */,
+				FE76567D2396B66D002D4FBF /* CategoryServiceTest */,
+				FE7656832396D3C1002D4FBF /* TestHelpers */,
+				FE76567C2396B64A002D4FBF /* EventServiceTest */,
+				FE42B89B239612E00019C2A2 /* PartyMakerTest.swift */,
+				FE42B89D239612E00019C2A2 /* Info.plist */,
+			);
+			path = PartyMakerTest;
+			sourceTree = "<group>";
+		};
+		FE76567C2396B64A002D4FBF /* EventServiceTest */ = {
+			isa = PBXGroup;
+			children = (
+				FE42B89123960BF50019C2A2 /* EventServiceTest.swift */,
+			);
+			path = EventServiceTest;
+			sourceTree = "<group>";
+		};
+		FE76567D2396B66D002D4FBF /* CategoryServiceTest */ = {
+			isa = PBXGroup;
+			children = (
+				FE76567E2396B6B3002D4FBF /* CategoryServiceTest.swift */,
+			);
+			path = CategoryServiceTest;
+			sourceTree = "<group>";
+		};
+		FE7656802396C0AC002D4FBF /* UserServiceTest */ = {
+			isa = PBXGroup;
+			children = (
+				FE7656812396C0D9002D4FBF /* UserServiceTest.swift */,
+			);
+			path = UserServiceTest;
+			sourceTree = "<group>";
+		};
+		FE7656832396D3C1002D4FBF /* TestHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				FE42B88D23960B8E0019C2A2 /* URLSessionDataTaskMock.swift */,
+				FE42B88F23960BB50019C2A2 /* URLSessionMock.swift */,
+			);
+			path = TestHelpers;
+			sourceTree = "<group>";
+		};
+		FE7656872396D4E1002D4FBF /* AuthServiceTest */ = {
+			isa = PBXGroup;
+			children = (
+				FE7656842396D3E0002D4FBF /* AuthServiceTest.swift */,
+			);
+			path = AuthServiceTest;
+			sourceTree = "<group>";
+		};
+		FE76568A2396DD44002D4FBF /* StorageServiceTest */ = {
+			isa = PBXGroup;
+			children = (
+				FE7656882396DD3D002D4FBF /* StorageServiceTest.swift */,
+			);
+			path = StorageServiceTest;
+			sourceTree = "<group>";
+		};
 		FE7BB053234BFF53004CF70F = {
 			isa = PBXGroup;
 			children = (
 				FE7BB05E234BFF53004CF70F /* PartyMaker */,
+				FE42B89A239612E00019C2A2 /* PartyMakerTest */,
 				FE7BB05D234BFF53004CF70F /* Products */,
 				38BEB3DEEDD3925E50DFA184 /* Pods */,
 				56B3AA81D3FAE4E1D807166C /* Frameworks */,
@@ -301,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				FE7BB05C234BFF53004CF70F /* PartyMaker.app */,
+				FE42B899239612E00019C2A2 /* PartyMakerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -431,6 +532,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FE42B898239612E00019C2A2 /* PartyMakerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE42B8A0239612E00019C2A2 /* Build configuration list for PBXNativeTarget "PartyMakerTests" */;
+			buildPhases = (
+				FE42B895239612E00019C2A2 /* Sources */,
+				FE42B896239612E00019C2A2 /* Frameworks */,
+				FE42B897239612E00019C2A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE42B89F239612E00019C2A2 /* PBXTargetDependency */,
+			);
+			name = PartyMakerTests;
+			productName = PartyMakerTests;
+			productReference = FE42B899239612E00019C2A2 /* PartyMakerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FE7BB05B234BFF53004CF70F /* PartyMaker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE7BB070234BFF55004CF70F /* Build configuration list for PBXNativeTarget "PartyMaker" */;
@@ -457,10 +576,14 @@
 		FE7BB054234BFF53004CF70F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
+				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = 711Development;
 				TargetAttributes = {
+					FE42B898239612E00019C2A2 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = FE7BB05B234BFF53004CF70F;
+					};
 					FE7BB05B234BFF53004CF70F = {
 						CreatedOnToolsVersion = 11.0;
 					};
@@ -480,11 +603,19 @@
 			projectRoot = "";
 			targets = (
 				FE7BB05B234BFF53004CF70F /* PartyMaker */,
+				FE42B898239612E00019C2A2 /* PartyMakerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FE42B897239612E00019C2A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FE7BB05A234BFF53004CF70F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -557,10 +688,23 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FE42B895239612E00019C2A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE7656862396D3F0002D4FBF /* AuthServiceTest.swift in Sources */,
+				FE42B8C7239654630019C2A2 /* URLSessionDataTaskMock.swift in Sources */,
+				FE42B8C8239654630019C2A2 /* URLSessionMock.swift in Sources */,
+				FE42B8C9239654630019C2A2 /* EventServiceTest.swift in Sources */,
+				FE76567A2396560C002D4FBF /* PartyMakerTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FE7BB058234BFF53004CF70F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE7656892396DD3D002D4FBF /* StorageServiceTest.swift in Sources */,
 				FE5F2869235BECF100F2FD1C /* CustomHoshiTextField.swift in Sources */,
 				FE42B851238A04DF0019C2A2 /* AgeCategory.swift in Sources */,
 				2304C44A235E3542006E5C33 /* StorageServiceProtocol.swift in Sources */,
@@ -571,6 +715,7 @@
 				2310B3FB235299EA00CAFB75 /* LoginViewProtocol.swift in Sources */,
 				2303836C2382FE8300A7F800 /* CreatePartyRouterProtocol.swift in Sources */,
 				2310B4072352A81C00CAFB75 /* LoginInteractor.swift in Sources */,
+				FE76567F2396B6B3002D4FBF /* CategoryServiceTest.swift in Sources */,
 				FEED38B2237746BA0013B21C /* AccountViewProtocol.swift in Sources */,
 				2304C456235E3F74006E5C33 /* RegisterRouter.swift in Sources */,
 				236524052389FCB3006F650F /* CreatePartyConfigurator.swift in Sources */,
@@ -608,6 +753,7 @@
 				23059B4A2363BE440033FC74 /* FillableLoader.swift in Sources */,
 				FEED38B4237754DE0013B21C /* AccountConfigurator.swift in Sources */,
 				FE42B853238A09260019C2A2 /* CategoryService.swift in Sources */,
+				FE7656822396C0D9002D4FBF /* UserServiceTest.swift in Sources */,
 				2310B40123529E4100CAFB75 /* LoginPresenter.swift in Sources */,
 				FE7BB060234BFF53004CF70F /* AppDelegate.swift in Sources */,
 				23059B472363BD350033FC74 /* LoaderPath.swift in Sources */,
@@ -636,6 +782,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		FE42B89F239612E00019C2A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE7BB05B234BFF53004CF70F /* PartyMaker */;
+			targetProxy = FE42B89E239612E00019C2A2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		FE7BB065234BFF53004CF70F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -656,6 +810,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FE42B8A1239612E00019C2A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SWFK827YHT;
+				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.PartyMakerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_STYLE = all;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PartyMaker.app/PartyMaker";
+			};
+			name = Debug;
+		};
+		FE42B8A2239612E00019C2A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SWFK827YHT;
+				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.PartyMakerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_STYLE = all;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PartyMaker.app/PartyMaker";
+			};
+			name = Release;
+		};
 		FE7BB06E234BFF55004CF70F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -813,6 +1011,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FE42B8A0239612E00019C2A2 /* Build configuration list for PBXNativeTarget "PartyMakerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE42B8A1239612E00019C2A2 /* Debug */,
+				FE42B8A2239612E00019C2A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FE7BB057234BFF53004CF70F /* Build configuration list for PBXProject "PartyMaker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

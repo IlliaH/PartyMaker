@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ServiceError : LocalizedError {
+enum ServiceError : LocalizedError, Equatable {
     case TokenNotFound
     case ServerMessage(String)
     case NoResponseFromServer
