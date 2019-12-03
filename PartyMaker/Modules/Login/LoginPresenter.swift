@@ -64,6 +64,7 @@ class LoginPresenter : LoginPresenterProtocol {
     func googleLoginButtonClicked(tokenID : String) {
         interactor.googleLogin(token: tokenID, completion: { (status, message) in
             if (status == .Sucess) {
+                self.interactor.getCurrentUser()
                 self.router.showMainView()
             }
             else if (status == .LoginError) {

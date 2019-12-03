@@ -9,6 +9,7 @@
 import Foundation
 
 class EventShort : Codable {
+    var id : Int?
     var name: String?
     var latitude: Decimal?
     var longitude: Decimal?

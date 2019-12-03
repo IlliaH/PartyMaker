@@ -106,6 +106,11 @@ class EventService: EventServiceProtocol {
                                     completion(events, nil)
                                 }
                             }
+                        } else {
+                            eventsCounter -= 1
+                            if eventsCounter == 0 {
+                                completion(events, nil)
+                            }
                         }
                     }
                 } catch {

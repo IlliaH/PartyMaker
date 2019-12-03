@@ -59,6 +59,7 @@
 		FE42B853238A09260019C2A2 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B852238A09260019C2A2 /* CategoryService.swift */; };
 		FE42B85523941F530019C2A2 /* SelectAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B85423941F530019C2A2 /* SelectAddressViewController.swift */; };
 		FE42B8572394305C0019C2A2 /* PassLocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B8562394305C0019C2A2 /* PassLocationDelegate.swift */; };
+		FE42B8812395EB460019C2A2 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B8802395EB460019C2A2 /* CustomAnnotation.swift */; };
 		FE5F2869235BECF100F2FD1C /* CustomHoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5F2868235BECF100F2FD1C /* CustomHoshiTextField.swift */; };
 		FE7BB060234BFF53004CF70F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7BB05F234BFF53004CF70F /* AppDelegate.swift */; };
 		FE7BB062234BFF53004CF70F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7BB061234BFF53004CF70F /* SceneDelegate.swift */; };
@@ -137,6 +138,7 @@
 		FE42B852238A09260019C2A2 /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
 		FE42B85423941F530019C2A2 /* SelectAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressViewController.swift; sourceTree = "<group>"; };
 		FE42B8562394305C0019C2A2 /* PassLocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassLocationDelegate.swift; sourceTree = "<group>"; };
+		FE42B8802395EB460019C2A2 /* CustomAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		FE5F2868235BECF100F2FD1C /* CustomHoshiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHoshiTextField.swift; sourceTree = "<group>"; };
 		FE7BB05C234BFF53004CF70F /* PartyMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7BB05F234BFF53004CF70F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -390,6 +392,7 @@
 				FE42B84E238A04B10019C2A2 /* EventType.swift */,
 				FE42B850238A04DF0019C2A2 /* AgeCategory.swift */,
 				23054AEF2395E0AA00852BFF /* EventShort.swift */,
+				FE42B8802395EB460019C2A2 /* CustomAnnotation.swift */,
 			);
 			path = Enities;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 				FE42B84F238A04B10019C2A2 /* EventType.swift in Sources */,
 				2310B40D2352AC2E00CAFB75 /* LoginRouter.swift in Sources */,
 				2310B4092352AB7100CAFB75 /* LoginConfiguratorProtocol.swift in Sources */,
+				FE42B8812395EB460019C2A2 /* CustomAnnotation.swift in Sources */,
 				FE13576B235BCF26008597E4 /* GradientView.swift in Sources */,
 				2304C44C235E3592006E5C33 /* StorageService.swift in Sources */,
 				FEED38AE237746820013B21C /* AccountInteractorProtocol.swift in Sources */,
