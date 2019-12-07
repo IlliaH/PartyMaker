@@ -30,8 +30,8 @@ class CreatePartyPresenter: CreatePartyPresenterProtocol {
     var nameValue: String? {
         willSet(newNameValue) {
             if let name = newNameValue {
-                if interactor.event.Name != name {
-                    interactor.event.Name = name
+                if interactor.event.name != name {
+                    interactor.event.name = name
                 }
             }
         }
@@ -44,7 +44,7 @@ class CreatePartyPresenter: CreatePartyPresenterProtocol {
             guard let unwrappedId = categoryId else { return }
             let selectedCategory = categories[unwrappedId]
             let selectedCategoryId = selectedCategory.id
-            interactor.event.AgeCategoryId = selectedCategoryId
+            interactor.event.ageCategoryId = selectedCategoryId
         }
     }
     
@@ -55,15 +55,15 @@ class CreatePartyPresenter: CreatePartyPresenterProtocol {
             guard let unwrappedId = eventTypeId else { return }
             let selectedEventType = eventTypes[unwrappedId]
             let selectedEventTypeId = selectedEventType.id
-            interactor.event.EventTypeId = selectedEventTypeId
+            interactor.event.eventTypeId = selectedEventTypeId
         }
     }
     
     var descriptionValue: String? {
         willSet(newDescriptionValue) {
             if let description = newDescriptionValue {
-                if interactor.event.Description != description {
-                    interactor.event.Description = description
+                if interactor.event.description != description {
+                    interactor.event.description = description
                 }
             }
         }
@@ -84,8 +84,8 @@ class CreatePartyPresenter: CreatePartyPresenterProtocol {
             if let startDateValue = newStartDateValue {
                 let dateValue = dateFormatter.string(from: startDateValue)
                 
-                if interactor.event.StartDate != dateValue {
-                    interactor.event.StartDate = dateValue
+                if interactor.event.startDate != dateValue {
+                    interactor.event.startDate = dateValue
                 }
             }
         }
@@ -96,8 +96,8 @@ class CreatePartyPresenter: CreatePartyPresenterProtocol {
             if let endDateValue = newEndDateValue {
                 let dateValue = dateFormatter.string(from: endDateValue)
                 
-                if interactor.event.EndDate != dateValue {
-                    interactor.event.EndDate = dateValue
+                if interactor.event.endDate != dateValue {
+                    interactor.event.endDate = dateValue
                 }
             }
         }
@@ -105,8 +105,8 @@ class CreatePartyPresenter: CreatePartyPresenterProtocol {
     
     var isPrivateValue: Bool? {
         willSet(newIsPrivateValue) {
-            if interactor.event.IsPrivate != newIsPrivateValue {
-                interactor.event.IsPrivate = newIsPrivateValue
+            if interactor.event.isPrivate != newIsPrivateValue {
+                interactor.event.isPrivate = newIsPrivateValue
             }
         }
     }
@@ -115,8 +115,8 @@ class CreatePartyPresenter: CreatePartyPresenterProtocol {
         willSet(newNumberOfPeopleValue) {
             if let numberOfPeopleValue = newNumberOfPeopleValue {
                 if let numberOfPeople = Int(numberOfPeopleValue) {
-                    if interactor.event.NumberOfPeople != numberOfPeople {
-                        interactor.event.NumberOfPeople = numberOfPeople
+                    if interactor.event.numberOfPeople != numberOfPeople {
+                        interactor.event.numberOfPeople = numberOfPeople
                     }
                 }
             }
@@ -138,8 +138,8 @@ class CreatePartyPresenter: CreatePartyPresenterProtocol {
     var latitudeValue: Decimal? {
         willSet(newLatitudeValue) {
             if let latitude = newLatitudeValue {
-                if interactor.event.Latitude != latitude {
-                    interactor.event.Latitude = latitude
+                if interactor.event.latitude != latitude {
+                    interactor.event.latitude = latitude
                 }
             }
         }
@@ -148,8 +148,8 @@ class CreatePartyPresenter: CreatePartyPresenterProtocol {
     var longitudeValue: Decimal? {
         willSet(newLongitudeValue) {
             if let longitude = newLongitudeValue {
-                if interactor.event.Longitude != longitude {
-                    interactor.event.Longitude = longitude
+                if interactor.event.longitude != longitude {
+                    interactor.event.longitude = longitude
                 }
             }
         }

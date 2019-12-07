@@ -76,18 +76,18 @@ class PartyMakerTests: XCTestCase {
         let manager = EventServiceTest(session: session)
         
         let event = Event()
-        event.Id = 1
-        event.Name = "Commons"
-        event.Description = "Cool party"
-        event.StartDate = "07/11/2019"
-        event.EndDate = "08/11/2019"
-        event.PictureUrl = "url"
-        event.Latitude = 37.363949
-        event.Longitude = -121.928940
-        event.IsPrivate = false
-        event.AgeCategoryId = 2
-        event.EventTypeId = 3
-        event.NumberOfPeople = 10
+        event.id = 1
+        event.name = "Commons"
+        event.description = "Cool party"
+        event.startDate = "07/11/2019"
+        event.endDate = "08/11/2019"
+        event.pictureUrl = "url"
+        event.latitude = 37.363949
+        event.longitude = -121.928940
+        event.isPrivate = false
+        event.ageCategoryId = 2
+        event.eventTypeId = 3
+        event.numberOfPeople = 10
         
         let jsonEncoder = JSONEncoder()
         jsonEncoder.outputFormatting = .prettyPrinted
@@ -116,18 +116,18 @@ class PartyMakerTests: XCTestCase {
         let manager = EventServiceTest(session: session)
         
         let event = Event()
-        event.Id = 1
-        event.Name = "Commons"
-        event.Description = "Cool party"
-        event.StartDate = "07/11/2019"
-        event.EndDate = "08/11/2019"
-        event.PictureUrl = "url"
-        event.Latitude = 37.363949
-        event.Longitude = -121.928940
-        event.IsPrivate = false
-        event.AgeCategoryId = 2
-        event.EventTypeId = 3
-        event.NumberOfPeople = 10
+        event.id = 1
+        event.name = "Commons"
+        event.description = "Cool party"
+        event.startDate = "07/11/2019"
+        event.endDate = "08/11/2019"
+        event.pictureUrl = "url"
+        event.latitude = 37.363949
+        event.longitude = -121.928940
+        event.isPrivate = false
+        event.ageCategoryId = 2
+        event.eventTypeId = 3
+        event.numberOfPeople = 10
 
         // Create a URL (using the file path API to avoid optionals)
         let url = URL(fileURLWithPath: "url")

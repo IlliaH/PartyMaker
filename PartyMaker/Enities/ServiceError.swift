@@ -12,6 +12,8 @@ enum ServiceError : LocalizedError, Equatable {
     case TokenNotFound
     case ServerMessage(String)
     case NoResponseFromServer
+    case InvalidParameters
+    case PageNotFound
     
     var errorDescription: String? {
         switch self {
@@ -21,6 +23,10 @@ enum ServiceError : LocalizedError, Equatable {
             return "Token was not found in response"
         case .NoResponseFromServer:
             return "Server is not available"
+        case .InvalidParameters:
+            return "Request parameters were invalid"
+        case .PageNotFound:
+            return "The requested data was not found"
         }
     }
 }

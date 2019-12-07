@@ -10,19 +10,20 @@ import Foundation
 
 class Event : Codable, Equatable {
     static func == (lhs: Event, rhs: Event) -> Bool {
-        return lhs.Id == rhs.Id && lhs.Name == rhs.Name && lhs.Description == rhs.Description && lhs.StartDate == rhs.StartDate && lhs.EndDate == rhs.EndDate && lhs.PictureUrl == rhs.PictureUrl && lhs.Latitude == rhs.Latitude && lhs.Longitude == rhs.Longitude && lhs.IsPrivate == rhs.IsPrivate && lhs.AgeCategoryId == rhs.AgeCategoryId && lhs.EventTypeId == rhs.EventTypeId && lhs.NumberOfPeople == rhs.NumberOfPeople
+        return lhs.id == rhs.id && lhs.name == rhs.name && lhs.description == rhs.description && lhs.startDate == rhs.startDate && lhs.endDate == rhs.endDate && lhs.pictureUrl == rhs.pictureUrl && lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude && lhs.isPrivate == rhs.isPrivate && lhs.ageCategoryId == rhs.ageCategoryId && lhs.eventTypeId == rhs.eventTypeId && lhs.numberOfPeople == rhs.numberOfPeople
     }
     
-    var Id: Int?
-    var Name: String?
-    var Description: String?
-    var StartDate: String?
-    var EndDate: String?
-    var PictureUrl: String?
-    var Latitude: Decimal?
-    var Longitude: Decimal?
-    var IsPrivate: Bool?
-    var AgeCategoryId: Int?
-    var EventTypeId: Int?
-    var NumberOfPeople: Int?
+    var id: Int?
+    var name: String?
+    var description: String?
+    var startDate: String?
+    var endDate: String?
+    var pictureUrl: String?
+    var picture: Data?
+    var latitude: Decimal?
+    var longitude: Decimal?
+    var isPrivate: Bool?
+    var ageCategoryId: Int?
+    var eventTypeId: Int?
+    var numberOfPeople: Int?
 }
