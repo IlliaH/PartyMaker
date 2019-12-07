@@ -76,5 +76,7 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>NSContactsUsageDescription</key>
+	<string>$(PRODUCT_NAME) contacts use</string>
 </dict>
 </plist>

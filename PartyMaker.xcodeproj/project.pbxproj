@@ -63,6 +63,10 @@
 		FE42B8C7239654630019C2A2 /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B88D23960B8E0019C2A2 /* URLSessionDataTaskMock.swift */; };
 		FE42B8C8239654630019C2A2 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B88F23960BB50019C2A2 /* URLSessionMock.swift */; };
 		FE42B8C9239654630019C2A2 /* EventServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B89123960BF50019C2A2 /* EventServiceTest.swift */; };
+		FE512D4B239C2F35002EAAF6 /* InviteFriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE512D4A239C2F35002EAAF6 /* InviteFriendsTableViewController.swift */; };
+		FE512D4D239C3034002EAAF6 /* PhoneService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE512D4C239C3034002EAAF6 /* PhoneService.swift */; };
+		FE512D51239C3838002EAAF6 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE512D50239C3838002EAAF6 /* ContactTableViewCell.swift */; };
+		FE512D53239C3C68002EAAF6 /* PhoneContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE512D52239C3C68002EAAF6 /* PhoneContact.swift */; };
 		FE5F2869235BECF100F2FD1C /* CustomHoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5F2868235BECF100F2FD1C /* CustomHoshiTextField.swift */; };
 		FE76567A2396560C002D4FBF /* PartyMakerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B89B239612E00019C2A2 /* PartyMakerTest.swift */; };
 		FE76567F2396B6B3002D4FBF /* CategoryServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE76567E2396B6B3002D4FBF /* CategoryServiceTest.swift */; };
@@ -163,6 +167,10 @@
 		FE42B899239612E00019C2A2 /* PartyMakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PartyMakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE42B89B239612E00019C2A2 /* PartyMakerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyMakerTest.swift; sourceTree = "<group>"; };
 		FE42B89D239612E00019C2A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE512D4A239C2F35002EAAF6 /* InviteFriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendsTableViewController.swift; sourceTree = "<group>"; };
+		FE512D4C239C3034002EAAF6 /* PhoneService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneService.swift; sourceTree = "<group>"; };
+		FE512D50239C3838002EAAF6 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		FE512D52239C3C68002EAAF6 /* PhoneContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneContact.swift; sourceTree = "<group>"; };
 		FE5F2868235BECF100F2FD1C /* CustomHoshiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHoshiTextField.swift; sourceTree = "<group>"; };
 		FE76567E2396B6B3002D4FBF /* CategoryServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServiceTest.swift; sourceTree = "<group>"; };
 		FE7656812396C0D9002D4FBF /* UserServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceTest.swift; sourceTree = "<group>"; };
@@ -337,6 +345,15 @@
 			path = PartyMakerTest;
 			sourceTree = "<group>";
 		};
+		FE512D49239C2F0F002EAAF6 /* InviteFriends */ = {
+			isa = PBXGroup;
+			children = (
+				FE512D4A239C2F35002EAAF6 /* InviteFriendsTableViewController.swift */,
+				FE512D50239C3838002EAAF6 /* ContactTableViewCell.swift */,
+			);
+			path = InviteFriends;
+			sourceTree = "<group>";
+		};
 		FE76567C2396B64A002D4FBF /* EventServiceTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,6 +444,7 @@
 		FEBCC54423526F650034D1E2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FE512D49239C2F0F002EAAF6 /* InviteFriends */,
 				23A94E9A23943D77003E5F4A /* Map */,
 				23080A7423809C06008E3654 /* CreateParty */,
 				FEED38A5237745B40013B21C /* Account */,
@@ -478,6 +496,7 @@
 				2304C44B235E3592006E5C33 /* StorageService.swift */,
 				2303837323830EBE00A7F800 /* EventService.swift */,
 				FE42B852238A09260019C2A2 /* CategoryService.swift */,
+				FE512D4C239C3034002EAAF6 /* PhoneService.swift */,
 			);
 			path = Concrete;
 			sourceTree = "<group>";
@@ -494,6 +513,7 @@
 				FE42B850238A04DF0019C2A2 /* AgeCategory.swift */,
 				23054AEF2395E0AA00852BFF /* EventShort.swift */,
 				FE42B8802395EB460019C2A2 /* CustomAnnotation.swift */,
+				FE512D52239C3C68002EAAF6 /* PhoneContact.swift */,
 			);
 			path = Enities;
 			sourceTree = "<group>";
@@ -721,18 +741,21 @@
 				236524052389FCB3006F650F /* CreatePartyConfigurator.swift in Sources */,
 				230383682382FDD600A7F800 /* CreatePartyPresenterProtocol.swift in Sources */,
 				FEED38B62377555E0013B21C /* AccountInteractor.swift in Sources */,
+				FE512D4D239C3034002EAAF6 /* PhoneService.swift in Sources */,
 				2303836E2382FEAD00A7F800 /* CreatePartyConfiguratorProtocol.swift in Sources */,
 				2304C454235E3F27006E5C33 /* RegisterRouterProtocol.swift in Sources */,
 				2310B4032352A0CF00CAFB75 /* LoginInteractorProtocol.swift in Sources */,
 				FE42B85523941F530019C2A2 /* SelectAddressViewController.swift in Sources */,
 				2304C444235E20C8006E5C33 /* RoundImageView.swift in Sources */,
 				2304C446235E276B006E5C33 /* UserServiceProtocol.swift in Sources */,
+				FE512D51239C3838002EAAF6 /* ContactTableViewCell.swift in Sources */,
 				2310B3FF23529A5A00CAFB75 /* LoginRouterProtocol.swift in Sources */,
 				23A94E9E23943F7C003E5F4A /* MapBaseViewController.swift in Sources */,
 				FE7BB064234BFF53004CF70F /* LoginController.swift in Sources */,
 				FE42B84F238A04B10019C2A2 /* EventType.swift in Sources */,
 				2310B40D2352AC2E00CAFB75 /* LoginRouter.swift in Sources */,
 				2310B4092352AB7100CAFB75 /* LoginConfiguratorProtocol.swift in Sources */,
+				FE512D4B239C2F35002EAAF6 /* InviteFriendsTableViewController.swift in Sources */,
 				FE42B8812395EB460019C2A2 /* CustomAnnotation.swift in Sources */,
 				FE13576B235BCF26008597E4 /* GradientView.swift in Sources */,
 				2304C44C235E3592006E5C33 /* StorageService.swift in Sources */,
@@ -763,6 +786,7 @@
 				23A94E9C23943D96003E5F4A /* MapViewController.swift in Sources */,
 				FE42B8572394305C0019C2A2 /* PassLocationDelegate.swift in Sources */,
 				FEBCC54C2352911A0034D1E2 /* AuthService.swift in Sources */,
+				FE512D53239C3C68002EAAF6 /* PhoneContact.swift in Sources */,
 				FEBCC54F235292AB0034D1E2 /* AppConstant.swift in Sources */,
 				2304C458235E3FAB006E5C33 /* RegisterPresenterProtocol.swift in Sources */,
 				FEED38B0237746A10013B21C /* AccountConfiguratorProtocol.swift in Sources */,
