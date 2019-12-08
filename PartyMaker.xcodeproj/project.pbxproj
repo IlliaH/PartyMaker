@@ -67,6 +67,7 @@
 		FE512D4D239C3034002EAAF6 /* PhoneService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE512D4C239C3034002EAAF6 /* PhoneService.swift */; };
 		FE512D51239C3838002EAAF6 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE512D50239C3838002EAAF6 /* ContactTableViewCell.swift */; };
 		FE512D53239C3C68002EAAF6 /* PhoneContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE512D52239C3C68002EAAF6 /* PhoneContact.swift */; };
+		FE512D56239C79C0002EAAF6 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE512D55239C79C0002EAAF6 /* EventDetailsViewController.swift */; };
 		FE5F2869235BECF100F2FD1C /* CustomHoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5F2868235BECF100F2FD1C /* CustomHoshiTextField.swift */; };
 		FE76567A2396560C002D4FBF /* PartyMakerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B89B239612E00019C2A2 /* PartyMakerTest.swift */; };
 		FE76567F2396B6B3002D4FBF /* CategoryServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE76567E2396B6B3002D4FBF /* CategoryServiceTest.swift */; };
@@ -171,6 +172,7 @@
 		FE512D4C239C3034002EAAF6 /* PhoneService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneService.swift; sourceTree = "<group>"; };
 		FE512D50239C3838002EAAF6 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		FE512D52239C3C68002EAAF6 /* PhoneContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneContact.swift; sourceTree = "<group>"; };
+		FE512D55239C79C0002EAAF6 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		FE5F2868235BECF100F2FD1C /* CustomHoshiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHoshiTextField.swift; sourceTree = "<group>"; };
 		FE76567E2396B6B3002D4FBF /* CategoryServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServiceTest.swift; sourceTree = "<group>"; };
 		FE7656812396C0D9002D4FBF /* UserServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceTest.swift; sourceTree = "<group>"; };
@@ -354,6 +356,14 @@
 			path = InviteFriends;
 			sourceTree = "<group>";
 		};
+		FE512D54239C799B002EAAF6 /* EventDetails */ = {
+			isa = PBXGroup;
+			children = (
+				FE512D55239C79C0002EAAF6 /* EventDetailsViewController.swift */,
+			);
+			path = EventDetails;
+			sourceTree = "<group>";
+		};
 		FE76567C2396B64A002D4FBF /* EventServiceTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -444,6 +454,7 @@
 		FEBCC54423526F650034D1E2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FE512D54239C799B002EAAF6 /* EventDetails */,
 				FE512D49239C2F0F002EAAF6 /* InviteFriends */,
 				23A94E9A23943D77003E5F4A /* Map */,
 				23080A7423809C06008E3654 /* CreateParty */,
@@ -778,6 +789,7 @@
 				FE42B853238A09260019C2A2 /* CategoryService.swift in Sources */,
 				FE7656822396C0D9002D4FBF /* UserServiceTest.swift in Sources */,
 				2310B40123529E4100CAFB75 /* LoginPresenter.swift in Sources */,
+				FE512D56239C79C0002EAAF6 /* EventDetailsViewController.swift in Sources */,
 				FE7BB060234BFF53004CF70F /* AppDelegate.swift in Sources */,
 				23059B472363BD350033FC74 /* LoaderPath.swift in Sources */,
 				2304C462235E4BE3006E5C33 /* RegisterConfigurator.swift in Sources */,

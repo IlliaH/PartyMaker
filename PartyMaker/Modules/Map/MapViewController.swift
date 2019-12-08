@@ -22,7 +22,6 @@ class MapViewController: MapBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
-     //   getEvents()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -108,12 +107,19 @@ extension MapViewController : MKMapViewDelegate {
 
         return anView
     }
-    
+    //TODO: pass event id
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "goToEventDetails"{
+//            let detailNC = segue.description as! UINavigationController
+//            let detailVC = detailNC.topViewController as! EventDetailsViewController
+//
+//        }
+//    }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if control == view.rightCalloutAccessoryView {
             print("Button tapped")
-
+            performSegue(withIdentifier: "goToEventDetails", sender: nil)
         }
     }
 }
