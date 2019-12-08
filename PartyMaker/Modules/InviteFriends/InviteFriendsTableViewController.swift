@@ -10,9 +10,11 @@ import UIKit
 import MessageUI
 
 class InviteFriendsTableViewController: UITableViewController, MFMessageComposeViewControllerDelegate {
-    var phoneService : PhoneService = PhoneService()
+    var eventId: Int = 2 // TO DO: pass event id from details controller
     var phoneContact = [PhoneContact]()
     
+    let phoneService : PhoneService = PhoneService()
+    let eventService: EventServiceProtocol = EventService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +62,7 @@ class InviteFriendsTableViewController: UITableViewController, MFMessageComposeV
             dismiss(animated: true, completion: nil)
         case .sent:
             print("Message was sent")
+            sendInvitationsToServer(controller.recipients, controller.body)
             dismiss(animated: true, completion: nil)
         default:
             break
@@ -114,5 +117,27 @@ class InviteFriendsTableViewController: UITableViewController, MFMessageComposeV
         }
     }
     
-    
+    func sendInvitationsToServer(_ recipients: [String]?, _ code: String?) {
+        if let recipients = recipients, let code = code {
+            var eventInvitations: [EventInvitation] = []
+            
+            for phoneNumber in recipients {
+                let invitation = EventInvitation()
+                invitation.userPhoneNumber = phoneNumber
+                invitation.code = code
+                invitation.eventId = eventId
+                
+                eventInvitations.append(invitation)
+            }
+            
+            eventService.createEventInvitations(id: eventId, invitations: eventInvitations) { (invitations, error) in
+                if let error = error {
+                    print(error as Any)
+                }
+                else {
+                    // Alert invitations created
+                }
+            }
+        }
+    }
 }

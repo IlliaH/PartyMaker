@@ -33,6 +33,7 @@
 		23059B472363BD350033FC74 /* LoaderPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23059B462363BD350033FC74 /* LoaderPath.swift */; };
 		23059B4A2363BE440033FC74 /* FillableLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23059B492363BE440033FC74 /* FillableLoader.swift */; };
 		23059B4C2363BF090033FC74 /* WavesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23059B4B2363BF090033FC74 /* WavesLoader.swift */; };
+		2307A99C239C78DE006D26C3 /* EventInvitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2307A99B239C78DE006D26C3 /* EventInvitation.swift */; };
 		23080A7623809C31008E3654 /* CreatePartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23080A7523809C31008E3654 /* CreatePartyViewController.swift */; };
 		2310B3FB235299EA00CAFB75 /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310B3FA235299EA00CAFB75 /* LoginViewProtocol.swift */; };
 		2310B3FD23529A2700CAFB75 /* LoginPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310B3FC23529A2700CAFB75 /* LoginPresenterProtocol.swift */; };
@@ -132,6 +133,7 @@
 		23059B462363BD350033FC74 /* LoaderPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderPath.swift; sourceTree = "<group>"; };
 		23059B492363BE440033FC74 /* FillableLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillableLoader.swift; sourceTree = "<group>"; };
 		23059B4B2363BF090033FC74 /* WavesLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavesLoader.swift; sourceTree = "<group>"; };
+		2307A99B239C78DE006D26C3 /* EventInvitation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInvitation.swift; sourceTree = "<group>"; };
 		23080A7523809C31008E3654 /* CreatePartyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePartyViewController.swift; sourceTree = "<group>"; };
 		2310B3FA235299EA00CAFB75 /* LoginViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
 		2310B3FC23529A2700CAFB75 /* LoginPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterProtocol.swift; sourceTree = "<group>"; };
@@ -514,6 +516,7 @@
 				23054AEF2395E0AA00852BFF /* EventShort.swift */,
 				FE42B8802395EB460019C2A2 /* CustomAnnotation.swift */,
 				FE512D52239C3C68002EAAF6 /* PhoneContact.swift */,
+				2307A99B239C78DE006D26C3 /* EventInvitation.swift */,
 			);
 			path = Enities;
 			sourceTree = "<group>";
@@ -799,6 +802,7 @@
 				FEED38BA23775DA00013B21C /* Extensions.swift in Sources */,
 				FEBCC54823528F970034D1E2 /* AuthServiceProtocol.swift in Sources */,
 				2310B40B2352ABC800CAFB75 /* LoginConfigurator.swift in Sources */,
+				2307A99C239C78DE006D26C3 /* EventInvitation.swift in Sources */,
 				2303836A2382FE0F00A7F800 /* CreatePartyInteractorProtocol.swift in Sources */,
 				FEBCC551235295F30034D1E2 /* ServiceError.swift in Sources */,
 			);
@@ -997,16 +1001,18 @@
 			baseConfigurationReference = 2DFFCBD30AA1B0CD95CED7AE /* Pods-PartyMaker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SWFK827YHT;
+				DEVELOPMENT_TEAM = HLDWLT2245;
 				INFOPLIST_FILE = PartyMaker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.711Development.PartyMaker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.711Development.PM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1017,16 +1023,18 @@
 			baseConfigurationReference = DB0B27CA6C904C4129E8A6F2 /* Pods-PartyMaker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SWFK827YHT;
+				DEVELOPMENT_TEAM = HLDWLT2245;
 				INFOPLIST_FILE = PartyMaker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.711Development.PartyMaker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.711Development.PM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

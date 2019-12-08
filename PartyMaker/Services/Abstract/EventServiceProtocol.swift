@@ -17,5 +17,6 @@ protocol EventServiceProtocol {
     func followEvent(id: Int, completion: @escaping(Error?) -> Void)
     func unfollowEvent(id: Int, completion: @escaping(Error?) -> Void)
     
+    func createEventInvitations(id: Int, invitations: [EventInvitation], completion: @escaping([EventInvitation]?, Error?) -> Void)
     func joinPrivateEvent(code: String, completion: @escaping(Event?, Error?) -> Void)
 }
