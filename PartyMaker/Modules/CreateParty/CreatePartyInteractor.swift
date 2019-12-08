@@ -20,6 +20,7 @@ class CreatePartyInteractor : CreatePartyInteractorProtocol {
     
     let eventService : EventServiceProtocol = EventService()
     let categoryService : CategoryServiceProtocol = CategoryService()
+    let storageService: StorageService = StorageService()
     
     required init(presenter: CreatePartyPresenterProtocol) {
         self.presenter = presenter
@@ -32,7 +33,30 @@ class CreatePartyInteractor : CreatePartyInteractorProtocol {
             }else if event == nil{
                 completion(PresenterStatus.CreateEventError, "Event has not been saved")
             } else {
-                completion(PresenterStatus.Sucess, "Event created")
+                if let picture = self.pictureValue {
+                    self.storageService.uploadFile(picture: picture) { (pictureUrl, error) in
+                        if error != nil {
+                            completion(PresenterStatus.Sucess, "Event created without image")
+                        }
+                        else if let pictureUrl = pictureUrl {
+                            event!.pictureUrl = pictureUrl
+                            self.eventService.updateEvent(event: event!) { (updatedEvent, error) in
+                                if let error = error {
+                                    completion(PresenterStatus.CreateEventError, error.localizedDescription)
+                                }
+                                else if updatedEvent == nil {
+                                    completion(PresenterStatus.CreateEventError, "Event has not been updated")
+                                }
+                                else {
+                                    completion(PresenterStatus.Sucess, "Event created")
+                                }
+                            }
+                        }
+                    }
+                }
+                else {
+                    completion(PresenterStatus.Sucess, "Event created")
+                }
             }
         }
     }
