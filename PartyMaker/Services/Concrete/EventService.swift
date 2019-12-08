@@ -344,7 +344,9 @@ class EventService: EventServiceProtocol {
             return
         }
         
-        guard let url = URL(string: "\(AppConstant.API_URL)Event/joinPrivateEvent/\(code)") else { completion(nil, ServiceError.InvalidParameters); return }
+        guard let escapedCode = code.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else { completion(nil,ServiceError.InvalidParameters); return }
+        
+        guard let url = URL(string: "\(AppConstant.API_URL)Event/joinPrivateEvent/\(escapedCode)") else { completion(nil, ServiceError.InvalidParameters); return }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         guard let token = UserDefaults.standard.string(forKey: "accessToken") else { completion(nil, ServiceError.TokenNotFound); return }

@@ -33,6 +33,7 @@
 		23059B472363BD350033FC74 /* LoaderPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23059B462363BD350033FC74 /* LoaderPath.swift */; };
 		23059B4A2363BE440033FC74 /* FillableLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23059B492363BE440033FC74 /* FillableLoader.swift */; };
 		23059B4C2363BF090033FC74 /* WavesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23059B4B2363BF090033FC74 /* WavesLoader.swift */; };
+		23067BF7239D5EBF007482B1 /* JoinPrivateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23067BF6239D5EBF007482B1 /* JoinPrivateEventViewController.swift */; };
 		2307A99C239C78DE006D26C3 /* EventInvitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2307A99B239C78DE006D26C3 /* EventInvitation.swift */; };
 		23080A7623809C31008E3654 /* CreatePartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23080A7523809C31008E3654 /* CreatePartyViewController.swift */; };
 		2310B3FB235299EA00CAFB75 /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310B3FA235299EA00CAFB75 /* LoginViewProtocol.swift */; };
@@ -134,6 +135,7 @@
 		23059B462363BD350033FC74 /* LoaderPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderPath.swift; sourceTree = "<group>"; };
 		23059B492363BE440033FC74 /* FillableLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillableLoader.swift; sourceTree = "<group>"; };
 		23059B4B2363BF090033FC74 /* WavesLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavesLoader.swift; sourceTree = "<group>"; };
+		23067BF6239D5EBF007482B1 /* JoinPrivateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinPrivateEventViewController.swift; sourceTree = "<group>"; };
 		2307A99B239C78DE006D26C3 /* EventInvitation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInvitation.swift; sourceTree = "<group>"; };
 		23080A7523809C31008E3654 /* CreatePartyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePartyViewController.swift; sourceTree = "<group>"; };
 		2310B3FA235299EA00CAFB75 /* LoginViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
@@ -268,6 +270,14 @@
 				23059B4B2363BF090033FC74 /* WavesLoader.swift */,
 			);
 			path = FillableLoader;
+			sourceTree = "<group>";
+		};
+		23067BF5239D5EA8007482B1 /* JoinPrivateEvent */ = {
+			isa = PBXGroup;
+			children = (
+				23067BF6239D5EBF007482B1 /* JoinPrivateEventViewController.swift */,
+			);
+			path = JoinPrivateEvent;
 			sourceTree = "<group>";
 		};
 		23080A7423809C06008E3654 /* CreateParty */ = {
@@ -456,6 +466,7 @@
 		FEBCC54423526F650034D1E2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				23067BF5239D5EA8007482B1 /* JoinPrivateEvent */,
 				FE512D54239C799B002EAAF6 /* EventDetails */,
 				FE512D49239C2F0F002EAAF6 /* InviteFriends */,
 				23A94E9A23943D77003E5F4A /* Map */,
@@ -749,6 +760,7 @@
 				2310B3FB235299EA00CAFB75 /* LoginViewProtocol.swift in Sources */,
 				2303836C2382FE8300A7F800 /* CreatePartyRouterProtocol.swift in Sources */,
 				2310B4072352A81C00CAFB75 /* LoginInteractor.swift in Sources */,
+				23067BF7239D5EBF007482B1 /* JoinPrivateEventViewController.swift in Sources */,
 				FE76567F2396B6B3002D4FBF /* CategoryServiceTest.swift in Sources */,
 				FEED38B2237746BA0013B21C /* AccountViewProtocol.swift in Sources */,
 				2304C456235E3F74006E5C33 /* RegisterRouter.swift in Sources */,
