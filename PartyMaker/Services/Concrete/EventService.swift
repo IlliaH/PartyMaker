@@ -287,6 +287,57 @@ class EventService: EventServiceProtocol {
         }.resume()
     }
     
+    func createEventInvitations(id: Int, invitations: [EventInvitation], completion: @escaping ([EventInvitation]?, Error?) -> Void) {
+        if invitations.count <= 0 {
+            completion(nil, ServiceError.InvalidParameters)
+            return
+        }
+        
+        guard let url = URL(string: "\(AppConstant.API_URL)Event/\(id)/invitations") else { completion(nil, ServiceError.InvalidParameters); return }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        guard let token = UserDefaults.standard.string(forKey: "accessToken") else { completion(nil, ServiceError.TokenNotFound); return }
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        let jsonData = try? JSONEncoder().encode(invitations)
+        request.httpBody = jsonData
+        
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            if let response = response {
+                print(response)
+            }
+            
+            if let response = response as? HTTPURLResponse {
+                if response.statusCode == 404 {
+                    completion(nil, ServiceError.PageNotFound)
+                }
+                else if response.statusCode == 201 {
+                    if let data = data {
+                        do {
+                            let jsonDecoder = JSONDecoder()
+                            let eventInvitations = try jsonDecoder.decode([EventInvitation].self, from: data)
+                            
+                            completion(eventInvitations, nil)
+                        } catch {
+                            print(error)
+                            completion(nil, error)
+                        }
+                    } else {
+                        completion(nil, ServiceError.NoResponseFromServer)
+                    }
+                }
+                else {
+                    completion(nil, ServiceError.NoResponseFromServer)
+                }
+            }
+            else {
+                completion(nil, ServiceError.NoResponseFromServer)
+            }
+        }.resume()
+    }
+    
     func joinPrivateEvent(code: String, completion: @escaping (Event?, Error?) -> Void) {
         if code.isEmpty {
             completion(nil, ServiceError.InvalidParameters)
