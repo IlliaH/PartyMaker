@@ -8,6 +8,7 @@ target 'PartyMaker' do
   pod 'TextFieldEffects' 
   pod 'DateTimePicker'
   pod 'McPicker', '~> 2.0.0'
+  pod 'fluid-slider'
 
   # Pods for PartyMaker
 

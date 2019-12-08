@@ -17,7 +17,9 @@ class MapViewController: MapBaseViewController {
     
     var isSettingsHidden: Bool = true
     var loader : FillableLoader?
-    let eventService = EventService()
+    let eventService : EventServiceProtocol = EventService()
+    var selectedEventId : Int?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,8 +80,7 @@ class MapViewController: MapBaseViewController {
             }
         }
     }
-    
-    
+
 }
 
 
@@ -107,18 +108,21 @@ extension MapViewController : MKMapViewDelegate {
 
         return anView
     }
-    //TODO: pass event id
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "goToEventDetails"{
-//            let detailNC = segue.description as! UINavigationController
-//            let detailVC = detailNC.topViewController as! EventDetailsViewController
-//
-//        }
-//    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToEventDetails"{
+            let detailNC = segue.destination as! UINavigationController
+            let detailVC = detailNC.topViewController as! EventDetailsViewController
+            detailVC.eventId = selectedEventId
+            
+        }
+    }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if control == view.rightCalloutAccessoryView {
             print("Button tapped")
+            let selectedAnnotation = view.annotation as! CustomAnnotation
+            selectedEventId = selectedAnnotation.id
             performSegue(withIdentifier: "goToEventDetails", sender: nil)
         }
     }
