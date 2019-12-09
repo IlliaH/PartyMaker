@@ -70,6 +70,7 @@
 		FE512D51239C3838002EAAF6 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE512D50239C3838002EAAF6 /* ContactTableViewCell.swift */; };
 		FE512D53239C3C68002EAAF6 /* PhoneContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE512D52239C3C68002EAAF6 /* PhoneContact.swift */; };
 		FE512D56239C79C0002EAAF6 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE512D55239C79C0002EAAF6 /* EventDetailsViewController.swift */; };
+		FE512D5A239D7B1F002EAAF6 /* EventDetailsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE512D59239D7B1F002EAAF6 /* EventDetailsViewControllerProtocol.swift */; };
 		FE5F2869235BECF100F2FD1C /* CustomHoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5F2868235BECF100F2FD1C /* CustomHoshiTextField.swift */; };
 		FE76567A2396560C002D4FBF /* PartyMakerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B89B239612E00019C2A2 /* PartyMakerTest.swift */; };
 		FE76567F2396B6B3002D4FBF /* CategoryServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE76567E2396B6B3002D4FBF /* CategoryServiceTest.swift */; };
@@ -177,6 +178,7 @@
 		FE512D50239C3838002EAAF6 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		FE512D52239C3C68002EAAF6 /* PhoneContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneContact.swift; sourceTree = "<group>"; };
 		FE512D55239C79C0002EAAF6 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
+		FE512D59239D7B1F002EAAF6 /* EventDetailsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewControllerProtocol.swift; sourceTree = "<group>"; };
 		FE5F2868235BECF100F2FD1C /* CustomHoshiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHoshiTextField.swift; sourceTree = "<group>"; };
 		FE76567E2396B6B3002D4FBF /* CategoryServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServiceTest.swift; sourceTree = "<group>"; };
 		FE7656812396C0D9002D4FBF /* UserServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceTest.swift; sourceTree = "<group>"; };
@@ -371,9 +373,18 @@
 		FE512D54239C799B002EAAF6 /* EventDetails */ = {
 			isa = PBXGroup;
 			children = (
+				FE512D57239D7AFE002EAAF6 /* Abstract */,
 				FE512D55239C79C0002EAAF6 /* EventDetailsViewController.swift */,
 			);
 			path = EventDetails;
+			sourceTree = "<group>";
+		};
+		FE512D57239D7AFE002EAAF6 /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				FE512D59239D7B1F002EAAF6 /* EventDetailsViewControllerProtocol.swift */,
+			);
+			path = Abstract;
 			sourceTree = "<group>";
 		};
 		FE76567C2396B64A002D4FBF /* EventServiceTest */ = {
@@ -762,6 +773,7 @@
 				2310B4072352A81C00CAFB75 /* LoginInteractor.swift in Sources */,
 				23067BF7239D5EBF007482B1 /* JoinPrivateEventViewController.swift in Sources */,
 				FE76567F2396B6B3002D4FBF /* CategoryServiceTest.swift in Sources */,
+				FE512D5A239D7B1F002EAAF6 /* EventDetailsViewControllerProtocol.swift in Sources */,
 				FEED38B2237746BA0013B21C /* AccountViewProtocol.swift in Sources */,
 				2304C456235E3F74006E5C33 /* RegisterRouter.swift in Sources */,
 				236524052389FCB3006F650F /* CreatePartyConfigurator.swift in Sources */,
@@ -1027,14 +1039,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HLDWLT2245;
+				DEVELOPMENT_TEAM = SWFK827YHT;
 				INFOPLIST_FILE = PartyMaker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.711Development.PM;
+				PRODUCT_BUNDLE_IDENTIFIER = com.711Development.PartyMaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -1049,14 +1061,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HLDWLT2245;
+				DEVELOPMENT_TEAM = SWFK827YHT;
 				INFOPLIST_FILE = PartyMaker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.711Development.PM;
+				PRODUCT_BUNDLE_IDENTIFIER = com.711Development.PartyMaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

@@ -47,9 +47,19 @@ class RegisterController : UIViewController, RegisterViewProtocol {
         presenter.registerButtonClicked()
         
     }
+    
+    
+    @IBAction func profilePhotoOnTouched(_ sender: UITapGestureRecognizer) {
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = .photoLibrary
+        image.allowsEditing = false
+        self.present(image, animated: true) { }
+    }
+    
 }
 
-extension RegisterController {
+extension RegisterController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     func showLoader() {
         DispatchQueue.main.async {
@@ -66,4 +76,15 @@ extension RegisterController {
         loader.removeLoader()
        }
     }
+    
+    
+    // Implementation of UIImagePickerDelegate. This function triggers when user has selected an image
+       func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+           // Use guard let to get a reference to selected image
+           guard let photo = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {return}
+           // Save a reference to that image
+           ProfileImageView.image = photo
+           // Dismiss UIImagePickerController
+           self.dismiss(animated: true)
+       }
 }

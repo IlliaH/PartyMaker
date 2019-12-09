@@ -5,6 +5,8 @@ PODS:
   - AppAuth/Core (1.2.0)
   - AppAuth/ExternalUserAgent (1.2.0)
   - DateTimePicker (2.2.0)
+  - fluid-slider (1.1.0):
+    - pop
   - GoogleSignIn (5.0.1):
     - AppAuth (~> 1.2)
     - GTMAppAuth (~> 1.0)
@@ -18,10 +20,12 @@ PODS:
   - GTMSessionFetcher/Full (1.2.2):
     - GTMSessionFetcher/Core (= 1.2.2)
   - McPicker (2.0.1)
+  - pop (1.0.12)
   - TextFieldEffects (1.6.0)
 
 DEPENDENCIES:
   - DateTimePicker
+  - fluid-slider
   - GoogleSignIn (~> 5.0)
   - McPicker (~> 2.0.0)
   - TextFieldEffects
@@ -35,17 +39,21 @@ SPEC REPOS:
     - TextFieldEffects
   trunk:
     - DateTimePicker
+    - fluid-slider
     - McPicker
+    - pop
 
 SPEC CHECKSUMS:
   AppAuth: bce82c76043657c99d91e7882e8a9e1a93650cd4
   DateTimePicker: f65c0ae594e85dcf39d2aaf6a8ce06dee7d15aa7
+  fluid-slider: 68037ac7247f16a89f3e24ff5d0167c8eea6f50b
   GoogleSignIn: 3a51b9bb8e48b635fd7f4272cee06ca260345b86
   GTMAppAuth: 4deac854479704f348309e7b66189e604cf5e01e
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
   McPicker: a0a6b8ece8f1642e05401a29867463aba501188b
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: 39416bff0abdb0b61f3710e987282ac7b76bbcf4
+PODFILE CHECKSUM: 43da4f5d088b002848ca34deabc6e642b83b9aba
 
 COCOAPODS: 1.8.4

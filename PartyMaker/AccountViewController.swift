@@ -57,6 +57,15 @@ class AccountViewController: UIViewController {
         presenter.editPassword(isPasswordChanged: sender.isOn)
     }
     
+    
+    @IBAction func profileImageOnTouch(_ sender: UITapGestureRecognizer) {
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = .photoLibrary
+        image.allowsEditing = false
+        self.present(image, animated: true) { }
+    }
+    
 }
 
 extension AccountViewController : AccountViewProtocol {
@@ -84,5 +93,18 @@ extension AccountViewController : AccountViewProtocol {
             guard let loader = self.loader else {return}
         loader.removeLoader()
        }
+    }
+}
+
+
+extension AccountViewController : UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    // Implementation of UIImagePickerDelegate. This function triggers when user has selected an image
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        // Use guard let to get a reference to selected image
+        guard let photo = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {return}
+        // Save a reference to that image
+        profileImageView.image = photo
+        // Dismiss UIImagePickerController
+        self.dismiss(animated: true)
     }
 }
