@@ -26,4 +26,6 @@ class Event : Codable, Equatable {
     var ageCategoryId: Int?
     var eventTypeId: Int?
     var numberOfPeople: Int?
+    var isUserEvent : Bool?
+    var isFollowedEvent : Bool?
 }

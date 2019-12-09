@@ -27,6 +27,7 @@ class EventDetailsViewController: UIViewController, EventDetailsViewControllerPr
     var loader : FillableLoader?
     let eventService : EventServiceProtocol = EventService()
     var eventId : Int?
+    let categoryService : CategoryServiceProtocol = CategoryService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,16 +75,21 @@ class EventDetailsViewController: UIViewController, EventDetailsViewControllerPr
     func assignValuesToControls() {
         guard let event = event else {return}
         
-        guard let name = event.name, let startDate = event.startDate, let endDate = event.endDate, let description = event.description, let ageCategoryId = event.ageCategoryId, let eventType = event.eventTypeId, let numberOfPeople = event.numberOfPeople, let latitude = event.latitude, let longitude = event.longitude else {return}
+        guard let name = event.name, let startDate = event.startDate, let endDate = event.endDate, let description = event.description, let ageCategoryId = event.ageCategoryId, let eventTypeId = event.eventTypeId, let numberOfPeople = event.numberOfPeople, let latitude = event.latitude, let longitude = event.longitude else {return}
+        
+        if let eventPicture = event.picture{
+           photoImageView.image = UIImage(data: eventPicture)
+        }
         
         partyNameTextField.text = name
         startDateTextField.text = startDate
         endDateTextField.text = endDate
         partyDescriptionTextView.text = description
-        // photoImageView.image = UIImage(data: picture)
         loadFluidSlider(with: numberOfPeople)
         
         setAddressFromCoordinate(latitude: latitude, longitude: longitude)
+        setAgeCategory(id: ageCategoryId)
+        setEventCategory(id: eventTypeId)
     }
     
     func setAddressFromCoordinate(latitude : Decimal, longitude : Decimal){
@@ -134,6 +140,42 @@ class EventDetailsViewController: UIViewController, EventDetailsViewControllerPr
                 completion(addressString, nil)
             }else {
                 completion(nil, error)
+            }
+        }
+    }
+    
+    func setAgeCategory(id : Int){
+        categoryService.getAgeCategories { (ageCategories, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                DispatchQueue.main.async {
+                    self.ageCategoryTextField.text = "Unable to show category"
+                }
+            } else if ageCategories != nil{
+                let ageCategory = ageCategories?.first(where: { (ageCategory) -> Bool in
+                    ageCategory.id == id
+                })
+                DispatchQueue.main.async {
+                    self.ageCategoryTextField.text = ageCategory?.name
+                }
+            }
+        }
+    }
+    
+    func setEventCategory(id : Int){
+        categoryService.getEventTypes { (eventTypes, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                DispatchQueue.main.async {
+                    self.eventTypeTextField.text = "Unable to show category"
+                }
+            } else if eventTypes != nil {
+                let eventType = eventTypes?.first(where: { (eventType) -> Bool in
+                    eventType.id == id
+                })
+                DispatchQueue.main.async {
+                    self.eventTypeTextField.text = eventType?.name
+                }
             }
         }
     }

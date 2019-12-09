@@ -46,7 +46,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nG5-Ox-WMi">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PartyMaker" translatesAutoresizingMaskIntoConstraints="NO" id="nG5-Ox-WMi">
                                 <rect key="frame" x="87" y="67" width="240" height="139"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -128,6 +128,7 @@
                         <outlet property="LoginTextField" destination="xzo-Wp-3CX" id="u7U-cb-RaZ"/>
                         <outlet property="PasswordTextField" destination="sh4-l9-UlZ" id="VJr-S8-EoN"/>
                         <outlet property="RememberMeSwitch" destination="sc4-NP-VSm" id="fu6-Nx-9Gd"/>
+                        <outlet property="profileImageView" destination="nG5-Ox-WMi" id="2uu-87-0lD"/>
                         <segue destination="O7A-ob-oqS" kind="show" identifier="LoginToRegisterSegue" id="s4R-0F-V9e"/>
                         <segue destination="5rN-a9-1v9" kind="push" identifier="goToTabBar" id="FiP-5Q-Kw8"/>
                     </connections>

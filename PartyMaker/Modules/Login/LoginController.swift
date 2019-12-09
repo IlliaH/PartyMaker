@@ -17,6 +17,9 @@ class LoginController: UIViewController, LoginViewProtocol {
     
     @IBOutlet weak var RememberMeSwitch: UISwitch!
     
+    @IBOutlet weak var profileImageView: UIImageView!
+    
+    
     var presenter: LoginPresenterProtocol!
     var configurator: LoginConfiguratorProtocol = LoginConfigurator()
     var loader : FillableLoader?
@@ -32,11 +35,18 @@ class LoginController: UIViewController, LoginViewProtocol {
         // Autimatically sign in the user
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
     
+        LoginTextField.center.x -= view.bounds.width
+        PasswordTextField.center.x += view.bounds.width
+        profileImageView.alpha = 0
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+        UIView.animate(withDuration: 0.5, delay: 0.4, options: [], animations: {
+            self.LoginTextField.center.x += self.view.bounds.width
+            self.PasswordTextField.center.x -= self.view.bounds.width
+            self.profileImageView.alpha = 1
+        }, completion: nil)
     }
 
     
