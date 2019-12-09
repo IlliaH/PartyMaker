@@ -89,7 +89,6 @@ class CreatePartyViewController: UIViewController {
         presenter.eventTypeValueChanged(to: eventTypeTextField.text)
         
         presenter.createButonClicked()
-        print("")
     }
     
     func createAndReturnDate(min: Date?, max: Date?, selectedDate: Date = Date(), textField: UITextField) -> DateTimePicker {
