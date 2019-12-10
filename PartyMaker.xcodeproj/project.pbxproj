@@ -72,6 +72,7 @@
 		FE512D56239C79C0002EAAF6 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE512D55239C79C0002EAAF6 /* EventDetailsViewController.swift */; };
 		FE512D5A239D7B1F002EAAF6 /* EventDetailsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE512D59239D7B1F002EAAF6 /* EventDetailsViewControllerProtocol.swift */; };
 		FE512D5D239F11DF002EAAF6 /* UserEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE512D5C239F11DF002EAAF6 /* UserEventsViewController.swift */; };
+		FE512D61239F28F3002EAAF6 /* UserEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE512D60239F28F3002EAAF6 /* UserEventTableViewCell.swift */; };
 		FE5F2869235BECF100F2FD1C /* CustomHoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5F2868235BECF100F2FD1C /* CustomHoshiTextField.swift */; };
 		FE76567A2396560C002D4FBF /* PartyMakerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B89B239612E00019C2A2 /* PartyMakerTest.swift */; };
 		FE76567F2396B6B3002D4FBF /* CategoryServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE76567E2396B6B3002D4FBF /* CategoryServiceTest.swift */; };
@@ -181,6 +182,7 @@
 		FE512D55239C79C0002EAAF6 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		FE512D59239D7B1F002EAAF6 /* EventDetailsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewControllerProtocol.swift; sourceTree = "<group>"; };
 		FE512D5C239F11DF002EAAF6 /* UserEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEventsViewController.swift; sourceTree = "<group>"; };
+		FE512D60239F28F3002EAAF6 /* UserEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEventTableViewCell.swift; sourceTree = "<group>"; };
 		FE5F2868235BECF100F2FD1C /* CustomHoshiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHoshiTextField.swift; sourceTree = "<group>"; };
 		FE76567E2396B6B3002D4FBF /* CategoryServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServiceTest.swift; sourceTree = "<group>"; };
 		FE7656812396C0D9002D4FBF /* UserServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceTest.swift; sourceTree = "<group>"; };
@@ -393,6 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				FE512D5C239F11DF002EAAF6 /* UserEventsViewController.swift */,
+				FE512D60239F28F3002EAAF6 /* UserEventTableViewCell.swift */,
 			);
 			path = UserEventsScreen;
 			sourceTree = "<group>";
@@ -838,6 +841,7 @@
 				FE42B8572394305C0019C2A2 /* PassLocationDelegate.swift in Sources */,
 				FEBCC54C2352911A0034D1E2 /* AuthService.swift in Sources */,
 				FE512D53239C3C68002EAAF6 /* PhoneContact.swift in Sources */,
+				FE512D61239F28F3002EAAF6 /* UserEventTableViewCell.swift in Sources */,
 				FEBCC54F235292AB0034D1E2 /* AppConstant.swift in Sources */,
 				2304C458235E3FAB006E5C33 /* RegisterPresenterProtocol.swift in Sources */,
 				FEED38B0237746A10013B21C /* AccountConfiguratorProtocol.swift in Sources */,
