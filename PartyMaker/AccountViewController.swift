@@ -48,7 +48,6 @@ class AccountViewController: UIViewController {
         presenter.oldPasswordValueChanged(to: oldPasswordTextField.text)
         presenter.newPasswordConfirmValueChanged(to: newPasswordTextField.text)
         presenter.pictureValueChanged(to: profileImageView.image)
-        
         presenter.saveButtonClicked()
     }
     
@@ -98,6 +97,13 @@ extension AccountViewController : AccountViewProtocol {
             guard let loader = self.loader else {return}
         loader.removeLoader()
        }
+    }
+    
+    func showAlert(title: String, message: String) {
+        DispatchQueue.main.async {
+            let alert = Alert.createAlert(title: title, message: message)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }
 

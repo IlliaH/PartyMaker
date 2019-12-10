@@ -13,4 +13,5 @@ protocol AccountViewProtocol : class {
     func hideLoader()
     func showPassword()
     func hidePassword()
+    func showAlert(title : String, message: String)
 }
