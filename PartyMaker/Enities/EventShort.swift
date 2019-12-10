@@ -8,7 +8,11 @@
 
 import Foundation
 
-class EventShort : Codable {
+class EventShort : Codable, Equatable {
+    static func == (lhs: EventShort, rhs: EventShort) -> Bool {
+        lhs.id == rhs.id && lhs.name == rhs.name && lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
+    }
+    
     var id : Int?
     var name: String?
     var latitude: Decimal?

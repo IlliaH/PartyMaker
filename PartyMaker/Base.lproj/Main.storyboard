@@ -433,6 +433,85 @@
             </objects>
             <point key="canvasLocation" x="4606" y="970"/>
         </scene>
+        <!--User Events View Controller-->
+        <scene sceneID="D1s-Ls-aVn">
+            <objects>
+                <viewController id="VTx-z6-RWe" customClass="UserEventsViewController" customModule="PartyMaker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DnK-r5-oWz" customClass="GradientView" customModule="PartyMaker" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UmQ-ZE-LNJ">
+                                <rect key="frame" x="20" y="44" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Created events"/>
+                                    <segment title="Followed events"/>
+                                </segments>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hCJ-q0-aeH">
+                                <rect key="frame" x="0.0" y="38" width="414" height="687"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="eventCell" id="3If-rm-P0w" customClass="UserEventTableViewCell" customModule="PartyMaker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3If-rm-P0w" id="bOU-qR-nw1">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PartyMaker" translatesAutoresizingMaskIntoConstraints="NO" id="PuZ-rz-0c6" customClass="RoundImageView" customModule="PartyMaker" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="0.0" width="44" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xw2-Ms-Zh3">
+                                                    <rect key="frame" x="84" y="0.0" width="310" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="eventNameLabel" destination="xw2-Ms-Zh3" id="kpW-Ph-qRE"/>
+                                            <outlet property="eventPictureImageView" destination="PuZ-rz-0c6" id="8tg-wf-37g"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hCJ-q0-aeH" firstAttribute="top" secondItem="UmQ-ZE-LNJ" secondAttribute="bottom" constant="7" id="0Zq-Ts-n9y"/>
+                            <constraint firstItem="UmQ-ZE-LNJ" firstAttribute="trailing" secondItem="hCJ-q0-aeH" secondAttribute="trailing" id="0rU-CE-z7U"/>
+                            <constraint firstItem="UmQ-ZE-LNJ" firstAttribute="leading" secondItem="DnK-r5-oWz" secondAttribute="leading" id="2GC-Kn-LYO"/>
+                            <constraint firstItem="UmQ-ZE-LNJ" firstAttribute="top" secondItem="RHG-ou-RtI" secondAttribute="top" id="MWx-bm-fkz"/>
+                            <constraint firstItem="UmQ-ZE-LNJ" firstAttribute="leading" secondItem="hCJ-q0-aeH" secondAttribute="leading" id="dyJ-HD-gMz"/>
+                            <constraint firstItem="hCJ-q0-aeH" firstAttribute="bottom" secondItem="RHG-ou-RtI" secondAttribute="bottom" id="iXh-TT-0E2"/>
+                            <constraint firstAttribute="trailing" secondItem="UmQ-ZE-LNJ" secondAttribute="trailing" id="jBu-PD-VF4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RHG-ou-RtI"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" name="MainColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHorizontal" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="cFf-Co-UHQ"/>
+                    <connections>
+                        <outlet property="eventSegmentControl" destination="UmQ-ZE-LNJ" id="yEC-RK-S6A"/>
+                        <outlet property="tableView" destination="hCJ-q0-aeH" id="95A-UH-yYN"/>
+                        <segue destination="hSQ-fX-IRX" kind="show" identifier="goToEventDetails" id="zQ5-WJ-unf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Po6-ag-eaS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4399" y="-808"/>
+        </scene>
         <!--Select Address View Controller-->
         <scene sceneID="xwE-eX-sb5">
             <objects>
@@ -829,13 +908,17 @@
                                     <outlet property="delegate" destination="XFf-d7-fll" id="siq-0Y-gRg"/>
                                 </connections>
                             </mapView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list.dash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eAc-Gx-2U6">
+                            <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list.dash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eAc-Gx-2U6">
                                 <rect key="frame" x="20" y="23" width="50" height="44"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="2yd-0H-kKP"/>
                                     <constraint firstAttribute="width" constant="50" id="XlE-TC-uXM"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="7sT-uK-ZAX" appends="YES" id="jAb-jg-4sV"/>
+                                </connections>
                             </imageView>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gear" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sJb-m8-h5Z">
                                 <rect key="frame" x="344" y="20" width="50" height="50.5"/>
@@ -884,6 +967,7 @@
                         <outlet property="mapView" destination="fIe-5R-pN4" id="BZR-GO-xpr"/>
                         <outlet property="settingsImageView" destination="sJb-m8-h5Z" id="0GR-gi-z7w"/>
                         <segue destination="hSQ-fX-IRX" kind="show" identifier="goToEventDetails" id="loa-5u-jZc"/>
+                        <segue destination="VTx-z6-RWe" kind="push" identifier="goToUserEvents" id="cgM-64-6Po"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PAm-tt-lQe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -897,8 +981,13 @@
                         <action selector="currentLocationOnTapped:" destination="XFf-d7-fll" id="A4y-sN-lMP"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="7sT-uK-ZAX">
+                    <connections>
+                        <action selector="eventsButtonOnTouched:" destination="XFf-d7-fll" id="S9L-fq-xZ7"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4605.7971014492759" y="137.94642857142856"/>
+            <point key="canvasLocation" x="4399" y="138"/>
         </scene>
         <!--Event Details View Controller-->
         <scene sceneID="ZTM-eG-Qwe">
@@ -1085,7 +1174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1c4-gA-Sz2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6017.3913043478269" y="-525"/>
+            <point key="canvasLocation" x="6058" y="-525"/>
         </scene>
         <!--Invite Friends-->
         <scene sceneID="jai-4f-791">
@@ -1391,7 +1480,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XFs-pi-EnA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5107.2463768115949" y="-525"/>
+            <point key="canvasLocation" x="5278" y="-879"/>
         </scene>
     </scenes>
     <resources>
@@ -1410,6 +1499,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="te0-Em-I46"/>
+        <segue reference="zQ5-WJ-unf"/>
     </inferredMetricsTieBreakers>
 </document>

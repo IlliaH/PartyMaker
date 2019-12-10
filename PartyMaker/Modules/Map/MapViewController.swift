@@ -80,6 +80,11 @@ class MapViewController: MapBaseViewController {
             }
         }
     }
+    
+    @IBAction func eventsButtonOnTouched(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "goToUserEvents", sender: nil)
+    }
+    
 
 }
 
