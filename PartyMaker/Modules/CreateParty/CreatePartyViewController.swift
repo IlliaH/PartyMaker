@@ -174,6 +174,10 @@ class CreatePartyViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func onScreenTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
 }
 
 extension CreatePartyViewController : UINavigationControllerDelegate, UIImagePickerControllerDelegate {
@@ -274,5 +278,21 @@ extension CreatePartyViewController : PassLocationDelegate {
             let selectAddressVC = segue.destination as! SelectAddressViewController
             selectAddressVC.delegate = self
         }
+    }
+}
+
+extension CreatePartyViewController : UITextFieldDelegate, UITextViewDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+       if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+       }
+       else if let nextTextView = textField.superview?.viewWithTag(textField.tag + 1) as? UITextView {
+            nextTextView.becomeFirstResponder()
+       }
+       else {
+            textField.resignFirstResponder()
+            return true;
+       }
+       return false
     }
 }

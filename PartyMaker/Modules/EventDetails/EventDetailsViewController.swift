@@ -402,6 +402,10 @@ class EventDetailsViewController: UIViewController, EventDetailsViewControllerPr
         
         return picker
     }
+    
+    @IBAction func onScreenTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
 }
 
 extension EventDetailsViewController : PassLocationDelegate {

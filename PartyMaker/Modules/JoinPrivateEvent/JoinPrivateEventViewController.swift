@@ -30,6 +30,7 @@ class JoinPrivateEventViewController: UIViewController {
     }
     
     @IBAction func joinButtonOnTouch(_ sender: UIButton) {
+        view.endEditing(true)
         if let secretCode = secretCodeTextField.text {
             if secretCode.isNotEmpty {
                 eventService.joinPrivateEvent(code: secretCode) { (event, error) in
@@ -46,4 +47,14 @@ class JoinPrivateEventViewController: UIViewController {
         }
     }
     
+    @IBAction func onScreenTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+}
+
+extension JoinPrivateEventViewController : UITextFieldDelegate, UITextViewDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true;
+    }
 }
