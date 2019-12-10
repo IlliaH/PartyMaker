@@ -32,6 +32,12 @@ class RegisterController : UIViewController, RegisterViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurator.configure(with: self)
+        NicknameTextField.returnKeyType = .next
+        FirstNameTextField.returnKeyType = .next
+        LastNameTextField.returnKeyType = .next
+        EmailTextField.returnKeyType = .next
+        PasswordTextField.returnKeyType = .next
+        ConfirmPasswordTextField.returnKeyType = .done
     }
     
     
@@ -56,6 +62,11 @@ class RegisterController : UIViewController, RegisterViewProtocol {
         image.allowsEditing = false
         self.present(image, animated: true) { }
     }
+    
+    @IBAction func screenOnTouch(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
     
 }
 
@@ -87,4 +98,18 @@ extension RegisterController: UINavigationControllerDelegate, UIImagePickerContr
            // Dismiss UIImagePickerController
            self.dismiss(animated: true)
        }
+}
+
+extension RegisterController : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField:
+        UITextField) -> Bool {
+        
+       if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+            return true;
+        }
+        return false
+    }
 }

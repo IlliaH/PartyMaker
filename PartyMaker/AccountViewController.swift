@@ -66,6 +66,11 @@ class AccountViewController: UIViewController {
         self.present(image, animated: true) { }
     }
     
+    
+    @IBAction func screenOnTouch(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
 }
 
 extension AccountViewController : AccountViewProtocol {
@@ -106,5 +111,19 @@ extension AccountViewController : UINavigationControllerDelegate, UIImagePickerC
         profileImageView.image = photo
         // Dismiss UIImagePickerController
         self.dismiss(animated: true)
+    }
+}
+
+extension AccountViewController : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField:
+        UITextField) -> Bool {
+        
+       if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+            return true;
+        }
+        return false
     }
 }
