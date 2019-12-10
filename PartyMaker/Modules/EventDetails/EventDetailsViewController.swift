@@ -10,28 +10,48 @@ import UIKit
 import fluid_slider
 import CoreLocation
 import MapKit
+import DateTimePicker
 
 class EventDetailsViewController: UIViewController, EventDetailsViewControllerProtocol {
     
     @IBOutlet weak var startDateTextField: CustomHoshiTextField!
+    @IBOutlet weak var startDateSelectButton: UIButton!
     @IBOutlet weak var endDateTextField: CustomHoshiTextField!
+    @IBOutlet weak var endDateSelectButton: UIButton!
     @IBOutlet weak var photoImageView: RoundImageView!
     @IBOutlet weak var partyNameTextField: CustomHoshiTextField!
     @IBOutlet weak var partyDescriptionTextView: UITextView!
     @IBOutlet weak var addressTextField: CustomHoshiTextField!
+    @IBOutlet weak var addressSelectButton: UIButton!
     @IBOutlet weak var ageCategoryTextField: CustomHoshiTextField!
     @IBOutlet weak var eventTypeTextField: CustomHoshiTextField!
     @IBOutlet weak var participantsSlider: Slider!
+    
+    @IBOutlet weak var followButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
+    
+    var startdateTimePicker: DateTimePicker?
+    var enddateTimePicker: DateTimePicker?
     
     var event : Event?
     var loader : FillableLoader?
     let eventService : EventServiceProtocol = EventService()
     var eventId : Int?
     let categoryService : CategoryServiceProtocol = CategoryService()
+    let storageService: StorageServiceProtocol = StorageService()
+    
+    let dateFormatter = ISO8601DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        dateFormatter.formatOptions =  [
+        .withYear,
+        .withMonth,
+        .withDay,
+        .withTime,
+        .withDashSeparatorInDate,
+        .withColonSeparatorInTime]
         getEventById()
     }
     
@@ -82,14 +102,45 @@ class EventDetailsViewController: UIViewController, EventDetailsViewControllerPr
         }
         
         partyNameTextField.text = name
-        startDateTextField.text = startDate
-        endDateTextField.text = endDate
+        
+        if let startDateValue = dateFormatter.date(from: startDate) {
+            startDateTextField.text = startDateValue.shortDateTime
+        }
+        else {
+            startDateTextField.text = startDate
+        }
+        
+        if let endDateValue = dateFormatter.date(from: endDate) {
+            endDateTextField.text = endDateValue.shortDateTime
+        }
+        else {
+            endDateTextField.text = endDate
+        }
+        
         partyDescriptionTextView.text = description
         loadFluidSlider(with: numberOfPeople)
         
         setAddressFromCoordinate(latitude: latitude, longitude: longitude)
         setAgeCategory(id: ageCategoryId)
         setEventCategory(id: eventTypeId)
+        
+        if event.isUserEvent == true {
+            configureControlsForAuthor()
+        }
+        
+        if event.isFollowedEvent == true {
+            followButton.titleLabel?.text = "Unfollow"
+        }
+    }
+    
+    func configureControlsForAuthor() {
+        followButton.isHidden = true
+        saveButton.isHidden = false
+        photoImageView.isUserInteractionEnabled = true
+        startDateSelectButton.isHidden = false
+        endDateSelectButton.isHidden = false
+        partyDescriptionTextView.isUserInteractionEnabled = true
+        addressSelectButton.isHidden = false
     }
     
     func setAddressFromCoordinate(latitude : Decimal, longitude : Decimal){
@@ -122,7 +173,6 @@ class EventDetailsViewController: UIViewController, EventDetailsViewControllerPr
             if placemark.count > 0 {
                 let location = placemarks![0]
                 let city = location.locality
-                let landmark = location.subLocality
                 let streetAddress = location.thoroughfare
                 let postalCode = location.postalCode
                 
@@ -180,28 +230,199 @@ class EventDetailsViewController: UIViewController, EventDetailsViewControllerPr
         }
     }
     
-    @IBAction func sendInvitationButtonOnTapped(_ sender: UIButton) {
-        
+    @IBAction func pictureOnTouch(_ sender: UITapGestureRecognizer) {
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = .photoLibrary
+        image.allowsEditing = false
+        self.present(image, animated: true) { }
     }
     
     @IBAction func saveChangesButtonOnTapped(_ sender: UIButton) {
+        guard let event = event else { return }
         
+        if let startDate = startdateTimePicker?.selectedDate {
+            event.startDate = dateFormatter.string(from: startDate)
+        }
+        
+        if let endDate = enddateTimePicker?.selectedDate {
+            event.endDate = dateFormatter.string(from: endDate)
+        }
+        
+        if let description = partyDescriptionTextView.text {
+            event.description = description
+        }
+        
+        if let photoImageData = photoImageView.image?.pngData(), photoImageData != event.picture {
+            showLoader()
+            storageService.uploadFile(picture: photoImageData) { (imageUrl, error) in
+                self.hideLoader()
+                if error != nil {
+                    // Alert error
+                }
+                else if let imageUrl = imageUrl {
+                    self.event?.pictureUrl = imageUrl
+                    self.updateEvent()
+                }
+            }
+        }
+        else {
+            updateEvent()
+        }
+    }
+    
+    func updateEvent() {
+        guard let event = event else { return }
+        
+        showLoader()
+        eventService.updateEvent(event: event) { (updatedEvent, error) in
+            self.hideLoader()
+            if let error = error {
+                // Alert error
+            }
+            else if let updatedEvent = updatedEvent {
+                // Alert success
+            }
+        }
+    }
+    
+    @IBAction func followEventButtonOnTapped(_ sender: UIButton) {
+        guard let event = event, let eventId = event.id else { return }
+        
+        showLoader()
+        if event.isFollowedEvent == true {
+            eventService.unfollowEvent(id: eventId, completion: { (error) in
+                self.hideLoader()
+                if error != nil {
+                    self.event?.isFollowedEvent = false
+                    self.followButton.titleLabel?.text = "Follow"
+                }
+            })
+        }
+        else {
+            eventService.followEvent(id: eventId, completion: { (error) in
+                self.hideLoader()
+                if error != nil {
+                    self.event?.isFollowedEvent = true
+                    self.followButton.titleLabel?.text = "Unfollow"
+                }
+            })
+        }
+    }
+    
+    @IBAction func selectDateOnTouch(_ sender: UIButton) {
+        // Tag 0 = start date
+        if sender.tag == 0 {
+            showStartCalendar()
+        }
+        // Tag 1 = end date
+        else if sender.tag == 1 {
+            showEndCalendar()
+        }
+    }
+    
+    func showStartCalendar() {
+        guard let startdateTimePicker = startdateTimePicker else {
+            self.startdateTimePicker = createAndReturnDate(min: Date(), max: Date().addingTimeInterval(60 * 60 * 24 * 4 * 12 * 6), textField: startDateTextField)
+            self.startdateTimePicker?.dismissHandler = hideStartCalendar
+            return
+        }
+        
+        self.view.addSubview(startdateTimePicker)
+    }
+    
+    func hideStartCalendar() {
+        startdateTimePicker?.removeFromSuperview()
+    }
+    
+    func showEndCalendar() {
+        guard let enddateTimePicker = enddateTimePicker else {
+            var minDate = Date()
+            
+            if let event = event, let startDate = event.startDate,
+                let startDateValue = dateFormatter.date(from: startDate) {
+                minDate = startDateValue
+            }
+            
+            self.enddateTimePicker = createAndReturnDate(min: minDate, max: Date().addingTimeInterval(60 * 60 * 24 * 4 * 12 * 6), selectedDate: minDate, textField: endDateTextField)
+            self.enddateTimePicker?.dismissHandler = hideEndCalendar
+            return
+        }
+        
+        self.view.addSubview(enddateTimePicker)
+    }
+    
+    func hideEndCalendar() {
+        enddateTimePicker?.removeFromSuperview()
     }
     
     func showLoader() {
         DispatchQueue.main.async {
             self.loader = WavesLoader.createLoader(with: LoaderPath.glassPath(), on: self.view)
             guard let loader = self.loader else {return}
-                   loader.loaderColor = UIColor.systemPink
-                   loader.showLoader()
+            loader.loaderColor = UIColor.systemPink
+            loader.showLoader()
         }
-       }
+    }
        
-       func hideLoader() {
+    func hideLoader() {
         DispatchQueue.main.async {
             guard let loader = self.loader else {return}
-        loader.removeLoader()
+            loader.removeLoader()
        }
     }
     
+    func createAndReturnDate(min: Date?, max: Date?, selectedDate: Date = Date(), textField: UITextField) -> DateTimePicker {
+        let picker = DateTimePicker.create(minimumDate: min, maximumDate: max)
+        
+        let tabBarHeight = tabBarController?.tabBar.frame.size.height ?? 0
+        
+        let size = self.view.bounds.size.height - picker.frame.size.height - tabBarHeight
+        
+        picker.frame = CGRect(x: 0, y: size, width: picker.frame.size.width, height: picker.frame.size.height)
+        let formatString: String = DateFormatter.dateFormat(fromTemplate: "j", options: 0, locale: .current)!
+        picker.is12HourFormat = formatString.contains("a")
+        picker.includeMonth = true
+        picker.dateFormat = DateFormatter.dateFormat(fromTemplate: "hh:mm a YYYY-MM-dd", options: 0, locale: .current)!
+        picker.highlightColor = UIColor.init(named: "MainColor") ?? UIColor.cyan
+        picker.darkColor = UIColor.black
+        picker.doneBackgroundColor = UIColor.init(named: "MainColor") ?? UIColor.gray
+        
+        picker.completionHandler = { date in
+            print(date.shortDateTime)
+            textField.text = date.shortDateTime
+        }
+        self.view.addSubview(picker)
+        
+        picker.selectedDate = selectedDate
+        
+        return picker
+    }
+}
+
+extension EventDetailsViewController : PassLocationDelegate {
+    func passEventLocation(latitude: Decimal, longitude: Decimal, address: String) {
+        event?.latitude = latitude
+        event?.longitude = longitude
+        addressTextField.text = address
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "fromDetailsToSelectAddressSegue" {
+            let selectAddressVC = segue.destination as! SelectAddressViewController
+            selectAddressVC.delegate = self
+        }
+    }
+}
+
+extension EventDetailsViewController : UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    // Implementation of UIImagePickerDelegate. This function triggers when user has selected an image
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        // Use guard let to get a reference to selected image
+        guard let photo = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {return}
+        // Save a reference to that image
+        photoImageView.image = photo
+        // Dismiss UIImagePickerController
+        self.dismiss(animated: true)
+    }
 }

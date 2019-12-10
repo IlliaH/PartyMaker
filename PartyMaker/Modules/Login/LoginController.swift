@@ -34,24 +34,8 @@ class LoginController: UIViewController, LoginViewProtocol {
         
         // Autimatically sign in the user
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
-    
         
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        LoginTextField.center.x -= view.bounds.width
-        PasswordTextField.center.x += view.bounds.width
-        profileImageView.alpha = 0
-        self.view.layoutIfNeeded()
-        UIView.animate(withDuration: 0.5, delay: 0.4, options: [], animations: {
-            self.LoginTextField.center.x += self.view.bounds.width
-            self.PasswordTextField.center.x -= self.view.bounds.width
-            self.profileImageView.alpha = 1
-            self.view.layoutIfNeeded()
-        }, completion: nil)
-    }
-
     
     @IBAction func LoginButtonOnTapped(_ sender: UIButton) {
         
@@ -63,6 +47,18 @@ class LoginController: UIViewController, LoginViewProtocol {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        
+        LoginTextField.center.x -= view.bounds.width
+        PasswordTextField.center.x += view.bounds.width
+        profileImageView.alpha = 0
+        self.view.layoutIfNeeded()
+        
+        UIView.animate(withDuration: 0.5, delay: 0.4, options: [], animations: {
+            self.LoginTextField.center.x += self.view.bounds.width
+            self.PasswordTextField.center.x -= self.view.bounds.width
+            self.profileImageView.alpha = 1
+            self.view.layoutIfNeeded()
+        }, completion: nil)
     }
 
     override func viewWillDisappear(_ animated: Bool) {

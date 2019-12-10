@@ -11,12 +11,20 @@ import CoreLocation
 
 protocol EventDetailsViewControllerProtocol {
     func assignValuesToControls()
+    func configureControlsForAuthor()
     func loadFluidSlider(with currentValue : Int)
     func reverseGeoLocation(location : CLLocation, completion: @escaping(String?, Error?)-> Void)
     func getEventById()
     func setAddressFromCoordinate(latitude : Decimal, longitude : Decimal)
     func setAgeCategory(id : Int)
     func setEventCategory(id : Int)
+    
     func showLoader()
     func hideLoader()
+    
+    func showStartCalendar()
+    func hideStartCalendar()
+    
+    func showEndCalendar()
+    func hideEndCalendar()
 }

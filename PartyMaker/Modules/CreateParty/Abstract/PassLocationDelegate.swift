@@ -9,5 +9,5 @@
 import Foundation
 
 protocol PassLocationDelegate {
-    func passEventLocation(latitude : Decimal, longitude : Decimal)
+    func passEventLocation(latitude : Decimal, longitude : Decimal, address: String)
 }

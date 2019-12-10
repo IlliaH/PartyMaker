@@ -21,7 +21,7 @@ class SelectAddressViewController: MapBaseViewController {
         let center = getCenterLocation(for: mapView)
         let latitude : Decimal = Decimal(center.coordinate.latitude)
         let longitude : Decimal = Decimal(center.coordinate.longitude)
-        delegate?.passEventLocation(latitude: latitude, longitude: longitude)
+        delegate?.passEventLocation(latitude: latitude, longitude: longitude, address: addressLabel.text ?? "")
         dismiss(animated: true, completion: nil)
     }
     
@@ -49,11 +49,24 @@ extension SelectAddressViewController : MKMapViewDelegate {
                 return
             }
             
-            let streetNumber = placemark.subThoroughfare ?? ""
-            let streetName = placemark.thoroughfare ?? ""
+            let location = placemarks![0]
+            let city = location.locality
+            let streetAddress = location.thoroughfare
+            let postalCode = location.postalCode
+            
+            var addressString : String = ""
+            if city != nil {
+                addressString += city! + ","
+            }
+            if streetAddress != nil {
+                addressString += streetAddress! + ","
+            }
+            if postalCode != nil {
+                addressString += postalCode! + " "
+            }
             
             DispatchQueue.main.async {
-                self.addressLabel.text = "\(streetNumber) \(streetName)"
+                self.addressLabel.text = addressString
             }
         })
     

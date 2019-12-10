@@ -24,6 +24,8 @@ class CreatePartyViewController: UIViewController {
     
     @IBOutlet weak var endDateTextField: CustomHoshiTextField!
     
+    @IBOutlet weak var addressTextField: CustomHoshiTextField!
+    
     @IBOutlet weak var isPrivateSwitch: UISwitch!
     
     @IBOutlet weak var ageCategoryTextField: CustomHoshiTextField!
@@ -99,18 +101,17 @@ class CreatePartyViewController: UIViewController {
         let size = self.view.bounds.size.height - picker.frame.size.height - tabBarHeight
         
         picker.frame = CGRect(x: 0, y: size, width: picker.frame.size.width, height: picker.frame.size.height)
-        picker.is12HourFormat = true
+        let formatString: String = DateFormatter.dateFormat(fromTemplate: "j", options: 0, locale: .current)!
+        picker.is12HourFormat = formatString.contains("a")
         picker.includeMonth = true
-        picker.dateFormat = "hh:mm a YYYY-MM-dd"
+        picker.dateFormat = DateFormatter.dateFormat(fromTemplate: "hh:mm a YYYY-MM-dd", options: 0, locale: .current)!
         picker.highlightColor = UIColor.init(named: "MainColor") ?? UIColor.cyan
         picker.darkColor = UIColor.black
         picker.doneBackgroundColor = UIColor.init(named: "MainColor") ?? UIColor.gray
         
         picker.completionHandler = { date in
-            let formatter = DateFormatter()
-            formatter.dateFormat = "hh:mm a YYYY-MM-dd"
-            print(formatter.string(from: date))
-            textField.text = formatter.string(from: date)
+            print(date.shortDateTime)
+            textField.text = date.shortDateTime
         }
         self.view.addSubview(picker)
         
@@ -262,9 +263,10 @@ extension CreatePartyViewController : CreatePartyViewProtocol {
 
 
 extension CreatePartyViewController : PassLocationDelegate {
-    func passEventLocation(latitude: Decimal, longitude: Decimal) {
+    func passEventLocation(latitude: Decimal, longitude: Decimal, address: String) {
         presenter.latitudeValueChanged(to: latitude)
         presenter.longitudeValueChanged(to: longitude)
+        addressTextField.text = address
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

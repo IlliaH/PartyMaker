@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoK-7P-KaS">
-                                <rect key="frame" x="20" y="445" width="366" height="35"/>
+                                <rect key="frame" x="20" y="500" width="366" height="35"/>
                                 <color key="backgroundColor" red="1" green="0.2156862745" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="6N5-IY-aR0"/>
@@ -31,7 +31,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Password" textAlignment="natural" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="sh4-l9-UlZ" customClass="CustomHoshiTextField" customModule="PartyMaker">
-                                <rect key="frame" x="20" y="338" width="366" height="30"/>
+                                <rect key="frame" x="20" y="393" width="366" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="qky-jy-X8L"/>
                                 </constraints>
@@ -50,14 +50,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartyMaker" translatesAutoresizingMaskIntoConstraints="NO" id="nG5-Ox-WMi">
-                                <rect key="frame" x="87" y="67" width="240" height="140"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="140" id="DcE-ub-7SZ"/>
-                                </constraints>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Upe-61-dgb">
-                                <rect key="frame" x="20" y="397" width="368" height="31"/>
+                                <rect key="frame" x="20" y="452" width="368" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember me" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwz-MD-7RY">
                                         <rect key="frame" x="0.0" y="0.0" width="319" height="31"/>
@@ -80,20 +74,20 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FgV-Ws-j8j">
-                                <rect key="frame" x="28" y="515" width="358" height="17.5"/>
+                                <rect key="frame" x="28" y="570" width="358" height="17.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eag-G7-jJ8" customClass="GIDSignInButton">
-                                <rect key="frame" x="20" y="556" width="366" height="35"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eag-G7-jJ8" customClass="GIDSignInButton">
+                                <rect key="frame" x="20" y="617" width="366" height="35"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="AQI-cx-szP"/>
+                                    <constraint firstAttribute="height" constant="35" id="AQI-cx-szP"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xzo-Wp-3CX" customClass="CustomHoshiTextField" customModule="PartyMaker">
-                                <rect key="frame" x="20" y="273" width="366" height="30"/>
+                                <rect key="frame" x="20" y="328" width="366" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Is9-ny-UtB"/>
                                 </constraints>
@@ -122,25 +116,22 @@
                                     <action selector="registerButtonOnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3o7-3U-7gS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Party Maker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11D-Xj-WlB">
-                                <rect key="frame" x="20" y="215" width="366" height="35"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="MainLogo" translatesAutoresizingMaskIntoConstraints="NO" id="nG5-Ox-WMi">
+                                <rect key="frame" x="0.0" y="20" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="DcE-ub-7SZ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.21568627450980393" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="CzW-RV-E6c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0Ie-g3-fD1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FgV-Ws-j8j" secondAttribute="trailing" constant="28" id="15S-KE-nD9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sh4-l9-UlZ" secondAttribute="trailing" constant="28" id="1SY-rL-G02"/>
-                            <constraint firstItem="xzo-Wp-3CX" firstAttribute="top" secondItem="11D-Xj-WlB" secondAttribute="bottom" constant="23" id="1i8-fQ-lOU"/>
                             <constraint firstItem="Eag-G7-jJ8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3uo-Vz-gXx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="11D-Xj-WlB" secondAttribute="trailing" constant="28" id="5s2-Rv-h8U"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KoK-7P-KaS" secondAttribute="trailing" constant="28" id="8ap-HX-0IR"/>
                             <constraint firstItem="Upe-61-dgb" firstAttribute="top" secondItem="sh4-l9-UlZ" secondAttribute="bottom" constant="29" id="8ea-uZ-StJ"/>
-                            <constraint firstItem="nG5-Ox-WMi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="Cco-Ob-aw8"/>
-                            <constraint firstItem="11D-Xj-WlB" firstAttribute="top" secondItem="nG5-Ox-WMi" secondAttribute="bottom" constant="8" id="E5g-3b-KDe"/>
+                            <constraint firstItem="nG5-Ox-WMi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Cco-Ob-aw8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xzo-Wp-3CX" secondAttribute="trailing" constant="28" id="FDE-6Z-LG1"/>
                             <constraint firstItem="xzo-Wp-3CX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FUb-1q-ycZ"/>
                             <constraint firstItem="Upe-61-dgb" firstAttribute="top" secondItem="sh4-l9-UlZ" secondAttribute="bottom" constant="29" id="JDy-nG-q08"/>
@@ -150,20 +141,19 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CzW-RV-E6c" secondAttribute="trailing" constant="28" id="LiV-qq-Sii"/>
                             <constraint firstItem="FgV-Ws-j8j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="O9G-EY-VEs"/>
                             <constraint firstItem="KoK-7P-KaS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ufe-4i-GuQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nG5-Ox-WMi" secondAttribute="trailing" constant="87" id="WPs-Ue-lNd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nG5-Ox-WMi" secondAttribute="trailing" id="WPs-Ue-lNd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eag-G7-jJ8" secondAttribute="trailing" constant="28" id="WUe-I0-u2a"/>
-                            <constraint firstItem="xzo-Wp-3CX" firstAttribute="top" secondItem="11D-Xj-WlB" secondAttribute="bottom" constant="23" id="Xry-Uu-dvR"/>
                             <constraint firstItem="sh4-l9-UlZ" firstAttribute="top" secondItem="xzo-Wp-3CX" secondAttribute="bottom" constant="35" id="aQv-OL-Qtc"/>
                             <constraint firstItem="Eag-G7-jJ8" firstAttribute="top" secondItem="FgV-Ws-j8j" secondAttribute="bottom" constant="29.5" id="cO1-1S-kLf"/>
                             <constraint firstItem="Upe-61-dgb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cl3-8z-GX9"/>
                             <constraint firstItem="sh4-l9-UlZ" firstAttribute="top" secondItem="xzo-Wp-3CX" secondAttribute="bottom" constant="35" id="eZM-6s-47Y"/>
-                            <constraint firstItem="nG5-Ox-WMi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="67" id="gJS-2M-gNK"/>
+                            <constraint firstItem="xzo-Wp-3CX" firstAttribute="top" secondItem="nG5-Ox-WMi" secondAttribute="bottom" constant="8" id="fR3-2n-67e"/>
+                            <constraint firstItem="nG5-Ox-WMi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="gJS-2M-gNK"/>
                             <constraint firstItem="CzW-RV-E6c" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="k7g-DS-EDw"/>
                             <constraint firstItem="CzW-RV-E6c" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Eag-G7-jJ8" secondAttribute="bottom" id="l0p-SK-u81"/>
                             <constraint firstItem="sh4-l9-UlZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nBm-XQ-fZd"/>
                             <constraint firstItem="KoK-7P-KaS" firstAttribute="top" secondItem="Upe-61-dgb" secondAttribute="bottom" constant="17" id="oZW-PV-8YC"/>
                             <constraint firstItem="FgV-Ws-j8j" firstAttribute="top" relation="lessThanOrEqual" secondItem="KoK-7P-KaS" secondAttribute="bottom" constant="35" id="vso-aW-BLw"/>
-                            <constraint firstItem="11D-Xj-WlB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xpb-P6-NWw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <userDefinedRuntimeAttributes>
@@ -558,7 +548,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CM9-gY-fgj">
                                                 <rect key="frame" x="352" y="443" width="40" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="calendar" catalog="system"/>
                                                 <connections>
                                                     <action selector="selectStartDateOnTouch:" destination="NA0-9q-kbH" eventType="touchUpInside" id="dK1-pc-lz0"/>
@@ -567,7 +557,7 @@
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGW-E4-NMb">
                                                 <rect key="frame" x="352" y="499" width="40" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="calendar" catalog="system"/>
                                                 <connections>
                                                     <action selector="selectStartDateOnTouch:" destination="NA0-9q-kbH" eventType="touchUpInside" id="nkZ-gz-6y1"/>
@@ -646,7 +636,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nit-OT-uTE">
                                                 <rect key="frame" x="352" y="577" width="40" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="map" catalog="system"/>
                                                 <connections>
                                                     <segue destination="tPP-Q5-cOb" kind="presentation" identifier="selectAddressSegue" id="Ono-Xm-ogF"/>
@@ -696,7 +686,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faa-g1-yw2">
                                                 <rect key="frame" x="352" y="701" width="40" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="list.dash" catalog="system"/>
                                                 <connections>
                                                     <action selector="pickerOnTouch:" destination="NA0-9q-kbH" eventType="touchUpInside" id="ual-aa-uzs"/>
@@ -752,7 +742,7 @@
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYu-Sn-7Pl">
                                                 <rect key="frame" x="350" y="755" width="45" height="37"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="list.dash" catalog="system"/>
                                                 <connections>
                                                     <action selector="pickerOnTouch:" destination="NA0-9q-kbH" eventType="touchUpInside" id="WOs-Wd-6Nm"/>
@@ -794,6 +784,7 @@
                     <tabBarItem key="tabBarItem" title="Create" image="plus" catalog="system" id="7S7-vD-C4o"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addressTextField" destination="sua-XY-LPN" id="y4p-ZL-xAm"/>
                         <outlet property="ageCategoryTextField" destination="fvQ-2Y-TWj" id="P5b-Uz-b7C"/>
                         <outlet property="descriptionTextView" destination="lov-fk-JH2" id="ddn-w4-IJG"/>
                         <outlet property="endDateTextField" destination="JIS-WH-dL3" id="aTT-oq-mAe"/>
@@ -909,21 +900,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEt-Wa-nk7">
-                                <rect key="frame" x="20" y="718" width="344" height="34"/>
+                                <rect key="frame" x="20" y="718" width="374" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.48627450979999998" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="send SMS">
+                                <state key="normal" title="Invite friends">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="sendInvitationButtonOnTapped:" destination="XGI-MJ-PGj" eventType="touchUpInside" id="22Q-3z-0LZ"/>
                                     <segue destination="yqG-0K-dgD" kind="show" id="yZD-wz-lsn"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PartyMaker" translatesAutoresizingMaskIntoConstraints="NO" id="Tcg-Me-ugj" customClass="RoundImageView" customModule="PartyMaker" customModuleProvider="target">
                                 <rect key="frame" x="4" y="119" width="165" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Bja-W3-Ecw" appends="YES" id="Iht-Nl-cfL"/>
+                                </connections>
                             </imageView>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Start Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mgH-pu-9Hm" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
                                 <rect key="frame" x="192" y="142" width="167" height="34"/>
@@ -961,8 +954,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DSC-a9-EAm" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                <rect key="frame" x="9" y="315" width="355" height="34"/>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DSC-a9-EAm" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
+                                <rect key="frame" x="20" y="315" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -980,15 +973,15 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FIi-KA-jZm">
-                                <rect key="frame" x="9" y="369" width="355" height="74"/>
+                                <rect key="frame" x="20" y="369" width="374" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" red="0.83921568629999999" green="0.83921568629999999" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2E3-hQ-VFz" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                <rect key="frame" x="13" y="471" width="351" height="34"/>
+                                <rect key="frame" x="20" y="471" width="339" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -1006,7 +999,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Age Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a5X-EJ-YHj" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                <rect key="frame" x="9" y="538" width="355" height="34"/>
+                                <rect key="frame" x="20" y="538" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -1023,8 +1016,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Event Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0r2-Hk-zNi" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                <rect key="frame" x="11" y="604" width="360" height="34"/>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Event Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0r2-Hk-zNi" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
+                                <rect key="frame" x="20" y="604" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -1041,8 +1034,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3if-qC-c3Z">
-                                <rect key="frame" x="20" y="772" width="344" height="31"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3if-qC-c3Z">
+                                <rect key="frame" x="20" y="772" width="374" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.48627450979999998" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -1054,9 +1047,47 @@
                                 </connections>
                             </button>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K8T-Kd-TS2" customClass="Slider" customModule="fluid_slider">
-                                <rect key="frame" x="13" y="659" width="358" height="39"/>
+                                <rect key="frame" x="20" y="659" width="374" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXx-LO-gZL">
+                                <rect key="frame" x="367" y="142" width="27" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="calendar" catalog="system"/>
+                                <connections>
+                                    <action selector="selectDateOnTouch:" destination="XGI-MJ-PGj" eventType="touchUpInside" id="0yM-vO-pKz"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3n-4A-gto">
+                                <rect key="frame" x="367" y="210" width="27" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="calendar" catalog="system"/>
+                                <connections>
+                                    <action selector="selectDateOnTouch:" destination="XGI-MJ-PGj" eventType="touchUpInside" id="MU2-d0-Sye"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSb-od-zHf">
+                                <rect key="frame" x="361" y="471" width="33" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="map" catalog="system"/>
+                                <connections>
+                                    <segue destination="tPP-Q5-cOb" kind="presentation" identifier="fromDetailsToSelectAddressSegue" id="THG-p2-6Rp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XP8-LI-Gms">
+                                <rect key="frame" x="192" y="255" width="202" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.48627450979999998" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Follow">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="followEventButtonOnTapped:" destination="XGI-MJ-PGj" eventType="touchUpInside" id="ORB-za-hVT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="lbe-P7-vbY"/>
@@ -1072,18 +1103,28 @@
                     </view>
                     <navigationItem key="navigationItem" id="PCU-NQ-Yw4"/>
                     <connections>
+                        <outlet property="addressSelectButton" destination="LSb-od-zHf" id="ryW-Vk-tkb"/>
                         <outlet property="addressTextField" destination="2E3-hQ-VFz" id="f1v-cg-mXy"/>
                         <outlet property="ageCategoryTextField" destination="a5X-EJ-YHj" id="fUa-fP-B7R"/>
+                        <outlet property="endDateSelectButton" destination="O3n-4A-gto" id="o4y-Gt-WUe"/>
                         <outlet property="endDateTextField" destination="arG-Ut-k1k" id="MMn-1G-uXM"/>
                         <outlet property="eventTypeTextField" destination="0r2-Hk-zNi" id="DqC-li-S6g"/>
+                        <outlet property="followButton" destination="XP8-LI-Gms" id="jrB-G5-2gs"/>
                         <outlet property="participantsSlider" destination="K8T-Kd-TS2" id="kjp-HA-a3j"/>
                         <outlet property="partyDescriptionTextView" destination="FIi-KA-jZm" id="13m-Nl-kaa"/>
                         <outlet property="partyNameTextField" destination="DSC-a9-EAm" id="azR-gz-63p"/>
                         <outlet property="photoImageView" destination="Tcg-Me-ugj" id="Xkd-Zq-i4F"/>
+                        <outlet property="saveButton" destination="3if-qC-c3Z" id="BED-CQ-QqQ"/>
+                        <outlet property="startDateSelectButton" destination="iXx-LO-gZL" id="usA-OM-7db"/>
                         <outlet property="startDateTextField" destination="mgH-pu-9Hm" id="ZeX-Tx-RCG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1c4-gA-Sz2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Bja-W3-Ecw">
+                    <connections>
+                        <action selector="pictureOnTouch:" destination="XGI-MJ-PGj" id="4SP-ya-SKa"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="6017.3913043478269" y="-525"/>
         </scene>
@@ -1395,6 +1436,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="MainLogo" width="584" height="375"/>
         <image name="PartyMaker" width="500" height="500"/>
         <image name="calendar" catalog="system" width="64" height="52"/>
         <image name="gear" catalog="system" width="64" height="58"/>
@@ -1411,5 +1453,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="te0-Em-I46"/>
+        <segue reference="THG-p2-6Rp"/>
     </inferredMetricsTieBreakers>
 </document>
