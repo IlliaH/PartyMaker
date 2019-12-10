@@ -11,4 +11,5 @@ import Foundation
 protocol RegisterViewProtocol : class {
     func showLoader()
     func hideLoader()
+    func showAlert(title : String, message: String)
 }
