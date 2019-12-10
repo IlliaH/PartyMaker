@@ -129,7 +129,7 @@ class EventDetailsViewController: UIViewController, EventDetailsViewControllerPr
         }
         
         if event.isFollowedEvent == true {
-            followButton.titleLabel?.text = "Unfollow"
+            followButton.setTitle("Unfollow", for: .normal)
         }
     }
     
@@ -293,18 +293,22 @@ class EventDetailsViewController: UIViewController, EventDetailsViewControllerPr
         if event.isFollowedEvent == true {
             eventService.unfollowEvent(id: eventId, completion: { (error) in
                 self.hideLoader()
-                if error != nil {
+                if error == nil {
                     self.event?.isFollowedEvent = false
-                    self.followButton.titleLabel?.text = "Follow"
+                    DispatchQueue.main.async {
+                        self.followButton.setTitle("Follow", for: .normal)
+                    }
                 }
             })
         }
         else {
             eventService.followEvent(id: eventId, completion: { (error) in
                 self.hideLoader()
-                if error != nil {
+                if error == nil {
                     self.event?.isFollowedEvent = true
-                    self.followButton.titleLabel?.text = "Unfollow"
+                    DispatchQueue.main.async {
+                        self.followButton.setTitle("Unfollow", for: .normal)
+                    }
                 }
             })
         }
