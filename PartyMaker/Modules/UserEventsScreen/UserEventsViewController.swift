@@ -14,6 +14,7 @@ class UserEventsViewController: UIViewController {
     var followedShortEvents = [EventShort]()
     
     var selectedEventId : Int?
+    var loader : FillableLoader?
     
     @IBOutlet weak var eventSegmentControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
@@ -27,10 +28,10 @@ class UserEventsViewController: UIViewController {
         eventSegmentControl.addTarget(self, action: #selector(segmentControlValueChanged(segment:)), for: .valueChanged)
         tableView.dataSource = self
         tableView.delegate = self
-        // Do any additional setup after loading the view.
     }
     
     func getUserCretedEvents() {
+            showLoader()
             eventService.getUserEvents { (createdEventsShort, error) in
                 if let error = error {
                     print("No data retrieved")
@@ -40,6 +41,7 @@ class UserEventsViewController: UIViewController {
                         self.tableView.reloadData()
                     }
                 }
+                self.hideLoader()
             }
     }
     
@@ -107,11 +109,12 @@ extension UserEventsViewController : UITableViewDelegate, UITableViewDataSource 
     
     func returnCellForTableView(cell : UserEventTableViewCell, eventsShot : [EventShort], indexPath : IndexPath) -> UserEventTableViewCell{
         let event = eventsShot[indexPath.row]
-        if let name = event.name, let imageData = event.picture {
+        let name = event.name ?? "name was not retrieved"
+        if let imageData = event.picture {
             cell.configureCell(eventName: name, imageData: imageData)
         }else {
             let imageData = UIImage(named: "PartyMaker")?.pngData()
-            cell.configureCell(eventName: "name was not retrieved", imageData: imageData!)
+            cell.configureCell(eventName: name, imageData: imageData!)
         }
         return cell
     }
@@ -121,7 +124,6 @@ extension UserEventsViewController : UITableViewDelegate, UITableViewDataSource 
         if eventSegmentControl.selectedSegmentIndex == 0 {
             let event = createdShortEvents[indexPath.row]
             selectedEventId = event.id
-            print("I stuck here")
         // FollowedEvents segment
         } else if eventSegmentControl.selectedSegmentIndex == 1 {
             let event = followedShortEvents[indexPath.row]
@@ -130,4 +132,41 @@ extension UserEventsViewController : UITableViewDelegate, UITableViewDataSource 
         performSegue(withIdentifier: "goToEventDetails", sender: nil)
     }
     
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        if eventSegmentControl.selectedSegmentIndex == 1 {
+            let unfollowAction = UIContextualAction(style: .destructive, title: "Unfollow") { (action, view, success) in
+                let id = self.followedShortEvents[indexPath.row].id!
+                self.eventService.unfollowEvent(id: id) { (error) in
+                    if let error = error {
+                        print(error.localizedDescription)
+                    }else {
+                        self.getUserFollowedEvents()
+                    }
+                }
+            }
+            return UISwipeActionsConfiguration(actions: [unfollowAction])
+        } else {
+            return UISwipeActionsConfiguration(actions: [])
+        }
+        
+    }
+    
+}
+
+extension UserEventsViewController {
+    func showLoader() {
+        DispatchQueue.main.async {
+            self.loader = WavesLoader.createLoader(with: LoaderPath.glassPath(), on: self.view)
+            guard let loader = self.loader else {return}
+            loader.loaderColor = UIColor.systemPink
+            loader.showLoader()
+        }
+    }
+       
+    func hideLoader() {
+        DispatchQueue.main.async {
+            guard let loader = self.loader else {return}
+            loader.removeLoader()
+       }
+    }
 }
