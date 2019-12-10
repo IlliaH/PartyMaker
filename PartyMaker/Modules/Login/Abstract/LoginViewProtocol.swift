@@ -11,4 +11,5 @@ import Foundation
 protocol LoginViewProtocol : class {
     func showLoader()
     func hideLoader()
+    func showAlert(title : String, message: String)
 }
