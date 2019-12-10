@@ -1541,8 +1541,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="te0-Em-I46"/>
-        <segue reference="THG-p2-6Rp"/>
         <segue reference="zQ5-WJ-unf"/>
+        <segue reference="THG-p2-6Rp"/>
     </inferredMetricsTieBreakers>
 </document>
