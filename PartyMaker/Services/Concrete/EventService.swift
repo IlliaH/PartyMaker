@@ -150,6 +150,11 @@ class EventService: EventServiceProtocol {
                     
                     // Download images
                     var eventsCounter = events.count
+                    
+                    if eventsCounter == 0 {
+                        completion(events, nil)
+                    }
+                    
                     for event in events {
                         if let pictureUrl = event.pictureUrl {
                             self.storageService.downloadFile(url: pictureUrl) { (data, _) in
@@ -390,6 +395,106 @@ class EventService: EventServiceProtocol {
                 }
             }
             else {
+                completion(nil, ServiceError.NoResponseFromServer)
+            }
+        }.resume()
+    }
+    
+    func getUserEvents(completion: @escaping ([EventShort]?, Error?) -> Void) {
+        guard let url = URL(string: "\(AppConstant.API_URL)Event/userEvents") else {completion(nil, ServiceError.InvalidParameters); return}
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        guard let token = UserDefaults.standard.string(forKey: "accessToken") else {completion(nil, ServiceError.TokenNotFound); return}
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            if let response = response {
+                print(response)
+            }
+            if let data = data {
+                do {
+                    let jsonDecoder = JSONDecoder()
+                    let events = try jsonDecoder.decode([EventShort].self, from: data)
+                    
+                    // Download images
+                    var eventsCounter = events.count
+                    
+                    if eventsCounter == 0 {
+                        completion(events, nil)
+                    }
+                    
+                    for event in events {
+                        if let pictureUrl = event.pictureUrl {
+                            self.storageService.downloadFile(url: pictureUrl) { (data, _) in
+                                event.picture = data
+                                eventsCounter -= 1
+                                
+                                if eventsCounter == 0 {
+                                    completion(events, nil)
+                                }
+                            }
+                        } else {
+                            eventsCounter -= 1
+                            if eventsCounter == 0 {
+                                completion(events, nil)
+                            }
+                        }
+                    }
+                } catch {
+                    print(error)
+                    completion(nil, error)
+                }
+            }else {
+                completion(nil, ServiceError.NoResponseFromServer)
+            }
+        }.resume()
+    }
+    
+    func getFollowedEvents(completion: @escaping ([EventShort]?, Error?) -> Void) {
+        guard let url = URL(string: "\(AppConstant.API_URL)Event/followedEvents") else {completion(nil, ServiceError.InvalidParameters); return}
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        guard let token = UserDefaults.standard.string(forKey: "accessToken") else {completion(nil, ServiceError.TokenNotFound); return}
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            if let response = response {
+                print(response)
+            }
+            if let data = data {
+                do {
+                    let jsonDecoder = JSONDecoder()
+                    let events = try jsonDecoder.decode([EventShort].self, from: data)
+                    
+                    // Download images
+                    var eventsCounter = events.count
+                    
+                    if eventsCounter == 0 {
+                        completion(events, nil)
+                    }
+                    
+                    for event in events {
+                        if let pictureUrl = event.pictureUrl {
+                            self.storageService.downloadFile(url: pictureUrl) { (data, _) in
+                                event.picture = data
+                                eventsCounter -= 1
+                                
+                                if eventsCounter == 0 {
+                                    completion(events, nil)
+                                }
+                            }
+                        } else {
+                            eventsCounter -= 1
+                            if eventsCounter == 0 {
+                                completion(events, nil)
+                            }
+                        }
+                    }
+                } catch {
+                    print(error)
+                    completion(nil, error)
+                }
+            }else {
                 completion(nil, ServiceError.NoResponseFromServer)
             }
         }.resume()

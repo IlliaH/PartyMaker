@@ -13,6 +13,8 @@ protocol EventServiceProtocol {
     func updateEvent(event: Event, completion: @escaping(Event?, Error?) -> Void)
     func getEvents(completion: @escaping([EventShort]?, Error?) -> Void)
     func getEventById(id: Int, completion: @escaping(Event?, Error?) -> Void)
+    func getUserEvents(completion: @escaping([EventShort]?, Error?) -> Void)
+    func getFollowedEvents(completion: @escaping([EventShort]?, Error?) -> Void)
     
     func followEvent(id: Int, completion: @escaping(Error?) -> Void)
     func unfollowEvent(id: Int, completion: @escaping(Error?) -> Void)
