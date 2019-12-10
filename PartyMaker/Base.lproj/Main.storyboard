@@ -165,6 +165,9 @@
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="isHorizontal" value="NO"/>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="XyK-e1-oGQ" appends="YES" id="A4Z-5H-yPW"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="oc9-Rr-6U7"/>
                     <connections>
@@ -177,6 +180,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="XyK-e1-oGQ">
+                    <connections>
+                        <action selector="onScreenTapped:" destination="BYZ-38-t0r" id="vNc-fo-2eq"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>

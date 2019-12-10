@@ -26,6 +26,12 @@ class LoginController: UIViewController, LoginViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.LoginTextField.delegate = self
+        self.PasswordTextField.delegate = self
+        self.LoginTextField.tag = 0
+        self.PasswordTextField.tag = 1
+        self.LoginTextField.returnKeyType = .next
+        self.PasswordTextField.returnKeyType = .done
         // Do any additional setup after loading the view.
         configurator.configure(with: self)
         GIDSignIn.sharedInstance()?.presentingViewController = self
@@ -38,7 +44,7 @@ class LoginController: UIViewController, LoginViewProtocol {
     }
     
     @IBAction func LoginButtonOnTapped(_ sender: UIButton) {
-        
+        view.endEditing(true)
         presenter.emailValueChanged(to: LoginTextField.text)
         presenter.passwordValueChanged(to: PasswordTextField.text)
         presenter.loginButtonClicked()
@@ -70,6 +76,11 @@ class LoginController: UIViewController, LoginViewProtocol {
         presenter.router.showRegisterView()
     }
     
+    
+    @IBAction func onScreenTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
 }
 
 extension LoginController {
@@ -88,5 +99,17 @@ extension LoginController {
             guard let loader = self.loader else {return}
         loader.removeLoader()
        }
+    }
+}
+
+extension LoginController : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+       if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+            return true;
+        }
+        return false
     }
 }

@@ -37,7 +37,7 @@ class EventServiceTest {
     
     func createEvent(from url: URL, event: Event, completion: @escaping (Event?, Error?) -> Void) {
         
-        let data : [String : Any] = ["Name" : event.name, "Description" : event.Description, "StartDate" : event.StartDate, "EndDate" : event.EndDate, "PictureUrl" : event.PictureUrl, "Latitude" : event.Latitude, "Longitude" : event.Longitude, "IsPrivate" : event.IsPrivate, "AgeCategoryId" : event.AgeCategoryId, "EventTypeId" : event.EventTypeId, "NumberOfPeople" : event.NumberOfPeople]
+        let data : [String : Any] = ["Name" : event.name, "Description" : event.description, "StartDate" : event.startDate, "EndDate" : event.endDate, "PictureUrl" : event.pictureUrl, "Latitude" : event.latitude, "Longitude" : event.longitude, "IsPrivate" : event.isPrivate, "AgeCategoryId" : event.ageCategoryId, "EventTypeId" : event.eventTypeId, "NumberOfPeople" : event.numberOfPeople]
         
         let jsonData = try? JSONSerialization.data(withJSONObject: data)
         
