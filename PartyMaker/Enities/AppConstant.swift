@@ -10,4 +10,5 @@ import Foundation
 
 struct AppConstant {
     static let API_URL = "https://partymakerbhm.azurewebsites.net/api/"
+    static let tabBarInset = 50
 }

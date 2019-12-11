@@ -19,6 +19,7 @@ class AccountViewController: UIViewController {
     
     @IBOutlet weak var oldPasswordTextField: CustomHoshiTextField!
     @IBOutlet weak var newPasswordTextField: CustomHoshiTextField!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     var presenter : AccountPresenterProtocol!
     var configurator : AccountConfiguratorProtocol = AccountConfigurator()
@@ -28,12 +29,15 @@ class AccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurator.configure(with: self)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        profileImageView.downloadImageFrom(link: AppDelegate.currentUser!.pictureUrl!, contentMode: .scaleAspectFit)
+        profileImageView.downloadImageFrom(link: AppDelegate.currentUser!.pictureUrl!, contentMode: .scaleAspectFill)
         firstNameTextField.text = AppDelegate.currentUser?.firstName
         lastNameTextField.text = AppDelegate.currentUser?.lastName
         emailTextField.text = AppDelegate.currentUser?.email
@@ -70,17 +74,36 @@ class AccountViewController: UIViewController {
         view.endEditing(true)
     }
     
+    @objc func keyboardWillShow(notification:NSNotification){
+        //give room at the bottom of the scroll view, so it doesn't cover up anything the user needs to tap
+        let userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+
+        var contentInset:UIEdgeInsets = self.scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height + CGFloat(AppConstant.tabBarInset)
+        self.scrollView.contentInset = contentInset
+    }
+
+    @objc func keyboardWillHide(notification:NSNotification){
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInset
+    }
 }
 
 extension AccountViewController : AccountViewProtocol {
     func showPassword() {
-            oldPasswordTextField.alpha = 1
-            newPasswordTextField.alpha = 1
+        view.endEditing(true)
+        oldPasswordTextField.isHidden = false
+        oldPasswordTextField.drawViewsForRect(oldPasswordTextField.bounds)
+        newPasswordTextField.isHidden = false
+        newPasswordTextField.drawViewsForRect(newPasswordTextField.bounds)
     }
     
     func hidePassword() {
-        oldPasswordTextField.alpha = 0
-        newPasswordTextField.alpha = 0
+        view.endEditing(true)
+        oldPasswordTextField.isHidden = true
+        newPasswordTextField.isHidden = true
     }
     
     func showLoader() {
