@@ -35,6 +35,8 @@ class CreatePartyViewController: UIViewController {
     @IBOutlet weak var numberOfPeopleTextField: CustomHoshiTextField!
     
     
+    
+    
     var startdateTimePicker: DateTimePicker?
     var enddateTimePicker: DateTimePicker?
     
@@ -178,6 +180,14 @@ class CreatePartyViewController: UIViewController {
     @IBAction func onScreenTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
+    
+    func presentView() {
+        DispatchQueue.main.async {
+            if let tabBbar = self.tabBarController{
+                tabBbar.selectedIndex = 0
+            }
+        }
+    }
 }
 
 extension CreatePartyViewController : UINavigationControllerDelegate, UIImagePickerControllerDelegate {
@@ -193,6 +203,14 @@ extension CreatePartyViewController : UINavigationControllerDelegate, UIImagePic
 }
 
 extension CreatePartyViewController : CreatePartyViewProtocol {
+    
+    func showAlert(title: String, message: String) {
+        DispatchQueue.main.async {
+            let alert = Alert.createAlert(title: title, message: message)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
     func showLoader() {
         DispatchQueue.main.async {
             self.loader = WavesLoader.createLoader(with: LoaderPath.glassPath(), on: self.view)
@@ -207,6 +225,7 @@ extension CreatePartyViewController : CreatePartyViewProtocol {
             guard let loader = self.loader else {return}
         loader.removeLoader()
        }
+    
     }
     
     func showStartCalendar() {

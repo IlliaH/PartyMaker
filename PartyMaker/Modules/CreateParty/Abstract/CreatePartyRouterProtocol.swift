@@ -9,5 +9,5 @@
 import Foundation
 
 protocol CreatePartyRouterProtocol : class {
-    
+    func changeScreenToMap()
 }

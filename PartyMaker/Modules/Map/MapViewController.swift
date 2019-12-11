@@ -24,6 +24,9 @@ class MapViewController: MapBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
+        print("tab bar is \(self.tabBarItem.tag)")
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

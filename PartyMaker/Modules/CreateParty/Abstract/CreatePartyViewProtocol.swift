@@ -17,9 +17,11 @@ protocol CreatePartyViewProtocol: class {
     
     func showEndCalendar()
     func hideEndCalendar()
+    func showAlert(title : String, message: String)
     
     func showAgeCategoryPicker(data: [[String]])
     func hideAgeCategoryPicker()
+    func presentView()
     
     func showEventTypePicker(data: [[String]])
     func hideEventTypePicker()
