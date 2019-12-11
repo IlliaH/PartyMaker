@@ -180,7 +180,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="XyK-e1-oGQ">
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="XyK-e1-oGQ">
                     <connections>
                         <action selector="onScreenTapped:" destination="BYZ-38-t0r" id="vNc-fo-2eq"/>
                     </connections>
