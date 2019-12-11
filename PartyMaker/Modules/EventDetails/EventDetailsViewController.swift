@@ -45,6 +45,7 @@ class EventDetailsViewController: UIViewController, EventDetailsViewControllerPr
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
         dateFormatter.formatOptions =  [
         .withYear,
         .withMonth,
@@ -434,6 +435,11 @@ class EventDetailsViewController: UIViewController, EventDetailsViewControllerPr
     
     @IBAction func onScreenTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
+    }
+    
+    @objc func keyboardWillShow(notification:NSNotification){
+        self.hideStartCalendar()
+        self.hideEndCalendar()
     }
 }
 
