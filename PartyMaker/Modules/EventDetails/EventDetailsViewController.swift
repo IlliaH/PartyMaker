@@ -351,6 +351,8 @@ class EventDetailsViewController: UIViewController, EventDetailsViewControllerPr
     }
     
     func showStartCalendar() {
+        view.endEditing(true)
+        
         guard let startdateTimePicker = startdateTimePicker else {
             self.startdateTimePicker = createAndReturnDate(min: Date(), max: Date().addingTimeInterval(60 * 60 * 24 * 4 * 12 * 6), textField: startDateTextField)
             self.startdateTimePicker?.dismissHandler = hideStartCalendar
@@ -365,6 +367,8 @@ class EventDetailsViewController: UIViewController, EventDetailsViewControllerPr
     }
     
     func showEndCalendar() {
+        view.endEditing(true)
+        
         guard let enddateTimePicker = enddateTimePicker else {
             var minDate = Date()
             
@@ -442,6 +446,7 @@ extension EventDetailsViewController : PassLocationDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "fromDetailsToSelectAddressSegue" {
+            self.view.endEditing(true)
             let selectAddressVC = segue.destination as! SelectAddressViewController
             selectAddressVC.delegate = self
         }

@@ -202,6 +202,9 @@ class CreatePartyViewController: UIViewController {
         var contentInset:UIEdgeInsets = self.scrollView.contentInset
         contentInset.bottom = keyboardFrame.size.height + CGFloat(AppConstant.tabBarInset)
         self.scrollView.contentInset = contentInset
+        
+        self.hideStartCalendar()
+        self.hideEndCalendar()
     }
 
     @objc func keyboardWillHide(notification:NSNotification){
@@ -249,6 +252,8 @@ extension CreatePartyViewController : CreatePartyViewProtocol {
     }
     
     func showStartCalendar() {
+        view.endEditing(true)
+        
         guard let startdateTimePicker = startdateTimePicker else {
             self.startdateTimePicker = createAndReturnDate(min: Date(), max: Date().addingTimeInterval(60 * 60 * 24 * 4 * 12 * 6), textField: startDateTextField)
             self.startdateTimePicker?.dismissHandler = hideStartCalendar
@@ -263,6 +268,8 @@ extension CreatePartyViewController : CreatePartyViewProtocol {
     }
     
     func showEndCalendar() {
+        view.endEditing(true)
+        
         if startdateTimePicker?.selectedDate == nil {
             // Alert
             print("select start date")
@@ -285,6 +292,7 @@ extension CreatePartyViewController : CreatePartyViewProtocol {
     
     func showAgeCategoryPicker(data: [[String]]) {
         DispatchQueue.main.async {
+            self.view.endEditing(true)
             self.setValuesForPickerAndTextField(picker: &self.ageCategoryPicker, data: data, textField: self.ageCategoryTextField)
         }
     }
@@ -295,6 +303,7 @@ extension CreatePartyViewController : CreatePartyViewProtocol {
     
     func showEventTypePicker(data: [[String]]) {
         DispatchQueue.main.async {
+            self.view.endEditing(true)
             self.setValuesForPickerAndTextField(picker: &self.eventTypePicker, data: data, textField: self.eventTypeTextField)
         }
     }
@@ -314,6 +323,7 @@ extension CreatePartyViewController : PassLocationDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "selectAddressSegue" {
+            self.view.endEditing(true)
             let selectAddressVC = segue.destination as! SelectAddressViewController
             selectAddressVC.delegate = self
         }
