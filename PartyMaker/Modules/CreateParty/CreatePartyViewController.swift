@@ -34,6 +34,7 @@ class CreatePartyViewController: UIViewController {
     
     @IBOutlet weak var numberOfPeopleTextField: CustomHoshiTextField!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     
     
     
@@ -50,6 +51,9 @@ class CreatePartyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurator.configure(with: self)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @IBAction func selectStartDateOnTouch(_ sender: UIButton) {
@@ -187,6 +191,22 @@ class CreatePartyViewController: UIViewController {
                 tabBbar.selectedIndex = 0
             }
         }
+    }
+    
+    @objc func keyboardWillShow(notification:NSNotification){
+        //give room at the bottom of the scroll view, so it doesn't cover up anything the user needs to tap
+        let userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+
+        var contentInset:UIEdgeInsets = self.scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height + CGFloat(AppConstant.tabBarInset)
+        self.scrollView.contentInset = contentInset
+    }
+
+    @objc func keyboardWillHide(notification:NSNotification){
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInset
     }
 }
 

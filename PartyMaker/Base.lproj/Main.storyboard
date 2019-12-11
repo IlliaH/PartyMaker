@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vZL-If-dHX">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginController" customModule="PartyMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GradientView" customModule="PartyMaker" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoK-7P-KaS">
-                                <rect key="frame" x="20" y="500" width="327" height="35"/>
+                                <rect key="frame" x="20" y="500" width="366" height="35"/>
                                 <color key="backgroundColor" red="1" green="0.2156862745" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="6N5-IY-aR0"/>
@@ -31,7 +31,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Password" textAlignment="natural" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="sh4-l9-UlZ" customClass="CustomHoshiTextField" customModule="PartyMaker">
-                                <rect key="frame" x="20" y="393" width="327" height="30"/>
+                                <rect key="frame" x="20" y="393" width="366" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="qky-jy-X8L"/>
                                 </constraints>
@@ -51,16 +51,16 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Upe-61-dgb">
-                                <rect key="frame" x="20" y="452" width="329" height="31"/>
+                                <rect key="frame" x="20" y="452" width="368" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember me" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwz-MD-7RY">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="319" height="31"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sc4-NP-VSm">
-                                        <rect key="frame" x="280" y="0.0" width="51" height="31"/>
+                                        <rect key="frame" x="319" y="0.0" width="51" height="31"/>
                                         <color key="onTintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </switch>
                                 </subviews>
@@ -74,20 +74,20 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FgV-Ws-j8j">
-                                <rect key="frame" x="28" y="570" width="319" height="17.666666666666629"/>
+                                <rect key="frame" x="28" y="570" width="358" height="17.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eag-G7-jJ8" customClass="GIDSignInButton">
-                                <rect key="frame" x="20" y="617.33333333333337" width="327" height="35"/>
+                                <rect key="frame" x="20" y="617" width="366" height="35"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="AQI-cx-szP"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xzo-Wp-3CX" customClass="CustomHoshiTextField" customModule="PartyMaker">
-                                <rect key="frame" x="20" y="328" width="327" height="30"/>
+                                <rect key="frame" x="20" y="328" width="366" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Is9-ny-UtB"/>
                                 </constraints>
@@ -107,7 +107,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CzW-RV-E6c">
-                                <rect key="frame" x="20" y="658" width="327" height="32"/>
+                                <rect key="frame" x="20" y="742" width="366" height="32"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="DON`T HAVE AN ACCOUNT? SIGN UP!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -117,7 +117,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="MainLogo" translatesAutoresizingMaskIntoConstraints="NO" id="nG5-Ox-WMi">
-                                <rect key="frame" x="0.0" y="20" width="375" height="300"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="DcE-ub-7SZ"/>
                                 </constraints>
@@ -193,11 +193,11 @@
             <objects>
                 <viewController id="O7A-ob-oqS" userLabel="Register Controller" customClass="RegisterController" customModule="PartyMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V9S-mV-hPz" customClass="GradientView" customModule="PartyMaker" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Nickname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cul-F9-eRx" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                <rect key="frame" x="20" y="167" width="335" height="35"/>
+                                <rect key="frame" x="20" y="167" width="374" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="0vR-Cv-lJ8"/>
                                 </constraints>
@@ -220,10 +220,10 @@
                                 </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Rcv-HO-Yki">
-                                <rect key="frame" x="20" y="239" width="335" height="35"/>
+                                <rect key="frame" x="20" y="239" width="374" height="35"/>
                                 <subviews>
                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8lF-0H-0Ac" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="163.66666666666666" height="35"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="183" height="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -243,7 +243,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eZl-tm-LHe" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                        <rect key="frame" x="171.66666666666663" y="0.0" width="163.33333333333337" height="35"/>
+                                        <rect key="frame" x="191" y="0.0" width="183" height="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -268,7 +268,7 @@
                                 </constraints>
                             </stackView>
                             <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zhA-Ns-DA3" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                <rect key="frame" x="20" y="316" width="335" height="34"/>
+                                <rect key="frame" x="20" y="316" width="374" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="7cc-Xa-WEA"/>
                                 </constraints>
@@ -291,7 +291,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sGM-Ju-l9P" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                <rect key="frame" x="20" y="390" width="335" height="35"/>
+                                <rect key="frame" x="20" y="390" width="374" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="9bL-ty-jXA"/>
                                 </constraints>
@@ -314,7 +314,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aK1-2u-ULy" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                <rect key="frame" x="20" y="462" width="335" height="35"/>
+                                <rect key="frame" x="20" y="462" width="374" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="pEQ-a8-bie"/>
                                 </constraints>
@@ -337,7 +337,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7p4-cs-kqV">
-                                <rect key="frame" x="20" y="541" width="335" height="39"/>
+                                <rect key="frame" x="20" y="541" width="374" height="39"/>
                                 <color key="backgroundColor" red="1" green="0.2156862745" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="Afd-c4-Iov"/>
@@ -350,7 +350,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartyMaker" translatesAutoresizingMaskIntoConstraints="NO" id="xr7-JV-vL3" customClass="RoundImageView" customModule="PartyMaker" customModuleProvider="target">
-                                <rect key="frame" x="137.66666666666666" y="25" width="100" height="100"/>
+                                <rect key="frame" x="157" y="25" width="100" height="100"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="2qP-ma-ezE"/>
@@ -428,11 +428,11 @@
             <objects>
                 <viewController id="YlU-5L-mBN" customClass="JoinPrivateEventViewController" customModule="PartyMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rvj-bW-2ga" customClass="GradientView" customModule="PartyMaker" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join Private Event" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e98-ij-D38">
-                                <rect key="frame" x="20" y="176" width="335" height="35"/>
+                                <rect key="frame" x="20" y="176" width="374" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="56N-gN-kuz"/>
                                 </constraints>
@@ -441,7 +441,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Secret code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9WF-LY-MGJ" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                <rect key="frame" x="20" y="313" width="335" height="35"/>
+                                <rect key="frame" x="20" y="313" width="374" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="7ek-qv-b1f"/>
                                 </constraints>
@@ -464,7 +464,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a secret code sent by your friend to join a private party" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98s-e3-JUr">
-                                <rect key="frame" x="20" y="219" width="335" height="86"/>
+                                <rect key="frame" x="20" y="219" width="374" height="86"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="86" id="gH0-Mu-o9d"/>
                                 </constraints>
@@ -473,7 +473,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9SZ-A6-Irz">
-                                <rect key="frame" x="20" y="385" width="335" height="35"/>
+                                <rect key="frame" x="20" y="385" width="374" height="35"/>
                                 <color key="backgroundColor" red="1" green="0.48627450979999998" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="nAd-uG-LUz"/>
@@ -536,11 +536,11 @@
             <objects>
                 <viewController id="VTx-z6-RWe" customClass="UserEventsViewController" customModule="PartyMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DnK-r5-oWz" customClass="GradientView" customModule="PartyMaker" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UmQ-ZE-LNJ">
-                                <rect key="frame" x="20" y="0.0" width="335" height="32"/>
+                                <rect key="frame" x="20" y="0.0" width="374" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="Xv8-yg-SaR"/>
                                 </constraints>
@@ -550,28 +550,28 @@
                                 </segments>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hCJ-q0-aeH">
-                                <rect key="frame" x="0.0" y="31" width="375" height="610"/>
+                                <rect key="frame" x="0.0" y="31" width="414" height="694"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="eventCell" id="3If-rm-P0w" customClass="UserEventTableViewCell" customModule="PartyMaker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="40.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="40.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3If-rm-P0w" id="bOU-qR-nw1">
-                                            <rect key="frame" x="0.0" y="0.0" width="349" height="40.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="40.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Bvv-61-a8b">
-                                                    <rect key="frame" x="20" y="0.0" width="309" height="40.333333333333336"/>
+                                                    <rect key="frame" x="20" y="0.0" width="343" height="40.5"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartyMaker" translatesAutoresizingMaskIntoConstraints="NO" id="PuZ-rz-0c6" customClass="RoundImageView" customModule="PartyMaker" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="40" height="40.333333333333336"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="40" height="40.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="Lyt-2B-vhe"/>
                                                                 <constraint firstAttribute="width" constant="40" id="Wsc-V9-KAY"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xw2-Ms-Zh3">
-                                                            <rect key="frame" x="60" y="0.0" width="249" height="40.333333333333336"/>
+                                                            <rect key="frame" x="60" y="0.0" width="283" height="40.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="vgf-J7-q9g"/>
                                                             </constraints>
@@ -638,24 +638,24 @@
             <objects>
                 <viewController id="tPP-Q5-cOb" customClass="SelectAddressViewController" customModule="PartyMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RJA-Gh-lwR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Irq-yL-zs5">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="676"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="760"/>
                                 <connections>
                                     <outlet property="delegate" destination="tPP-Q5-cOb" id="0vw-yY-aDB"/>
                                 </connections>
                             </mapView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="7iM-Tq-lbn">
-                                <rect key="frame" x="167.66666666666666" y="319" width="40" height="40"/>
+                                <rect key="frame" x="187" y="361" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="J9H-2m-KNd"/>
                                     <constraint firstAttribute="height" constant="40" id="X5C-xu-iyo"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l08-hx-b7U">
-                                <rect key="frame" x="20" y="38" width="335" height="40"/>
+                                <rect key="frame" x="20" y="38" width="374" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="zMT-WV-VG6"/>
@@ -665,7 +665,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTI-Q3-3EM">
-                                <rect key="frame" x="20" y="684" width="335" height="40"/>
+                                <rect key="frame" x="20" y="768" width="374" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.48627450979999998" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="LMl-eP-MHd"/>
@@ -710,18 +710,20 @@
             <objects>
                 <viewController id="NA0-9q-kbH" customClass="CreatePartyViewController" customModule="PartyMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gjw-3j-BuN" customClass="GradientView" customModule="PartyMaker" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYx-8r-aHR">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hsr-WH-HDu">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="924"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1008"/>
                                         <subviews>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Select start date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g3I-2Y-YId" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="443" width="336" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Select start date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g3I-2Y-YId" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="443" width="345" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="L2G-XE-vil"/>
+                                                </constraints>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -737,9 +739,11 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Select end date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JIS-WH-dL3" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="505" width="336" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Select end date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JIS-WH-dL3" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="505" width="345" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="YE0-Lj-Kf9"/>
+                                                </constraints>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -755,27 +759,35 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CM9-gY-fgj">
-                                                <rect key="frame" x="352" y="443" width="40" height="40"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CM9-gY-fgj">
+                                                <rect key="frame" x="373" y="443" width="21" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="21" id="RXw-zC-8OO"/>
+                                                    <constraint firstAttribute="height" constant="40" id="wgZ-37-eM2"/>
+                                                </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="calendar" catalog="system"/>
                                                 <connections>
                                                     <action selector="selectStartDateOnTouch:" destination="NA0-9q-kbH" eventType="touchUpInside" id="dK1-pc-lz0"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGW-E4-NMb">
-                                                <rect key="frame" x="352" y="499" width="40" height="40"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGW-E4-NMb">
+                                                <rect key="frame" x="373" y="499" width="21" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="9Rk-C4-RjQ"/>
+                                                    <constraint firstAttribute="width" constant="21" id="mv7-8q-Uay"/>
+                                                </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="calendar" catalog="system"/>
                                                 <connections>
                                                     <action selector="selectStartDateOnTouch:" destination="NA0-9q-kbH" eventType="touchUpInside" id="nkZ-gz-6y1"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qtB-W1-YOg" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="174" width="398" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qtB-W1-YOg" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="174" width="374" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="ryO-bK-knm"/>
+                                                </constraints>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -794,17 +806,21 @@
                                                     <outlet property="delegate" destination="NA0-9q-kbH" id="Xm8-DF-2mJ"/>
                                                 </connections>
                                             </textField>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lov-fk-JH2">
-                                                <rect key="frame" x="8" y="235" width="398" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lov-fk-JH2">
+                                                <rect key="frame" x="20" y="235" width="374" height="100"/>
                                                 <color key="backgroundColor" red="0.83921568627450982" green="0.83921568627450982" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="8rl-q8-36R"/>
+                                                </constraints>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <textField opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Hashtags" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x0z-HT-Saz" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="363" width="398" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Hashtags" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x0z-HT-Saz" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="363" width="374" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="2t7-vd-G0X"/>
+                                                </constraints>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -823,17 +839,22 @@
                                                     <outlet property="delegate" destination="NA0-9q-kbH" id="WfG-dC-ETV"/>
                                                 </connections>
                                             </textField>
-                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PartyMaker" translatesAutoresizingMaskIntoConstraints="NO" id="6Ka-2J-qNf" customClass="RoundImageView" customModule="PartyMaker" customModuleProvider="target">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartyMaker" translatesAutoresizingMaskIntoConstraints="NO" id="6Ka-2J-qNf" customClass="RoundImageView" customModule="PartyMaker" customModuleProvider="target">
                                                 <rect key="frame" x="143" y="8" width="128" height="128"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="128" id="HcJ-Z5-nto"/>
+                                                    <constraint firstAttribute="height" constant="128" id="lcp-fK-ttu"/>
+                                                </constraints>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="HWK-Sb-Nkm" appends="YES" id="FAO-df-Cvd"/>
                                                 </connections>
                                             </imageView>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sua-XY-LPN" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="577" width="336" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sua-XY-LPN" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="577" width="344.5" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="QPY-wH-wP7"/>
+                                                </constraints>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -849,18 +870,23 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nit-OT-uTE">
-                                                <rect key="frame" x="352" y="577" width="40" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nit-OT-uTE">
+                                                <rect key="frame" x="372.5" y="577" width="21.5" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="e8g-6I-MJA"/>
+                                                    <constraint firstAttribute="width" constant="21.5" id="uEY-6Q-SzR"/>
+                                                </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="map" catalog="system"/>
                                                 <connections>
                                                     <segue destination="tPP-Q5-cOb" kind="presentation" identifier="selectAddressSegue" id="Ono-Xm-ogF"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Is Event Private?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yY9-FE-7On" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="636" width="336" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Is Event Private?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yY9-FE-7On" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="636" width="317" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="xRB-g1-iOn"/>
+                                                </constraints>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -876,14 +902,19 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="80R-Ct-ytu">
-                                                <rect key="frame" x="352" y="638" width="49" height="31"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="80R-Ct-ytu">
+                                                <rect key="frame" x="345" y="638" width="51" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="49" id="m6e-jp-mhx"/>
+                                                    <constraint firstAttribute="height" constant="31" id="pkD-93-mew"/>
+                                                </constraints>
                                                 <color key="onTintColor" red="1" green="0.21568627450980393" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </switch>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Age Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fvQ-2Y-TWj" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="701" width="336" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Age Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fvQ-2Y-TWj" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="701" width="345" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="Y2G-0f-NGl"/>
+                                                </constraints>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -899,18 +930,23 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faa-g1-yw2">
-                                                <rect key="frame" x="352" y="701" width="40" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faa-g1-yw2">
+                                                <rect key="frame" x="373" y="701" width="21" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="plP-oe-JVe"/>
+                                                    <constraint firstAttribute="width" constant="21" id="rFu-Y6-gEt"/>
+                                                </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="list.dash" catalog="system"/>
                                                 <connections>
                                                     <action selector="pickerOnTouch:" destination="NA0-9q-kbH" eventType="touchUpInside" id="ual-aa-uzs"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Event Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sl3-da-qnP" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="758" width="336" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Event Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sl3-da-qnP" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="758" width="347" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="BS3-zO-NdW"/>
+                                                </constraints>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -926,9 +962,11 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Number of people" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OJD-B5-7vW" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="823" width="384" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Number of people" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OJD-B5-7vW" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="823" width="374" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="Fss-ax-ojc"/>
+                                                </constraints>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
@@ -947,10 +985,12 @@
                                                     <outlet property="delegate" destination="NA0-9q-kbH" id="05Y-9t-849"/>
                                                 </connections>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2C-Td-IxX">
-                                                <rect key="frame" x="8" y="911" width="398" height="38"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2C-Td-IxX">
+                                                <rect key="frame" x="20" y="911" width="374" height="38"/>
                                                 <color key="backgroundColor" red="1" green="0.48627450979999998" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="38" id="Ge7-P8-5jR"/>
+                                                </constraints>
                                                 <state key="normal" title="CREATE">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -958,9 +998,12 @@
                                                     <action selector="createButtonOnTouch:" destination="NA0-9q-kbH" eventType="touchUpInside" id="riF-CW-t5V"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYu-Sn-7Pl">
-                                                <rect key="frame" x="350" y="755" width="45" height="37"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYu-Sn-7Pl">
+                                                <rect key="frame" x="373" y="755" width="21" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="37" id="1mg-iu-ZFK"/>
+                                                    <constraint firstAttribute="width" constant="21" id="uP0-AA-z4d"/>
+                                                </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="list.dash" catalog="system"/>
                                                 <connections>
@@ -969,6 +1012,56 @@
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="x0z-HT-Saz" secondAttribute="trailing" constant="20" id="1oc-mh-hsN"/>
+                                            <constraint firstItem="6Ka-2J-qNf" firstAttribute="centerX" secondItem="hsr-WH-HDu" secondAttribute="centerX" id="2AI-Ym-yYm"/>
+                                            <constraint firstItem="Sl3-da-qnP" firstAttribute="top" secondItem="fvQ-2Y-TWj" secondAttribute="bottom" constant="23" id="2i6-5v-kMJ"/>
+                                            <constraint firstItem="OJD-B5-7vW" firstAttribute="leading" secondItem="hsr-WH-HDu" secondAttribute="leading" constant="20" id="33G-RT-LWi"/>
+                                            <constraint firstItem="qtB-W1-YOg" firstAttribute="leading" secondItem="hsr-WH-HDu" secondAttribute="leading" constant="20" id="48p-Os-mc4"/>
+                                            <constraint firstItem="CM9-gY-fgj" firstAttribute="leading" secondItem="g3I-2Y-YId" secondAttribute="trailing" constant="8" id="4f4-R4-aPc"/>
+                                            <constraint firstAttribute="bottom" secondItem="U2C-Td-IxX" secondAttribute="bottom" constant="59" id="4xV-6B-WAw"/>
+                                            <constraint firstItem="sua-XY-LPN" firstAttribute="leading" secondItem="hsr-WH-HDu" secondAttribute="leading" constant="20" id="7rH-dt-dHW"/>
+                                            <constraint firstItem="JIS-WH-dL3" firstAttribute="leading" secondItem="hsr-WH-HDu" secondAttribute="leading" constant="20" id="C7u-FC-yiK"/>
+                                            <constraint firstAttribute="trailing" secondItem="qtB-W1-YOg" secondAttribute="trailing" constant="20" id="CcE-jr-P6P"/>
+                                            <constraint firstItem="80R-Ct-ytu" firstAttribute="leading" secondItem="yY9-FE-7On" secondAttribute="trailing" constant="8" id="EOm-vw-Mac"/>
+                                            <constraint firstItem="DYu-Sn-7Pl" firstAttribute="leading" secondItem="Sl3-da-qnP" secondAttribute="trailing" constant="6" id="El7-BP-OzK"/>
+                                            <constraint firstItem="fvQ-2Y-TWj" firstAttribute="top" secondItem="yY9-FE-7On" secondAttribute="bottom" constant="31" id="FAp-xM-1cs"/>
+                                            <constraint firstItem="yY9-FE-7On" firstAttribute="top" secondItem="sua-XY-LPN" secondAttribute="bottom" constant="25" id="FRA-Hu-vab"/>
+                                            <constraint firstItem="U2C-Td-IxX" firstAttribute="top" secondItem="OJD-B5-7vW" secondAttribute="bottom" constant="54" id="FW4-KO-RSN"/>
+                                            <constraint firstAttribute="trailing" secondItem="Nit-OT-uTE" secondAttribute="trailing" constant="20" id="GCW-sh-dok"/>
+                                            <constraint firstAttribute="trailing" secondItem="U2C-Td-IxX" secondAttribute="trailing" constant="20" id="MdZ-WL-4dN"/>
+                                            <constraint firstItem="SGW-E4-NMb" firstAttribute="top" secondItem="g3I-2Y-YId" secondAttribute="bottom" constant="22" id="O7I-6U-urR"/>
+                                            <constraint firstItem="fvQ-2Y-TWj" firstAttribute="leading" secondItem="hsr-WH-HDu" secondAttribute="leading" constant="20" id="PZA-nl-JfM"/>
+                                            <constraint firstItem="yY9-FE-7On" firstAttribute="leading" secondItem="hsr-WH-HDu" secondAttribute="leading" constant="20" id="THI-x7-P44"/>
+                                            <constraint firstItem="Nit-OT-uTE" firstAttribute="leading" secondItem="sua-XY-LPN" secondAttribute="trailing" constant="8" id="VMK-xO-lq5"/>
+                                            <constraint firstItem="lov-fk-JH2" firstAttribute="leading" secondItem="hsr-WH-HDu" secondAttribute="leading" constant="20" id="Zau-lg-mEp"/>
+                                            <constraint firstItem="x0z-HT-Saz" firstAttribute="top" secondItem="lov-fk-JH2" secondAttribute="bottom" constant="28" id="b3m-EI-GKm"/>
+                                            <constraint firstItem="faa-g1-yw2" firstAttribute="top" secondItem="yY9-FE-7On" secondAttribute="bottom" constant="31" id="dBM-7c-ZcS"/>
+                                            <constraint firstItem="CM9-gY-fgj" firstAttribute="top" secondItem="x0z-HT-Saz" secondAttribute="bottom" constant="46" id="dl1-er-6qG"/>
+                                            <constraint firstItem="Nit-OT-uTE" firstAttribute="top" secondItem="JIS-WH-dL3" secondAttribute="bottom" constant="38" id="dwN-EH-jph"/>
+                                            <constraint firstItem="g3I-2Y-YId" firstAttribute="leading" secondItem="hsr-WH-HDu" secondAttribute="leading" constant="20" id="eZr-Xm-MZd"/>
+                                            <constraint firstItem="6Ka-2J-qNf" firstAttribute="top" secondItem="hsr-WH-HDu" secondAttribute="top" constant="8" id="eyu-FE-Jkh"/>
+                                            <constraint firstItem="g3I-2Y-YId" firstAttribute="top" secondItem="x0z-HT-Saz" secondAttribute="bottom" constant="46" id="f4G-ct-Xuo"/>
+                                            <constraint firstItem="OJD-B5-7vW" firstAttribute="top" secondItem="Sl3-da-qnP" secondAttribute="bottom" constant="31" id="hMC-e7-a8u"/>
+                                            <constraint firstAttribute="trailing" secondItem="OJD-B5-7vW" secondAttribute="trailing" constant="20" id="igF-1Z-GsE"/>
+                                            <constraint firstItem="JIS-WH-dL3" firstAttribute="top" secondItem="g3I-2Y-YId" secondAttribute="bottom" constant="28" id="io5-CN-orP"/>
+                                            <constraint firstItem="Sl3-da-qnP" firstAttribute="leading" secondItem="hsr-WH-HDu" secondAttribute="leading" constant="20" id="kXC-ya-VlD"/>
+                                            <constraint firstItem="faa-g1-yw2" firstAttribute="leading" secondItem="fvQ-2Y-TWj" secondAttribute="trailing" constant="8" id="kwI-ux-t8v"/>
+                                            <constraint firstAttribute="trailing" secondItem="CM9-gY-fgj" secondAttribute="trailing" constant="20" id="lCq-Mf-ZiD"/>
+                                            <constraint firstItem="lov-fk-JH2" firstAttribute="top" secondItem="qtB-W1-YOg" secondAttribute="bottom" constant="27" id="m7u-Yb-ryo"/>
+                                            <constraint firstAttribute="trailing" secondItem="SGW-E4-NMb" secondAttribute="trailing" constant="20" id="mCo-DJ-Bm0"/>
+                                            <constraint firstItem="DYu-Sn-7Pl" firstAttribute="top" secondItem="fvQ-2Y-TWj" secondAttribute="bottom" constant="20" id="nuj-56-JPp"/>
+                                            <constraint firstAttribute="trailing" secondItem="lov-fk-JH2" secondAttribute="trailing" constant="20" id="r47-hW-oIu"/>
+                                            <constraint firstItem="80R-Ct-ytu" firstAttribute="top" secondItem="sua-XY-LPN" secondAttribute="bottom" constant="27" id="reI-UG-kgI"/>
+                                            <constraint firstItem="qtB-W1-YOg" firstAttribute="top" secondItem="6Ka-2J-qNf" secondAttribute="bottom" constant="38" id="rgx-a4-dV2"/>
+                                            <constraint firstItem="x0z-HT-Saz" firstAttribute="leading" secondItem="hsr-WH-HDu" secondAttribute="leading" constant="20" id="rzS-eS-oYR"/>
+                                            <constraint firstAttribute="trailing" secondItem="faa-g1-yw2" secondAttribute="trailing" constant="20" id="swY-0h-NQo"/>
+                                            <constraint firstItem="sua-XY-LPN" firstAttribute="top" secondItem="JIS-WH-dL3" secondAttribute="bottom" constant="38" id="tMV-Ug-w8v"/>
+                                            <constraint firstAttribute="trailing" secondItem="80R-Ct-ytu" secondAttribute="trailing" constant="20" id="upt-Wa-PTZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="DYu-Sn-7Pl" secondAttribute="trailing" constant="20" id="uxm-yp-p0N"/>
+                                            <constraint firstItem="SGW-E4-NMb" firstAttribute="leading" secondItem="JIS-WH-dL3" secondAttribute="trailing" constant="8" id="wyi-KS-ozB"/>
+                                            <constraint firstItem="U2C-Td-IxX" firstAttribute="leading" secondItem="hsr-WH-HDu" secondAttribute="leading" constant="20" id="ymH-Bz-bZe"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -982,7 +1075,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="hsr-WH-HDu" firstAttribute="height" secondItem="gjw-3j-BuN" secondAttribute="height" priority="250" constant="200" id="Dyd-8P-f12"/>
+                            <constraint firstItem="hsr-WH-HDu" firstAttribute="height" secondItem="gjw-3j-BuN" secondAttribute="height" priority="250" id="Dyd-8P-f12"/>
                             <constraint firstItem="sYx-8r-aHR" firstAttribute="top" secondItem="lSs-mY-fpv" secondAttribute="top" id="IOQ-fl-0BW"/>
                             <constraint firstItem="hsr-WH-HDu" firstAttribute="width" secondItem="gjw-3j-BuN" secondAttribute="width" id="RzW-G9-1wn"/>
                             <constraint firstItem="sYx-8r-aHR" firstAttribute="trailing" secondItem="gjw-3j-BuN" secondAttribute="trailing" id="c7g-mW-GW3"/>
@@ -1016,6 +1109,7 @@
                         <outlet property="logoImageView" destination="6Ka-2J-qNf" id="VaU-Ny-577"/>
                         <outlet property="nameTextField" destination="qtB-W1-YOg" id="SZx-oF-Chx"/>
                         <outlet property="numberOfPeopleTextField" destination="OJD-B5-7vW" id="GOj-ba-MNg"/>
+                        <outlet property="scrollView" destination="sYx-8r-aHR" id="Q7G-f6-zJV"/>
                         <outlet property="startDateTextField" destination="g3I-2Y-YId" id="57W-eb-555"/>
                     </connections>
                 </viewController>
@@ -1031,24 +1125,24 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2949" y="1090"/>
+            <point key="canvasLocation" x="2947.826086956522" y="1089.5089285714284"/>
         </scene>
         <!--Map-->
         <scene sceneID="iFz-6Y-NB4">
             <objects>
                 <viewController storyboardIdentifier="MapView" id="XFf-d7-fll" customClass="MapViewController" customModule="PartyMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Fl-Vb-JkD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fIe-5R-pN4">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <connections>
                                     <outlet property="delegate" destination="XFf-d7-fll" id="siq-0Y-gRg"/>
                                 </connections>
                             </mapView>
                             <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list.dash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eAc-Gx-2U6">
-                                <rect key="frame" x="20" y="23.333333333333336" width="50" height="43.666666666666671"/>
+                                <rect key="frame" x="20" y="23" width="50" height="44"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -1060,7 +1154,7 @@
                                 </connections>
                             </imageView>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gear" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sJb-m8-h5Z">
-                                <rect key="frame" x="305" y="19.999999999999996" width="50" height="50.333333333333329"/>
+                                <rect key="frame" x="344" y="20" width="50" height="50.5"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="bhE-xO-SDD"/>
@@ -1068,7 +1162,7 @@
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="knY-rj-33V">
-                                <rect key="frame" x="310" y="587" width="40" height="38.666666666666686"/>
+                                <rect key="frame" x="349" y="670.5" width="40" height="39"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="Rfi-Jp-gOZ"/>
@@ -1133,14 +1227,14 @@
             <objects>
                 <viewController id="XGI-MJ-PGj" customClass="EventDetailsViewController" customModule="PartyMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qx5-XK-zLe" customClass="GradientView" customModule="PartyMaker" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DGH-vk-7ia">
-                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LWK-pk-tLG">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="689"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="689"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartyMaker" translatesAutoresizingMaskIntoConstraints="NO" id="Tcg-Me-ugj" customClass="RoundImageView" customModule="PartyMaker" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="17" width="150" height="147"/>
@@ -1153,7 +1247,7 @@
                                                 </connections>
                                             </imageView>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Start Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mgH-pu-9Hm" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                                <rect key="frame" x="178" y="30" width="144" height="34"/>
+                                                <rect key="frame" x="178" y="30" width="183" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="WlI-Ry-Iiy"/>
                                                 </constraints>
@@ -1173,7 +1267,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="End Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="arG-Ut-k1k" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                                <rect key="frame" x="176" y="90" width="148" height="34"/>
+                                                <rect key="frame" x="176" y="90" width="187" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="EJ3-pS-Qv1"/>
                                                 </constraints>
@@ -1193,7 +1287,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DSC-a9-EAm" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                                <rect key="frame" x="22" y="184" width="335" height="34"/>
+                                                <rect key="frame" x="22" y="184" width="374" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="MJ4-sC-gmO"/>
                                                 </constraints>
@@ -1213,7 +1307,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FIi-KA-jZm">
-                                                <rect key="frame" x="20" y="238" width="335" height="74"/>
+                                                <rect key="frame" x="20" y="238" width="374" height="74"/>
                                                 <color key="backgroundColor" red="0.83921568629999999" green="0.83921568629999999" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="74" id="K2F-ek-T4z"/>
@@ -1223,7 +1317,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2E3-hQ-VFz" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                                <rect key="frame" x="22" y="342" width="300" height="34"/>
+                                                <rect key="frame" x="22" y="342" width="339" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="DSp-Hk-iaK"/>
                                                 </constraints>
@@ -1243,7 +1337,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Age Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a5X-EJ-YHj" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                                <rect key="frame" x="22" y="411" width="300" height="34"/>
+                                                <rect key="frame" x="22" y="411" width="339" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="6me-fK-jxa"/>
                                                 </constraints>
@@ -1263,7 +1357,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Event Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0r2-Hk-zNi" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="480" width="300" height="34"/>
+                                                <rect key="frame" x="20" y="480" width="339" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="jyY-os-ihY"/>
                                                 </constraints>
@@ -1283,7 +1377,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3if-qC-c3Z">
-                                                <rect key="frame" x="20" y="598" width="335" height="35"/>
+                                                <rect key="frame" x="20" y="598" width="374" height="35"/>
                                                 <color key="backgroundColor" red="1" green="0.48627450979999998" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="dAG-8h-eau"/>
@@ -1297,13 +1391,13 @@
                                                 </connections>
                                             </button>
                                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8T-Kd-TS2" customClass="Slider" customModule="fluid_slider">
-                                                <rect key="frame" x="20" y="537" width="334" height="39"/>
+                                                <rect key="frame" x="20" y="537" width="373" height="39"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="39" id="NJ6-XG-Kx7"/>
                                                 </constraints>
                                             </view>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXx-LO-gZL">
-                                                <rect key="frame" x="330" y="30" width="27" height="34"/>
+                                                <rect key="frame" x="369" y="30" width="27" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="27" id="GvK-sH-Azq"/>
                                                     <constraint firstAttribute="height" constant="34" id="gti-Nw-4eO"/>
@@ -1315,7 +1409,7 @@
                                                 </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSb-od-zHf">
-                                                <rect key="frame" x="321" y="342" width="33" height="34"/>
+                                                <rect key="frame" x="360" y="342" width="33" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="33" id="7wu-5j-E9x"/>
                                                     <constraint firstAttribute="height" constant="34" id="NYh-la-KXl"/>
@@ -1327,7 +1421,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XP8-LI-Gms">
-                                                <rect key="frame" x="175" y="135" width="179" height="30"/>
+                                                <rect key="frame" x="175" y="135" width="218" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.48627450979999998" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="gP6-W2-lid"/>
@@ -1340,7 +1434,7 @@
                                                 </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3n-4A-gto">
-                                                <rect key="frame" x="330" y="95" width="27" height="34"/>
+                                                <rect key="frame" x="369" y="95" width="27" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="7ho-aQ-CY7"/>
                                                     <constraint firstAttribute="width" constant="27" id="e2C-Ts-rYi"/>
@@ -1352,7 +1446,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEt-Wa-nk7">
-                                                <rect key="frame" x="20" y="654" width="335" height="35"/>
+                                                <rect key="frame" x="20" y="654" width="374" height="35"/>
                                                 <color key="backgroundColor" red="1" green="0.48627450979999998" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="Djm-Am-kc7"/>
@@ -1481,25 +1575,25 @@
             <objects>
                 <tableViewController id="yqG-0K-dgD" customClass="InviteFriendsTableViewController" customModule="PartyMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Vax-eH-6HD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.48627450979999998" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="phoneCell" id="hKk-Bl-T5z" customClass="ContactTableViewCell" customModule="PartyMaker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="18"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="18"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hKk-Bl-T5z" id="zFB-e5-mm6">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="18"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="18"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXR-oU-5Cb" userLabel="ContactNameLabel">
-                                            <rect key="frame" x="20" y="7" width="326" height="0.66666666666666696"/>
+                                            <rect key="frame" x="20" y="7" width="365" height="0.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zC3-gh-XDV" userLabel="CheckmarkLabel">
-                                            <rect key="frame" x="365" y="7" width="0.0" height="4.6666666666666679"/>
+                                            <rect key="frame" x="404" y="7" width="0.0" height="4.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -1565,17 +1659,17 @@
             <objects>
                 <viewController id="VFa-8p-ZIf" customClass="AccountViewController" customModule="PartyMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6AL-XH-f7R" customClass="GradientView" customModule="PartyMaker" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iFG-uA-3HP">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gv5-J8-X64">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="511"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="511"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="PartyMaker" translatesAutoresizingMaskIntoConstraints="NO" id="KqE-9F-0dy" customClass="RoundImageView" customModule="PartyMaker" customModuleProvider="target">
-                                                <rect key="frame" x="123.66666666666669" y="8" width="128" height="128"/>
+                                                <rect key="frame" x="143" y="8" width="128" height="128"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="128" id="Eaf-oG-UiH"/>
@@ -1586,10 +1680,10 @@
                                                 </connections>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Dng-id-nyf">
-                                                <rect key="frame" x="20" y="151" width="335" height="360"/>
+                                                <rect key="frame" x="20" y="151" width="374" height="360"/>
                                                 <subviews>
                                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cwD-dk-T6h" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="35"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="35"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -1609,7 +1703,7 @@
                                                         </connections>
                                                     </textField>
                                                     <textField opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4CI-6o-4CT" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="65" width="335" height="35"/>
+                                                        <rect key="frame" x="0.0" y="65" width="374" height="35"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -1629,7 +1723,7 @@
                                                         </connections>
                                                     </textField>
                                                     <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mtX-Ed-Kgk" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="130" width="335" height="35"/>
+                                                        <rect key="frame" x="0.0" y="130" width="374" height="35"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -1649,7 +1743,7 @@
                                                         </connections>
                                                     </textField>
                                                     <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Nickname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Pa-44-kxA" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="195" width="335" height="35"/>
+                                                        <rect key="frame" x="0.0" y="195" width="374" height="35"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -1669,16 +1763,16 @@
                                                         </connections>
                                                     </textField>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t2d-t0-U3t">
-                                                        <rect key="frame" x="0.0" y="260" width="335" height="35"/>
+                                                        <rect key="frame" x="0.0" y="260" width="374" height="35"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSU-dK-kNs">
-                                                                <rect key="frame" x="0.0" y="0.0" width="276" height="35"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="315" height="35"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nSs-JA-bqb">
-                                                                <rect key="frame" x="286" y="0.0" width="51" height="35"/>
+                                                                <rect key="frame" x="325" y="0.0" width="51" height="35"/>
                                                                 <color key="onTintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <connections>
                                                                     <action selector="passwordSwitchValueChanged:" destination="VFa-8p-ZIf" eventType="valueChanged" id="MYG-pq-0NF"/>
@@ -1696,7 +1790,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <textField hidden="YES" opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Old Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f7A-bc-dQG" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="310" width="335" height="0.0"/>
+                                                        <rect key="frame" x="0.0" y="310" width="374" height="0.0"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
@@ -1716,7 +1810,7 @@
                                                         </connections>
                                                     </textField>
                                                     <textField hidden="YES" opaque="NO" tag="6" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pq0-uV-dfU" customClass="CustomHoshiTextField" customModule="PartyMaker" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="310" width="335" height="0.0"/>
+                                                        <rect key="frame" x="0.0" y="310" width="374" height="0.0"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
@@ -1736,7 +1830,7 @@
                                                         </connections>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="75" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6A-V6-mnJ" userLabel="Save Changes">
-                                                        <rect key="frame" x="0.0" y="325" width="335" height="35"/>
+                                                        <rect key="frame" x="0.0" y="325" width="374" height="35"/>
                                                         <color key="backgroundColor" red="1" green="0.48627450979999998" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="e06-wI-lLZ"/>
@@ -1828,7 +1922,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vZL-If-dHX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="sKe-t6-Al0">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="MainColor"/>
                     </navigationBar>
@@ -1848,7 +1942,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="jJi-q7-rZ3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Jl-wP-Bhb">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1879,6 +1973,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="zQ5-WJ-unf"/>
-        <segue reference="THG-p2-6Rp"/>
+        <segue reference="Ono-Xm-ogF"/>
     </inferredMetricsTieBreakers>
 </document>
