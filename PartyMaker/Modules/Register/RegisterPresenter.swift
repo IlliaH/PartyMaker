@@ -88,23 +88,42 @@ class RegisterPresenter : RegisterPresenterProtocol {
     }
     
     func registerButtonClicked() {
-        view.showLoader()
-        interactor.register { (status, message) in
-            if status == .Sucess {
-                self.router.showMainView()
-                self.view.hideLoader()
+        if let nickname = nicknameValue, let firstName = firstNameValue, let lastName = lastNameValue, let email = emailValue, let password = passwordValue, let passwordConfirm = passwordConfirmValue, let picture = pictureValue {
+            if nickname.isNotEmpty && firstName.isNotEmpty && lastName.isNotEmpty && email.isNotEmpty && password.isNotEmpty && passwordConfirm.isNotEmpty && passwordConfirm.isNotEmpty {
+                
+                if password == passwordConfirm {
+                    view.showLoader()
+                    interactor.register { (status, message) in
+                        if status == .Sucess {
+                            self.router.showMainView()
+                            self.view.hideLoader()
+                        }
+                        else if status == .RegisterPictureUploadError {
+                            // Alert picture upload failed
+                            print("Picture upload failed")
+                            self.router.showMainView()
+                            self.view.hideLoader()
+                            self.view.showAlert(title: "Error", message: "Uploading picture fails")
+                        }
+                        else if status == .RegisterError {
+                            print(message as Any)
+                            self.view.hideLoader()
+                            self.view.showAlert(title: "Error", message: "Invalid credentials")
+                        }
+                    }
+                } else {
+                    view.showAlert(title: "Attention", message: "Passwords do not match!")
+                } 
+            } else {
+                view.showAlert(title: "Attention", message: "All fields should be filled!")
             }
-            else if status == .RegisterPictureUploadError {
-                // Alert picture upload failed
-                print("Picture upload failed")
-                self.router.showMainView()
-                self.view.hideLoader()
-            }
-            else if status == .RegisterError {
-                print(message as Any)
-                self.view.hideLoader()
-            }
+            
+        } else {
+            view.showAlert(title: "Attention", message: "All fields should be filled!")
         }
+        
+        
+        
     }
     
     required init(view: RegisterViewProtocol) {

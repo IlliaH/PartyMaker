@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class LoginPresenter : LoginPresenterProtocol {
     
@@ -47,18 +48,29 @@ class LoginPresenter : LoginPresenterProtocol {
     }
     
     func loginButtonClicked() {
-        view.showLoader()
-        interactor.login { (status, message) in
-            if (status == .Sucess) {
-                self.router.showMainView()
-                self.interactor.getCurrentUser()
-                self.view.hideLoader()
+        
+        if let email = emailValue, let password = passwordValue {
+            if email.isNotEmpty && password.isNotEmpty {
+                view.showLoader()
+                interactor.login { (status, message) in
+                    if (status == .Sucess) {
+                        self.router.showMainView()
+                        self.interactor.getCurrentUser()
+                        self.view.hideLoader()
+                    }
+                    else if (status == .LoginError) {
+                        print(message as Any)
+                        self.view.hideLoader()
+                        self.view.showAlert(title: "Error", message: "Invalid credentials")
+                    }
+                }
+            } else {
+                view.showAlert(title: "Attention", message: "All fields should be filled!")
             }
-            else if (status == .LoginError) {
-                print(message as Any)
-                self.view.hideLoader()
-            }
+        } else {
+            view.showAlert(title: "Attention", message: "All fields should be filled!")
         }
+        
     }
     
     func googleLoginButtonClicked(tokenID : String) {

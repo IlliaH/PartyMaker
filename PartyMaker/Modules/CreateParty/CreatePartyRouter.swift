@@ -14,4 +14,10 @@ class CreatePartyRouter: CreatePartyRouterProtocol {
     init(viewController: CreatePartyViewController) {
         self.viewController = viewController
     }
+    
+    func changeScreenToMap() {
+        guard let view = viewController else {return}
+        view.presentView()
+    }
+    
 }

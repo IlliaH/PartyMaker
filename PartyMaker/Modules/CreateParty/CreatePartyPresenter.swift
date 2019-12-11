@@ -164,8 +164,6 @@ class CreatePartyPresenter: CreatePartyPresenterProtocol {
     }
     
     func showAgeCategoryPickerClicked() {
-        // TO DO: get categories from server
-        //let ageCategoriesData: [[String]] = [["Teenagers", "Students", "Adults", "Seniors"]]
         
         if isLoading {
             return
@@ -196,8 +194,6 @@ class CreatePartyPresenter: CreatePartyPresenterProtocol {
     }
     
     func showEventTypePickerClicked() {
-        // let eventTypeData: [[String]] = [["Birthday", "Cocktail", "Dances and balls", "Block", "Showers"]]
-        // TO DO: get categories from server
         
         if isLoading {
             return
@@ -226,17 +222,29 @@ class CreatePartyPresenter: CreatePartyPresenterProtocol {
     }
     
     func createButonClicked() {
-        view.showLoader()
-        interactor.create { (status, message) in
-            // TO DO: handle status
-            self.view.hideLoader()
-            if status == PresenterStatus.Sucess {
-                // Alert, use router to redirect user
-                print(message)
-            } else if status == PresenterStatus.CreateEventError {
-                print(message)
+        
+        if let name = nameValue, let ageCategory = ageCategoryValue, let eventType = eventTypeValue, let description = descriptionValue, let startDate = startDateValue, let endDate = endDateValue, let peopleNumber = numberOfPeopleValue, let latitude = latitudeValue, let longitude = longitudeValue {
+            if name.isNotEmpty && ageCategory.isNotEmpty && eventType.isNotEmpty && description.isNotEmpty && peopleNumber.isNotEmpty {
+                view.showLoader()
+                interactor.create { (status, message) in
+                    self.view.hideLoader()
+                    if status == PresenterStatus.Sucess {
+                        print(message)
+                        self.router.changeScreenToMap()
+                        
+                    } else if status == PresenterStatus.CreateEventError {
+                        self.view.showAlert(title: "Error", message: "Event has not been created")
+                        print(message)
+                    }
+                }
+            } else {
+                self.view.showAlert(title: "Attention", message: "All fields should be filled")
             }
+            
+        } else {
+            self.view.showAlert(title: "Error", message: "All fields should be filled")
         }
+ 
     }
     
     required init(view: CreatePartyViewProtocol) {

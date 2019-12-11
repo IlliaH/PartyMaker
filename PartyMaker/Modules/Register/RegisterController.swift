@@ -88,6 +88,13 @@ extension RegisterController: UINavigationControllerDelegate, UIImagePickerContr
        }
     }
     
+    func showAlert(title: String, message: String) {
+        DispatchQueue.main.async {
+            let alert = Alert.createAlert(title: title, message: message)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
     
     // Implementation of UIImagePickerDelegate. This function triggers when user has selected an image
        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

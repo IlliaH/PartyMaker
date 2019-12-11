@@ -67,12 +67,21 @@ class AccountPresenter : AccountPresenterProtocol {
         }
     }
     
+    var isPasswordChangedSwitchValue : Bool? {
+        willSet(newSwitchValue) {
+            if let value = newSwitchValue {
+                interactor.isPasswordChanged = value
+            }
+        }
+    }
+    
     required init(view: AccountViewProtocol) {
         self.view = view
     }
     
     func editPassword(isPasswordChanged: Bool) {
         interactor.isPasswordChanged = isPasswordChanged
+        isPasswordChangedSwitchValue = isPasswordChanged
         if isPasswordChanged {
             view.showPassword()
         } else {
@@ -82,6 +91,40 @@ class AccountPresenter : AccountPresenterProtocol {
     
     
     func saveButtonClicked() {
+        
+        if isPasswordChangedSwitchValue == true {
+                if let nickname = nicknameValue, let email = emailValue, let picture = pictureValue, let oldPassword = oldPasswordValue, let newPassword = newPasswordValue {
+                    
+                    if nickname.isNotEmpty && email.isNotEmpty && oldPassword.isNotEmpty && newPassword.isNotEmpty {
+                        
+                        if oldPassword != newPassword {
+                            performRequest()
+                        } else {
+                            view.showAlert(title: "Attention", message: "All fields should be filled!")
+                        }
+                    } else {
+                        view.showAlert(title: "Attention", message: "All fields should be filled!")
+                    }
+                    
+                } else {
+                    view.showAlert(title: "Attention", message: "All fields should be filled!")
+                }
+            } else {
+            if let nickname = nicknameValue, let email = emailValue, let picture = pictureValue {
+                if nickname.isNotEmpty && email.isNotEmpty {
+                    performRequest()
+                } else {
+                    view.showAlert(title: "Attention", message: "All fields should be filled!")
+                }
+            } else {
+                view.showAlert(title: "Attention", message: "All fields should be filled!")
+            }
+
+            }
+    
+    }
+    
+    func performRequest() {
         view.showLoader()
         interactor.updateProfile { (status, message) in
             if status == .Sucess {
@@ -92,13 +135,16 @@ class AccountPresenter : AccountPresenterProtocol {
                 // Alert picture upload failed
                 print("Picture upload failed")
                 self.view.hideLoader()
+                self.view.showAlert(title: "Error", message: "Picture upload failed")
             }
             else if status == .UpdateUserError {
                 print(message as Any)
                 self.view.hideLoader()
+                self.view.showAlert(title: "Error", message: "User has not been updated")
             } else if status == .UpdatePasswordError {
                 print("Password could not be changed")
                 self.view.hideLoader()
+                self.view.showAlert(title: "Error", message: "Password has not been changed")
             }
         }
     }

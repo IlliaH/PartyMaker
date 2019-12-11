@@ -17,4 +17,5 @@ protocol AccountPresenterProtocol : class {
     func newPasswordConfirmValueChanged(to newPasswordConfirmValue: String?)
     func pictureValueChanged(to newPictureValue: UIImage?)
     func editPassword(isPasswordChanged : Bool)
+    func performRequest()
 }

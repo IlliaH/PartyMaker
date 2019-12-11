@@ -73,6 +73,7 @@
 		FE512D5A239D7B1F002EAAF6 /* EventDetailsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE512D59239D7B1F002EAAF6 /* EventDetailsViewControllerProtocol.swift */; };
 		FE512D5D239F11DF002EAAF6 /* UserEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE512D5C239F11DF002EAAF6 /* UserEventsViewController.swift */; };
 		FE512D61239F28F3002EAAF6 /* UserEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE512D60239F28F3002EAAF6 /* UserEventTableViewCell.swift */; };
+		FE512D6523A04A4E002EAAF6 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE512D6423A04A4E002EAAF6 /* Alert.swift */; };
 		FE5F2869235BECF100F2FD1C /* CustomHoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5F2868235BECF100F2FD1C /* CustomHoshiTextField.swift */; };
 		FE76567A2396560C002D4FBF /* PartyMakerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B89B239612E00019C2A2 /* PartyMakerTest.swift */; };
 		FE76567F2396B6B3002D4FBF /* CategoryServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE76567E2396B6B3002D4FBF /* CategoryServiceTest.swift */; };
@@ -183,6 +184,7 @@
 		FE512D59239D7B1F002EAAF6 /* EventDetailsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewControllerProtocol.swift; sourceTree = "<group>"; };
 		FE512D5C239F11DF002EAAF6 /* UserEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEventsViewController.swift; sourceTree = "<group>"; };
 		FE512D60239F28F3002EAAF6 /* UserEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEventTableViewCell.swift; sourceTree = "<group>"; };
+		FE512D6423A04A4E002EAAF6 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		FE5F2868235BECF100F2FD1C /* CustomHoshiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHoshiTextField.swift; sourceTree = "<group>"; };
 		FE76567E2396B6B3002D4FBF /* CategoryServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServiceTest.swift; sourceTree = "<group>"; };
 		FE7656812396C0D9002D4FBF /* UserServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceTest.swift; sourceTree = "<group>"; };
@@ -564,6 +566,7 @@
 				FE42B8802395EB460019C2A2 /* CustomAnnotation.swift */,
 				FE512D52239C3C68002EAAF6 /* PhoneContact.swift */,
 				2307A99B239C78DE006D26C3 /* EventInvitation.swift */,
+				FE512D6423A04A4E002EAAF6 /* Alert.swift */,
 			);
 			path = Enities;
 			sourceTree = "<group>";
@@ -780,6 +783,7 @@
 				2304C44A235E3542006E5C33 /* StorageServiceProtocol.swift in Sources */,
 				FEED38A7237745CD0013B21C /* AccountViewController.swift in Sources */,
 				236524012389EE16006F650F /* CreatePartyPresenter.swift in Sources */,
+				FE512D6523A04A4E002EAAF6 /* Alert.swift in Sources */,
 				236524032389FC2B006F650F /* CreatePartyRouter.swift in Sources */,
 				2310B3FD23529A2700CAFB75 /* LoginPresenterProtocol.swift in Sources */,
 				2310B3FB235299EA00CAFB75 /* LoginViewProtocol.swift in Sources */,

@@ -10,7 +10,6 @@ import UIKit
 import GoogleSignIn
 
 class LoginController: UIViewController, LoginViewProtocol {
-
     @IBOutlet weak var LoginTextField: CustomHoshiTextField!
     
     @IBOutlet weak var PasswordTextField: CustomHoshiTextField!
@@ -99,6 +98,13 @@ extension LoginController {
             guard let loader = self.loader else {return}
         loader.removeLoader()
        }
+    }
+    
+    func showAlert(title: String, message: String) {
+        DispatchQueue.main.async {
+            let alert = Alert.createAlert(title: title, message: message)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }
 

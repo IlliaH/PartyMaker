@@ -945,12 +945,12 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2898.5507246376815" y="1153.7946428571429"/>
+            <point key="canvasLocation" x="2949" y="1090"/>
         </scene>
         <!--Map-->
         <scene sceneID="iFz-6Y-NB4">
             <objects>
-                <viewController id="XFf-d7-fll" customClass="MapViewController" customModule="PartyMaker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapView" id="XFf-d7-fll" customClass="MapViewController" customModule="PartyMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Fl-Vb-JkD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1690,6 +1690,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="te0-Em-I46"/>
+        <segue reference="loa-5u-jZc"/>
         <segue reference="Ono-Xm-ogF"/>
     </inferredMetricsTieBreakers>
 </document>
