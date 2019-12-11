@@ -297,13 +297,16 @@ class EventDetailsViewController: UIViewController, EventDetailsViewControllerPr
             self.hideLoader()
             if let error = error {
                  DispatchQueue.main.async {
-                    let alert = Alert.createAlert(title: "Error", message: "Picture has not been updated")
+                    let alert = Alert.createAlert(title: "Error", message: "Event has not been updated")
                     self.present(alert, animated: true, completion: nil)
                 }
                 
             }
             else if let updatedEvent = updatedEvent {
-                // Alert success
+                DispatchQueue.main.async {
+                    let alert = Alert.createAlert(title: "Success", message: "Event has been successfully updated")
+                    self.present(alert, animated: true, completion: nil)
+                }
             }
         }
     }

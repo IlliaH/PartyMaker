@@ -54,7 +54,7 @@ class StorageService : StorageServiceProtocol {
                         if let url = dictionary["url"] as? String, !url.isEmpty {
                             completion(url, nil)
                         }
-                        if let message = dictionary["message"] as? String {
+                        else if let message = dictionary["message"] as? String {
                             completion(nil, ServiceError.ServerMessage(message))
                         }
                         else {
