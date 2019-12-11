@@ -35,8 +35,10 @@ class JoinPrivateEventViewController: UIViewController {
             if secretCode.isNotEmpty {
                 eventService.joinPrivateEvent(code: secretCode) { (event, error) in
                     if let error = error {
-                        let alert = Alert.createAlert(title: "Attention", message: "Secret code is incorrect")
-                        self.present(alert, animated: true, completion: nil)
+                        DispatchQueue.main.async {
+                            let alert = Alert.createAlert(title: "Attention", message: "Secret code is incorrect")
+                            self.present(alert, animated: true, completion: nil)
+                        }
                     }
                     else if let event = event {
                         self.eventId = event.id
