@@ -12,7 +12,6 @@ import MapKit
 class MapViewController: MapBaseViewController {
     
     @IBOutlet weak var listImageView: UIImageView!
-    @IBOutlet weak var settingsImageView: UIImageView!
     @IBOutlet weak var currentLocationImageView: UIImageView!
     
     var isSettingsHidden: Bool = true
@@ -42,7 +41,6 @@ class MapViewController: MapBaseViewController {
         isSettingsHidden = !isHidden
         
         listImageView.isHidden = isSettingsHidden
-        settingsImageView.isHidden = isSettingsHidden
         currentLocationImageView.isHidden = isSettingsHidden
     }
     
