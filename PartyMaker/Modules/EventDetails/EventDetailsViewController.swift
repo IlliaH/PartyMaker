@@ -241,34 +241,52 @@ class EventDetailsViewController: UIViewController, EventDetailsViewControllerPr
     @IBAction func saveChangesButtonOnTapped(_ sender: UIButton) {
         guard let event = event else { return }
         
-        if let startDate = startdateTimePicker?.selectedDate {
-            event.startDate = dateFormatter.string(from: startDate)
+        if let startDate = startDateTextField.text {
+            event.startDate = startDate
+        }else {
+            let alert = Alert.createAlert(title: "Attention", message: "Start date filed shold not be blank")
+            self.present(alert, animated: true, completion: nil)
         }
         
-        if let endDate = enddateTimePicker?.selectedDate {
-            event.endDate = dateFormatter.string(from: endDate)
+        if let endDate = endDateTextField.text {
+            event.endDate = endDate
+        } else {
+            let alert = Alert.createAlert(title: "Attention", message: "End date filed shold not be blank")
+            self.present(alert, animated: true, completion: nil)
         }
         
         if let description = partyDescriptionTextView.text {
-            event.description = description
+            if description.isNotEmpty {
+                event.description = description
+                
+                if let photoImageData = photoImageView.image?.pngData(), photoImageData != event.picture {
+                    showLoader()
+                    storageService.uploadFile(picture: photoImageData) { (imageUrl, error) in
+                        self.hideLoader()
+                        if error != nil {
+                            DispatchQueue.main.async {
+                                let alert = Alert.createAlert(title: "Error", message: "Picture has not been updated")
+                                self.present(alert, animated: true, completion: nil)
+                            }
+                        }
+                        else if let imageUrl = imageUrl {
+                            self.event?.pictureUrl = imageUrl
+                            self.updateEvent()
+                        }
+                    }
+                }
+                else {
+                    updateEvent()
+                }
+            } else {
+                let alert = Alert.createAlert(title: "Attention", message: "Add description to your event")
+                self.present(alert, animated: true, completion: nil)
+            }
+        } else {
+            let alert = Alert.createAlert(title: "Attention", message: "Add description to your event")
+            self.present(alert, animated: true, completion: nil)
         }
         
-        if let photoImageData = photoImageView.image?.pngData(), photoImageData != event.picture {
-            showLoader()
-            storageService.uploadFile(picture: photoImageData) { (imageUrl, error) in
-                self.hideLoader()
-                if error != nil {
-                    // Alert error
-                }
-                else if let imageUrl = imageUrl {
-                    self.event?.pictureUrl = imageUrl
-                    self.updateEvent()
-                }
-            }
-        }
-        else {
-            updateEvent()
-        }
     }
     
     func updateEvent() {
@@ -278,7 +296,11 @@ class EventDetailsViewController: UIViewController, EventDetailsViewControllerPr
         eventService.updateEvent(event: event) { (updatedEvent, error) in
             self.hideLoader()
             if let error = error {
-                // Alert error
+                 DispatchQueue.main.async {
+                    let alert = Alert.createAlert(title: "Error", message: "Picture has not been updated")
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
             }
             else if let updatedEvent = updatedEvent {
                 // Alert success
